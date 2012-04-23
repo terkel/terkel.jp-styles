@@ -1,0 +1,154 @@
+// Common modules
+@charset "UTF-8";
+
+
+
+/* Vertical padding */
+
+%base-vertical-padding {
+    @include vertical-rhythm(padding-top, 1);
+    @include vertical-rhythm(padding-bottom, 1);
+}
+
+
+
+/* Border inset */
+
+%border-inset {
+    position: relative;
+}
+
+%border-inset-content {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+%border-inset-top-dashed {
+    @extend %border-inset;
+    *border-top: $gray-dashed-border;
+    &:before {
+        @extend %border-inset-content;
+        border-top: $gray-dashed-border;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+%border-inset-top-solid {
+    @extend %border-inset;
+    *border-top: $gray-solid-border;
+    &:before {
+        @extend %border-inset-content;
+        border-top: $gray-solid-border;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+%border-inset-bottom-solid {
+    @extend %border-inset;
+    *border-bottom: $gray-solid-border;
+    &:after {
+        @extend %border-inset-content;
+        border-bottom: $gray-solid-border;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+%border-inset-left-solid {
+    @extend %border-inset;
+    *border-left: $gray-solid-border;
+    &:before {
+        @extend %border-inset-content;
+        border-left: $gray-solid-border;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+%border-inset-top-none {
+    *border-top-width: 0;
+    &:before {
+        display: none;
+    }
+}
+
+
+/* small text */
+%small-text {
+    @include font-size($small);
+    @include line-height($line-normal);
+}
+
+%small-gray-text {
+    @extend %small-text;
+    color: $gray;
+}
+
+%small-text-block {
+    @extend %small-text;
+    display: block;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+%small-gray-text-block {
+    @extend %small-text-block;
+    color: $gray;
+}
+
+%small-text-block-top {
+    @extend %small-text-block;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+}
+
+%small-gray-text-block-top {
+    @extend %small-text-block-top;
+    color: $gray;
+}
+
+
+
+/* Caps text */
+
+%caps-text {
+    font-weight: bold;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    word-spacing: 0.25em;
+}
+
+
+
+/* Reveal link */
+
+%reveal-link {
+    a {
+        color: $darkblue;
+        @include transition(color 0.4s);
+    }
+    &:hover a {
+        color: $blue;
+        @include transition(color 0.2s);
+    }
+}
+
+
+
+/* Gray bordered image */
+
+%gray-bordered-image {
+    background-color: white;
+    border: $gray-solid-border;
+    padding: 1px;
+    a:hover & {
+        border-color: $gray;
+    }
+}

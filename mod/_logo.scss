@@ -1,0 +1,60 @@
+// Site logo modules
+@charset "UTF-8";
+
+/* Logo */
+
+%logo {
+    display: inline-block;
+    @include mq-screen(min-width, $break-width-large) {
+        & {
+            position: absolute;
+            left: 2em;
+            width: 12em;
+        }
+    }
+}
+
+%logo-main {
+    font-family: $condensed, sans-serif;
+    font-size: 300%; // 48px
+    font-weight: 700;
+    letter-spacing: -0.021em;
+    position: relative;
+    line-height: 1.75; // 84px
+    &:before {
+        background-color: $darkblue;
+        border-radius: 0.25em;
+        bottom: 0;
+        content: "";
+        height: 0.5em;
+        left: 50%;
+        margin-bottom: -0.25em;
+        margin-left: -0.25em;
+        position: absolute;
+        width: 0.5em;
+        @include transition(background-color 0.4s);
+    }
+    a:hover &:before {
+        background-color: $blue;
+        background-color: rgba($blue, 0.75);
+        @include transition(background-color 0.2s);
+    }
+}
+
+%logo-sub {
+    @extend %reset-margin;
+    @extend %reset-letter-spacing;
+    @extend %reset-word-spacing;
+    @extend %small-gray-text;
+    font-family: $serif;
+    font-style: italic;
+    padding-top: 1.5em;
+    position: relative;
+    .amp {
+        font-family: $baskerville, $palatino, serif;
+        font-size: 1.5em;
+        letter-spacing: 0.125em;
+        line-height: 1;
+        vertical-align: middle;
+    }
+}

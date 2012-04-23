@@ -1,0 +1,52 @@
+// Navigation modules
+@charset "UTF-8";
+
+/* Pagination */
+%pagination {
+    @extend %reset-margin;
+    @extend %reset-padding;
+    @extend %reset-list-style;
+    @extend %small-text;
+    @extend %caps-text;
+    display: block;
+    text-align: center;
+}
+
+%pagination-item {
+    display: inline-block;
+}
+
+%pagination-link {
+    background-color: $palegray;
+    border-radius: 3px;
+    color: $darkgray;
+    padding: 0.25em 0.75em;
+    &:hover {
+        background-color: $lightgray;
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+%pagination-link-next,
+%pagination-link-prev {
+    &:before,
+    &:after {
+        display: inline-block;
+    }
+}
+
+%pagination-link-next {
+    &:before {
+        content: "\00AB";
+        margin-right: 0.25em;
+    }
+}
+
+%pagination-link-prev {
+    &:after {
+        content: "\00BB";
+        margin-left: 0.25em;
+    }
+}
+

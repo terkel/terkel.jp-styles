@@ -1,0 +1,47 @@
+// sass --watch ./scss:. -t compact
+@charset "UTF-8";
+
+/*
+Theme Name:  terkel.jp
+Theme URI:
+Description:
+Version:     4.0
+Author:      Takeru Suzuki
+Author URI:  http://terkel.jp/
+Tags:        HTML5, CSS3, Sass
+*/
+
+// 1. Variables, Mixins and Functions
+@import "variables";
+@import "mixins";
+@import "functions";
+
+// 2. Libraries
+@import "lib/functions";
+@import "lib/mixins";
+@import "lib/mixins-css3";
+
+// 3. CSS @import and @font-face
+@import "import";
+@import "font-face";
+
+// 4. Base
+@import "lib/normalize";
+@import "lib/typography";
+@import "base";
+
+@import "mod/common";
+
+// 5. Layout
+@import "layout";
+
+// 6. Modules
+@import "modules";
+@import "lib/prettyprint";
+@import "lib/tipsy";
+
+// 7. Print
+@import "print";
+
+// 8. License
+@import "license";

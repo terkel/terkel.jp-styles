@@ -1,0 +1,46 @@
+// Form modules
+@charset "UTF-8";
+
+/* Search form */
+
+%search-form-label {
+    @extend %caps-text;
+}
+
+%search-form-textfield {
+    border: $gray-solid-border;
+    border-radius: 99em;
+    @include box-shadow(1px 1px rgba(black, 0.0625) inset);
+    padding-left: 0.75em;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    line-height: 1.25;
+    &:focus {
+        border-color: $gray;
+        outline: none;
+    }
+    &::-webkit-search-cancel-button {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+%search-form-submit {
+    @extend %small-text;
+    background: $palegray;
+    border: 0;
+    border-radius: 99em;
+    color: $darkgray;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    width: 2em;
+    // letter-spacing: -0.0625em;
+    line-height: 2;
+    height: 2em;
+    &:hover {
+        background-color: $lightgray;
+        color: $black;
+    }
+}
+

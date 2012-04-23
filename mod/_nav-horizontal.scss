@@ -1,0 +1,70 @@
+// Horizontal nav module
+@charset "UTF-8";
+
+/* Horizontal nav */
+
+%horizontal-nav-wrapper {
+    @extend %base-vertical-padding;
+    @extend %border-inset-bottom-solid;
+    @include mq-screen(min-width, $break-width-large) {
+        & {
+            @include vertical-rhythm(margin-bottom, 1);
+        }
+    }
+}
+
+%horizontal-nav {
+    @extend %caps-text;
+    display: table;
+    margin: 0 auto;
+}
+
+%horizontal-nav-item {
+    display: table-cell;
+    padding-right: $base-line-height / 3 * 1em;
+    &:first-child {
+        padding-left: $base-line-height / 3 * 1em;
+    }
+    > %horizontal-nav-link,
+    > %horizontal-nav-current {
+        padding-left: $base-line-height / 3 * 1em;
+        padding-right: $base-line-height / 3 * 1em;
+    }
+}
+
+%horizontal-nav-link,
+%horizontal-nav-current {
+    display: block;
+    position: relative;
+    &:before {
+        border-radius: 0.75em;
+        content: "";
+        height: 1.5em;
+        left: 50%;
+        margin-left: -0.75em;
+        margin-top: -0.75em;
+        position: absolute;
+        top: 50%;
+        width: 1.5em;
+        z-index: -1;
+    }
+}
+
+%horizontal-nav-link {
+    color: inherit;
+    text-decoration: none;
+    &:before {
+        @include transition(background-color 0.4s);
+    }
+    &:hover:before {
+        background-color: $lightblue;
+        @include transition(background-color 0.2s);
+    }
+}
+
+%horizontal-nav-current {
+    cursor: default;
+    &:before {
+        background-color: $paleblue;
+    }
+}

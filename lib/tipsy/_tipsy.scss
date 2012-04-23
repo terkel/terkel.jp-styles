@@ -1,0 +1,124 @@
+// tipsy - http://onehackoranother.com/projects/jquery/tipsy/
+@charset "UTF-8";
+
+//  <div class="tipsy tipsy-n">
+//      <div class="tipsy-arrow tipsy-arrow-n"></div>
+//      <div class="tipsy-inner"></div>
+//  </div>
+
+$tipsy-bg:     black !default;
+$tipsy-fg:     white !default;
+$tipsy-shadow: 0 0 1px #000000 !default;
+
+/* tipsy */
+.tipsy {
+    font-size: 12px;
+    line-height: 1.5;
+    position: absolute;
+    padding: 5px;
+    z-index: 100000;
+}
+
+/* tipsy inner */
+.tipsy-inner {
+    background-color: $tipsy-bg;
+    color: $tipsy-fg;
+    max-width: 200px;
+    padding: 5px 8px;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-shadow: $tipsy-shadow;
+    -moz-box-shadow: $tipsy-shadow;
+    box-shadow: $tipsy-shadow;
+}
+
+/* tipsy arrow */
+.tipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed #000;
+
+    &.tipsy-arrow-n { border-bottom-color: $tipsy-bg; }
+    &.tipsy-arrow-s { border-top-color: $tipsy-bg; }
+    &.tipsy-arrow-e { border-left-color: $tipsy-bg; }
+    &.tipsy-arrow-w { border-right-color: $tipsy-bg; }
+
+    .tipsy-n & {
+        top: 0px;
+        left: 50%;
+        margin-left: -5px;
+        border-bottom-style: solid;
+        border-top: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-nw & {
+        top: 0;
+        left: 10px;
+        border-bottom-style: solid;
+        border-top: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-ne & {
+        top: 0;
+        right: 10px;
+        border-bottom-style: solid;
+        border-top: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-s & {
+        bottom: 0;
+        left: 50%;
+        margin-left: -5px;
+        border-top-style: solid;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-sw & {
+        bottom: 0;
+        left: 10px;
+        border-top-style: solid;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-se & {
+        bottom: 0;
+        right: 10px;
+        border-top-style: solid;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .tipsy-e & {
+        right: 0;
+        top: 50%;
+        margin-top: -5px;
+        border-left-style: solid;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    .tipsy-w & {
+        left: 0;
+        top: 50%;
+        margin-top: -5px;
+        border-right-style: solid;
+        border-left: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+}

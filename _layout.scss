@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* L A Y O U T
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* Page */
+[role="banner"],
+[role="main"],
+[role="contentinfo"] {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 46em;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include mq-screen(min-width, $break-width-large) {
+        & {
+            padding-left: 17em;
+        }
+    }
+}
+
+/* Page header */
+[role="banner"] {
+    position: relative;
+    text-align: center;
+    a {
+        @extend %reset-link;
+    }
+}
+
+/* Main content */
+.mainContent {
+    @include vertical-rhythm(padding-bottom, 2);
+}
+
+/* Main content header */
+.mainContent > header {
+    @include vertical-rhythm(margin-bottom, 2);
+    h1 {
+        $f: convert-to-px($xx-large);
+        @extend %border-inset-bottom-solid;
+        @include adjust-leading($f);
+        @include vertical-rhythm(padding-top, 2);
+        padding-bottom: (calc-vertical-rhythm(2) - ($f + $base-leading)) / $f * 1em;
+        @include mq-screen(max-width, $break-width-small) {
+            font-size: $x-large;
+            line-height: $line-normal;
+        }
+    }
+    time {
+        @extend %small-gray-text-block-top;
+        display: block;
+        text-align: right;
+    }
+}
+
+.mainContent > footer {
+        @extend %border-inset-top-solid;
+        @extend %base-vertical-padding;
+}

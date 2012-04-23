@@ -1,0 +1,74 @@
+// List modules
+@charset "UTF-8";
+
+/* Article summary list */
+
+%article-summary-list {
+    margin-top: $base-line-height * 2em;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+%article-summary-list-item {
+    @extend %border-inset-top-dashed;
+    @extend %reveal-link;
+    padding-top: 3.5em;
+    padding-bottom: 1.75em;
+    /* border-top: $gray-dashed-border; */
+    %article-summary-list:first-child &:first-child {
+        border-top-width: 0;
+        @extend %border-inset-top-none;
+    }
+}
+
+%article-summary-list-link {}
+
+%article-summary-list-title {
+    @extend %reset-margin-top;
+    @extend %reset-letter-spacing;
+    @extend %reset-word-spacing;
+}
+
+%article-summary-list-meta {
+    @extend %small-gray-text;
+    display: block;
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+%article-summary-list-body {
+    @extend %reset-margin;
+}
+
+%article-summary-list-footer {
+    @extend %small-gray-text-block;
+    @include transition(opacity 0.4s);
+    text-align: right;
+    a {
+        color: inherit;
+        font-weight: normal;
+        position: relative;
+        &:after {
+            content: "\2192";
+            margin-left: 0.25em;
+            display: inline-block;
+        }
+    }
+    .no-touch & {
+        @include opacity(0);
+        @include transition(opacity 0.4s);
+    }
+    %article-summary-list-item:hover & {
+        @include opacity(1);
+        @include transition(opacity 0.2s);
+    }
+}
+
+@mixin mq($prop, $val) {
+    @media screen and ($prop : $val) {
+        @content;
+    }
+}

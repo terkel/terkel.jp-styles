@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* P R I N T
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media print {
+    body {
+        color: black;
+        background-color: white;
+    }
+    .ads {
+        display: none;
+    }
+}

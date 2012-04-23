@@ -1,0 +1,36 @@
+// Last.fm widget module
+@charset "UTF-8";
+
+/* Last.fm widget */
+
+%lastfm {
+    @include vertical-rhythm(padding-top, 1);
+}
+
+%lastfm-heading {
+    @extend %reset-margin;
+    @extend %reset-font-size;
+    color: $gray;
+    font-weight: bold;
+}
+
+%lastfm-list {
+    @extend %reset-list-style;
+    padding: 0.375em 0 0;
+    margin: 0 -3px;
+}
+
+%lastfm-item {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+%lastfm-link {
+    display: inline-block;
+}
+
+%lastfm-image {
+    @extend %gray-bordered-image;
+    max-width: 64px;
+}

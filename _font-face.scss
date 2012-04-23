@@ -1,0 +1,46 @@
+// @font-face
+@charset "UTF-8";
+
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    src: url("#{ $fonts-directory }/DejaVuSansMono-webfont.eot");
+    src: url("#{ $fonts-directory }/DejaVuSansMono-webfont.eot?#iefix") format("embedded-opentype"),
+         url("#{ $fonts-directory }/DejaVuSansMono-webfont.woff") format("woff"),
+         url("#{ $fonts-directory }/DejaVuSansMono-webfont.ttf") format("truetype"),
+         url("#{ $fonts-directory }/DejaVuSansMono-webfont.svg#DejaVuSansMonoBook") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: "DejaVu Sans Mono";
+//     src: url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.eot");
+//     src: url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.eot?#iefix") format("embedded-opentype"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.woff") format("woff"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.ttf") format("truetype"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.svg#DejaVuSansMonoOblique") format("svg");
+//     font-weight: normal;
+//     font-style: italic;
+// }
+
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    src: url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.eot");
+    src: url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.woff") format("woff"),
+         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.ttf") format("truetype"),
+         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.svg#DejaVuSansMonoBold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: "DejaVu Sans Mono";
+//     src: url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.eot");
+//     src: url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.eot?#iefix") format("embedded-opentype"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.woff") format("woff"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.ttf") format("truetype"),
+//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.svg#DejaVuSansMonoBoldOblique") format("svg");
+//     font-weight: bold;
+//     font-style: italic;
+// }

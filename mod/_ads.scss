@@ -1,0 +1,34 @@
+// Ads module
+@charset "UTF-8";
+
+/* Ads */
+
+%ads {
+    @include vertical-rhythm(margin-bottom, 3);
+    text-align: center;
+    %ad-medium,
+    %ad-large {
+        display: none;
+    }
+    %ad-small {
+        display: block;
+    }
+    @include mq-screen(min-width, $break-width-small) {
+        & %ad-small,
+        & %ad-large {
+            display: none;
+        }
+        & %ad-medium {
+            display: block;
+        }
+    }
+    @include mq-screen(min-width, $break-width-medium) {
+        & %ad-small,
+        & %ad-medium {
+            display: none;
+        }
+        & %ad-large {
+            display: block;
+        }
+    }
+}

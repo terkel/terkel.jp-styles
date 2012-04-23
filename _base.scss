@@ -1,0 +1,441 @@
+@charset "UTF-8";
+
+/*  B A S E
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// The root element
+
+html {
+    @include normalize-html;
+    font-family: $base-font-family;
+    @include base-font-size();
+    @include line-height($base-line-height);
+    @include mq-screen(max-width, $break-width-small) {
+        @include base-font-size(14px);
+    }
+}
+
+// Sections
+
+body {
+    @include normalize-body;
+    background-color: $white;
+    border-top: 0.25em solid $lightblue;
+    color: $black;
+}
+
+h1 {
+    $f: $xx-large;
+    @include font-size($f);
+    @include adjust-leading($f);
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    $f: $x-large;
+    @include font-size($f);
+    @include adjust-leading($f);
+    @include vertical-rhythm(margin-top, 2);
+    @include vertical-rhythm(margin-bottom, ($base-line-height-px - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
+    // @include vertical-rhythm(margin-bottom, (($base-line-height-px * 2) - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+h3 {
+    $f: $large;
+    @include font-size($f);
+    @include adjust-leading($f);
+    @include vertical-rhythm(margin-top, 2);
+    @include vertical-rhythm(margin-bottom, ($base-line-height-px - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
+    // @include vertical-rhythm(margin-bottom, (($base-line-height-px * 2) - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
+}
+
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(margin-bottom, -1);
+}
+
+// h2, h3, h4, h5, h6 {
+//     + p,
+//     + ol,
+//     + ul,
+//     + dl,
+//     + dl > dt:first-child {
+//         @extend %reset-margin-top;
+//     }
+// }
+
+// h2, h3 {
+//     + pre,
+//     + blockquote,
+//     + figure,
+//     + table {
+//         @extend %reset-margin-top;
+//     }
+// }
+
+// h4, h5, h6 {
+//     + pre,
+//     + blockquote,
+//     + figure,
+//     + table {
+//         @extend %base-vertical-margin-top;
+//     }
+// }
+
+// Grouping content
+
+p {
+    @extend %base-vertical-margin;
+}
+
+hr {
+    @include normalize-hr;
+}
+
+pre {
+    @include normalize-pre;
+    @extend %base-vertical-margin-2;
+    @extend %block-indent-border;
+    @extend %small-text-block;
+}
+
+blockquote {
+    @extend %base-vertical-margin-2;
+    @extend %reset-horizontal-margin;
+    &,
+    + .cite {
+        @extend %small-text;
+        @extend %block-indent-border;
+    }
+    + .cite {
+        @extend %base-vertical-margin-2m;
+        padding-top: 1.5em;
+    }
+    * {
+        @extend %reset-margin;
+    }
+}
+
+ol,
+ul {
+    @extend %base-vertical-margin;
+    @extend %block-indent;
+    @include normalize-list;
+}
+
+li {}
+
+dl {
+    @extend %base-vertical-margin;
+}
+
+dt {
+    @extend %base-vertical-margin-top;
+    font-weight: bold;
+    dt + & {
+        @extend %reset-margin-top;
+    }
+}
+
+dd {}
+
+li,
+dd {
+    ol,
+    ul,
+    dl {
+        @extend %reset-margin;
+    }
+}
+
+figure {
+    @extend %base-vertical-margin-2;
+    @extend %block-indent;
+    @extend %reset-horizontal-margin;
+    &.quote,
+    &.code {
+        @extend %reset-margin;
+        padding: 0;
+    }
+    img {
+        @extend %gray-bordered-image;
+        @include box-sizing(border-box);
+        max-width: 100%;
+        margin-right: 4px;
+    }
+}
+
+figcaption {
+    @extend %small-gray-text-block;
+}
+
+// Text-level semantics
+
+a {
+    @include normalize-a;
+    color: $blue;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+strong,
+b {
+    @include normalize-b;
+}
+
+small {
+    @include normalize-small;
+}
+
+cite {
+    font-style: normal;
+}
+
+q {
+    @include normalize-q;
+}
+
+dfn {
+    @include normalize-dfn;
+}
+
+abbr {
+    @include normalize-abbr;
+}
+
+code,
+samp,
+kbd {
+    @include normalize-monospace;
+    line-height: normal;
+}
+
+sub,
+sup {
+    @include normalize-sub-sup;
+}
+
+sub {
+    @include normalize-sub;
+}
+
+sup {
+    @include normalize-sup;
+}
+
+mark {
+    background-color: mix(yellow, $white, 50%);
+}
+
+br {
+    @include normalize-br;
+}
+
+// Embedded content
+
+img {
+    @include normalize-img;
+}
+
+svg {
+    @include normalize-svg;
+}
+
+// Tabular data
+
+table {
+    @include normalize-table;
+    @extend %base-vertical-margin-2;
+    @extend %small-text;
+    @extend %table-bordered;
+}
+
+caption {
+    padding-bottom: 0.5em;
+    text-align: left;
+}
+
+
+%table-bordered {
+    thead, tbody {
+        border-top: $gray-solid-border-2;
+        border-bottom: $gray-solid-border-2;
+    }
+    th, td {
+        border-bottom: $gray-solid-border;
+        border-top: $gray-solid-border;
+        text-align: left;
+        padding: 0.5em 0 0.5em 32px;
+        padding-left: convert-to-rem(32px);
+        vertical-align: baseline;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+%table-simple {
+    thead, tbody {
+        border-top: $gray-solid-border;
+        border-bottom: $gray-solid-border;
+    }
+    th, td {
+        text-align: left;
+        padding: 0 0 0.5em 32px;
+        padding-left: convert-to-rem(32px);
+        vertical-align: baseline;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    thead tr:first-child {
+        th, td {
+            padding-top: 0.5em;
+        }
+    }
+    tbody tr:first-child {
+        th, td {
+            padding-top: 0.75em;
+        }
+    }
+    tbody tr:last-child {
+        th, td {
+            padding-bottom: 0.75em;
+        }
+    }
+}
+
+
+// Forms
+
+form {
+    @include normalize-form;
+}
+
+fieldset {
+    @include normalize-fieldset;
+}
+
+legend {
+    @include normalize-legend;
+}
+
+@include normalize-form-control;
+
+/* Vertical margin */
+
+// top: 1; bottom: 1;
+%base-vertical-margin {
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(margin-bottom, 1);
+}
+
+// top: 1;
+%base-vertical-margin-top {
+    @include vertical-rhythm(margin-top, 1);
+}
+
+// top: 2; bottom: 2;
+%base-vertical-margin-2 {
+    @include vertical-rhythm(margin-top, 2);
+    @include vertical-rhythm(margin-bottom, 2);
+}
+
+// top: -2; bottom: 2;
+%base-vertical-margin-2m {
+    @include vertical-rhythm(margin-top, -2);
+    @include vertical-rhythm(margin-bottom, 2);
+}
+
+/* Reset margin */
+
+%reset-margin {
+    margin: 0;
+}
+
+%reset-margin-top {
+    margin-top: 0;
+}
+
+%reset-margin-bottom {
+    margin-bottom: 0;
+}
+
+%reset-horizontal-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Vertical padding */
+
+%base-vertical-padding {
+    @include vertical-rhythm(padding-top, 1);
+    @include vertical-rhythm(padding-bottom, 1);
+}
+
+/* Block indent */
+
+%block-indent {
+    @include rem(padding-left, 3rem);
+    @include mq-screen(max-width, $break-width-small) {
+        @include rem(padding-left, 1.5rem);
+    }
+}
+
+%block-indent-border {
+    @extend %block-indent;
+    @extend %border-inset-left-solid;
+}
+
+/* Reset padding */
+
+%reset-padding {
+    padding: 0;
+}
+
+/* Reset list-style */
+
+%reset-list-style {
+    list-style: none;
+}
+
+/* Reset font-size */
+
+%reset-font-size {
+    font-size: 100%;
+}
+
+/* Reset link */
+
+%reset-link {
+    color: inherit;
+    font-weight: inherit;
+    // text-decoration: none;
+}
+
+/* Reset letter-spacing */
+
+%reset-letter-spacing {
+    letter-spacing: normal;
+}
+
+/* Reset word-spacing */
+
+%reset-word-spacing {
+    word-spacing: normal;
+}

@@ -1,0 +1,39 @@
+// List modules
+@charset "UTF-8";
+
+/* Article list */
+
+%article-list {
+    @extend %reset-margin;
+    @extend %reset-padding;
+    @extend %reset-list-style;
+    @include vertical-rhythm(margin-top, 2);
+}
+
+%article-list-item {
+    @extend %reset-margin;
+    @extend %reveal-link;
+    @extend %base-vertical-padding;
+    @extend %border-inset-top-dashed;
+}
+
+
+%article-list-meta {
+    @extend %small-gray-text;
+    display: block;
+}
+
+@include mq-screen(min-width, $break-width-medium) {
+    %article-list-item {
+        display: table;
+        width: 100%;
+    }
+    %article-list-title {
+        display: table-cell;
+        @include rem(width, 36rem);
+    }
+    %article-list-meta {
+        display: table-cell;
+        text-align: right;
+    }
+}

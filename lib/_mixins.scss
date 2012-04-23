@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// Clearfix
+// http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        height: 0; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// inline-block
+@mixin inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+// NIR: Nash Image Replacement method
+// http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+@mixin nir ($src, $width, $height) {
+    width: $width;
+    height: $height;
+    overflow:hidden;
+    *background: url($src) no-repeat;
+    *text-indent: -9999px;
+    &:before {
+        content: url($src);
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+}
+

@@ -1,0 +1,34 @@
+// Headline module
+@charset "UTF-8";
+
+/* Headline */
+%headline {
+    @extend %reset-margin;
+    overflow: hidden;
+}
+
+/* Headline: Re-Make/Re-Model */
+%headline-re-make-re-model {
+    @extend %border-inset-bottom-solid;
+    color: $lightblue;
+    font-family: $condensed, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.0625em;
+    line-height: 1;
+    padding: 0.334em 0;
+    text-align: center;
+    text-transform: uppercase;
+    .hyphen,
+    .slash {
+        color: $paleblue;
+    }
+    a {
+        @extend %reset-link;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @media screen and (min-width: 64em) {
+        margin-top: -0.334em;
+    }
+}
