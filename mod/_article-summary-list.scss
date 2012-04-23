@@ -59,9 +59,3 @@
         @include transition(opacity 0.2s);
     }
 }
-
-@mixin mq($prop, $val) {
-    @media screen and ($prop : $val) {
-        @content;
-    }
-}
