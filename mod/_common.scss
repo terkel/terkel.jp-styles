@@ -1,7 +1,49 @@
 // Common modules
 @charset "UTF-8";
 
+/* Vertical margin */
 
+// top: 1; bottom: 1;
+%base-vertical-margin {
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(margin-bottom, 1);
+}
+
+// top: 1;
+%base-vertical-margin-top {
+    @include vertical-rhythm(margin-top, 1);
+}
+
+// top: 2; bottom: 2;
+%base-vertical-margin-2 {
+    @include vertical-rhythm(margin-top, 2);
+    @include vertical-rhythm(margin-bottom, 2);
+}
+
+// top: -2; bottom: 2;
+%base-vertical-margin-2m {
+    @include vertical-rhythm(margin-top, -2);
+    @include vertical-rhythm(margin-bottom, 2);
+}
+
+/* Reset margin */
+
+%reset-margin {
+    margin: 0;
+}
+
+%reset-margin-top {
+    margin-top: 0;
+}
+
+%reset-margin-bottom {
+    margin-bottom: 0;
+}
+
+%reset-horizontal-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
 
 /* Vertical padding */
 
@@ -10,7 +52,64 @@
     @include vertical-rhythm(padding-bottom, 1);
 }
 
+/* Block indent */
 
+%block-indent {
+    @include rem(padding-left, 3rem);
+    @include mq-screen(max-width, $break-width-small) {
+        @include rem(padding-left, 1.5rem);
+    }
+}
+
+%block-indent-border {
+    @extend %block-indent;
+    @extend %border-inset-left-solid;
+}
+
+/* Reset padding */
+
+%reset-padding {
+    padding: 0;
+}
+
+/* Reset list-style */
+
+%reset-list-style {
+    list-style: none;
+}
+
+/* Reset font-size */
+
+%reset-font-size {
+    font-size: 100%;
+}
+
+/* Reset link */
+
+%reset-link {
+    color: inherit;
+    font-weight: inherit;
+    // text-decoration: none;
+}
+
+/* Reset letter-spacing */
+
+%reset-letter-spacing {
+    letter-spacing: normal;
+}
+
+/* Reset word-spacing */
+
+%reset-word-spacing {
+    word-spacing: normal;
+}
+
+/* Vertical padding */
+
+%base-vertical-padding {
+    @include vertical-rhythm(padding-top, 1);
+    @include vertical-rhythm(padding-bottom, 1);
+}
 
 /* Border inset */
 
@@ -79,8 +178,8 @@
     }
 }
 
-
 /* small text */
+
 %small-text {
     @include font-size($small);
     @include line-height($line-normal);
@@ -114,8 +213,6 @@
     color: $gray;
 }
 
-
-
 /* Caps text */
 
 %caps-text {
@@ -124,8 +221,6 @@
     text-transform: uppercase;
     word-spacing: 0.25em;
 }
-
-
 
 /* Reveal link */
 
@@ -139,8 +234,6 @@
         @include transition(color 0.2s);
     }
 }
-
-
 
 /* Gray bordered image */
 

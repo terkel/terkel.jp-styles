@@ -30,15 +30,13 @@ Tags:        HTML5, CSS3, Sass
 @import "lib/typography";
 @import "base";
 
-@import "mod/common";
-
-// 5. Layout
-@import "layout";
-
-// 6. Modules
+// 5. Modules
 @import "modules";
 @import "lib/prettyprint";
 @import "lib/tipsy";
+
+// 6. Layout
+@import "layout";
 
 // 7. Print
 @import "print";
