@@ -4,11 +4,63 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 @media print {
+    %no-print {
+        display: none;
+    }
+    html {
+        font-size: 12px;
+    }
     body {
         color: black;
         background-color: white;
+        border: 0;
     }
-    .ads {
-        display: none;
+    [role="banner"],
+    [role="main"],
+    [role="contentinfo"] {
+        max-width: none;
+        padding: 0;
+    }
+    [role="banner"] {
+        text-align: left;
+    }
+    .logo h1 {
+        font-family: $base-font-family;
+        font-size: 100%;
+        letter-spacing: 0;
+    }
+    a {
+        font-weight: normal;
+    }
+    .mainContentBody a {
+        text-decoration: underline;
+    }
+    [role="complementary"] a,
+    .copyright a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .url-ref {
+        display: inline !important;
+        color: $gray;
+    }
+    .url-list {
+        @include vertical-rhythm(margin-top, 2);
+        @include vertical-rhythm(padding-top, 2);
+        border-top: $gray-solid-border;
+        display: block !important;
+        font-size: $small;
+        dt {
+            clear: left;
+            color: $gray;
+            float: left;
+            font-weight: normal;
+            margin: 0;
+            width: 2em;
+            text-align: right;
+        }
+        dd {
+            margin: 0 0 0 3em;
+        }
     }
 }

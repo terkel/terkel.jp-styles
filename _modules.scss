@@ -28,6 +28,7 @@
 // Primary nav
 .primaryNav {
     @extend %horizontal-nav-wrapper;
+    @extend %no-print;
     ul {
         @extend %horizontal-nav;
     }
@@ -61,6 +62,7 @@
 // Social buttons
 .socialButtons {
     @extend %social-buttons-wrapper;
+    @extend %no-print;
     h2 {
         @extend %social-buttons-heading;
     }
@@ -111,6 +113,7 @@
 // Ads
 .ads {
     @extend %ads;
+    @extend %no-print;
     .ad-halfbanner {
         @extend %ad-small;
     }
@@ -147,6 +150,7 @@
 // Last.fm widget
 .lastfm-profile {
     @extend %lastfm;
+    @extend %no-print;
     h2 {
         @extend %lastfm-heading;
     }
@@ -215,6 +219,7 @@
 
 // Search form
 .searchForm {
+    @extend %no-print;
     label {
         @extend %search-form-label;
     }

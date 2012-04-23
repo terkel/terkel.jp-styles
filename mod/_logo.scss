@@ -46,6 +46,7 @@
     @extend %reset-letter-spacing;
     @extend %reset-word-spacing;
     @extend %small-gray-text;
+    @extend %no-print;
     font-family: $serif;
     font-style: italic;
     padding-top: 1.5em;

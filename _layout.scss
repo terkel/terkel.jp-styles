@@ -55,6 +55,7 @@
 }
 
 .mainContent > footer {
-        @extend %border-inset-top-solid;
-        @extend %base-vertical-padding;
+    @extend %border-inset-top-solid;
+    @extend %base-vertical-padding;
+    @extend %no-print;
 }
