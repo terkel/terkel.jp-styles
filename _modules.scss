@@ -132,6 +132,7 @@
 // About the Author
 [role="complementary"] {
     @extend %author;
+    @extend %no-print;
     h1 {
         @extend %author-title;
     }
@@ -233,11 +234,16 @@
 
 
 
-// Copyright
-.copyright {
-    @extend %reset-margin;
-    @extend %small-text;
-    @extend %border-inset-top-solid;
-    @extend %base-vertical-padding;
-}
+@import "mod/credits";
 
+// Credits
+.credits {
+    @extend %credits;
+    small {
+        @extend %reset-font-size;
+    }
+    .powered,
+    .subscribe {
+        @extend %no-print;
+    }
+}
