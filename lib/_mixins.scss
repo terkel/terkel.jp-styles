@@ -38,3 +38,9 @@
     }
 }
 
+// Media queries
+@mixin mq-screen ($prop, $val) {
+    @media screen and ($prop: $val) {
+        @content;
+    }
+}

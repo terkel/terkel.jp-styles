@@ -13,27 +13,25 @@ Tags:        HTML5, CSS3, Sass
 
 // 1. Variables, Mixins and Functions
 @import "variables";
-@import "mixins";
-@import "functions";
+// @import "mixins";
+// @import "functions";
 
 // 2. Libraries
 @import "lib/functions";
 @import "lib/mixins";
 @import "lib/mixins-css3";
+@import "lib/normalize";
+@import "lib/typography";
 
 // 3. CSS @import and @font-face
 @import "import";
 @import "font-face";
 
 // 4. Base
-@import "lib/normalize";
-@import "lib/typography";
 @import "base";
 
 // 5. Modules
 @import "modules";
-@import "lib/prettyprint";
-@import "lib/tipsy";
 
 // 6. Layout
 @import "layout";
