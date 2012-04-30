@@ -19,14 +19,14 @@ $fonts-directory: "/fonts";
 $condensed:  "Open Sans Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow";
 $sans-serif: "Open Sans", $helvetica, $gothic, sans-serif;
 $serif:      "Georgia", serif;
-$monospace:  "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
+$monospace:  "Menlo", "Consolas", "Cousin", monospace;
 
 // font-size
 $xx-small:  62.5%; // 10px
-$x-small:   75.0%; // 12px
+$x-small:   75.0%; // 12px - sub/sup
 $small:     87.5%; // 14px - small text
 $medium:   100.0%; // 16px - body text
-$large:    125.0%; // 20px
+$large:    125.0%; // 20px - h3
 $x-large:  150.0%; // 24px - h2
 $xx-large: 200.0%; // 32px - h1
 
@@ -51,10 +51,6 @@ $sub-sup-font-size:     $x-small;
 $break-width-small:  32em;
 $break-width-medium: 48em;
 $break-width-large:  64em;
-
-
-
-
 
 
 
@@ -89,14 +85,8 @@ $gray-dashed-border:  1px dashed $lightgray;
 
 
 
-// Libraries/Modules
+// Modules
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// Normalize/Reset
-$reset: true;
 
 // tipsy
 $tipsy-shadow: none;
-
-
-

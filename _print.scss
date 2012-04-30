@@ -48,11 +48,11 @@
         // vertical-align: top;
     }
     .url-list {
+        @extend %small-text;
         @include vertical-rhythm(margin-top, 2);
         @include vertical-rhythm(padding-top, 2);
         border-top: $gray-solid-border;
         display: block !important;
-        font-size: $small;
         dt {
             clear: left;
             color: $gray;
@@ -63,6 +63,7 @@
             text-align: right;
         }
         dd {
+            // font-family: $monospace;
             margin: 0 0 0 3em;
         }
     }
