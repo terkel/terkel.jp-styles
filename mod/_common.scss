@@ -245,3 +245,8 @@
         border-color: $gray;
     }
 }
+
+%figure-image {
+    @extend %gray-bordered-image;
+    padding: 3px;
+}
