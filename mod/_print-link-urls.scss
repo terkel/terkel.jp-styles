@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* Link URLs for print */
+
+.url-ref {
+    display: none;
+    color: $gray;
+}
+
+.url-list {
+    @extend %small-text;
+    @include vertical-rhythm(margin-top, 2);
+    @include vertical-rhythm(padding-top, 2);
+    border-top: $gray-solid-border;
+    display: none;
+    dt {
+        clear: left;
+        color: $gray;
+        float: left;
+        font-weight: normal;
+        margin: 0;
+        width: 2em;
+        text-align: right;
+    }
+    dd {
+        // font-family: $monospace;
+        margin: 0 0 0 3em;
+    }
+}
