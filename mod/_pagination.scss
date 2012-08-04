@@ -17,6 +17,7 @@
 }
 
 %pagination-link {
+    @extend %reset-link;
     background-color: $palegray;
     border-radius: 3px;
     color: $darkgray;
@@ -24,7 +25,6 @@
     &:hover {
         background-color: $lightgray;
         color: $black;
-        text-decoration: none;
     }
 }
 
