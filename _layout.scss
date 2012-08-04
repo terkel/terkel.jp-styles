@@ -59,11 +59,8 @@
     a {
         @extend %bordered-link;
     }
-    figure a {
+    figure > a {
         border-bottom-width: 0;
-    }
-    figcaption a {
-        border-bottom-width: 1px;
     }
 }
 
