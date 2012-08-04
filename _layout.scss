@@ -59,6 +59,12 @@
     a {
         @extend %bordered-link;
     }
+    figure a {
+        border-bottom-width: 0;
+    }
+    figcaption a {
+        border-bottom-width: 1px;
+    }
 }
 
 /* Main content footer */
