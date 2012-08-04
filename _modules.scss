@@ -144,6 +144,9 @@
     p {
         @extend %author-body;
     }
+        a {
+            @extend %bordered-link;
+        }
     .profileImage {
         @extend %author-image;
     }
@@ -244,6 +247,9 @@
 // Credits
 .credits {
     @extend %credits;
+    a {
+        @extend %bordered-link;
+    }
     small {
         @extend %reset-font-size;
     }

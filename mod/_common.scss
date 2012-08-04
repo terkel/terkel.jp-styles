@@ -88,8 +88,7 @@
 
 %reset-link {
     color: inherit;
-    font-weight: inherit;
-    // text-decoration: none;
+    text-decoration: none;
 }
 
 /* Reset letter-spacing */
@@ -220,6 +219,18 @@
     letter-spacing: 0.125em;
     text-transform: uppercase;
     word-spacing: 0.25em;
+}
+
+/* Bordered link */
+
+%bordered-link {
+    border-bottom: $gray-solid-border;
+    color: $darkblue;
+    text-decoration: none;
+    &:hover {
+        border-bottom-color: $blue;
+        color: $blue;
+    }
 }
 
 /* Reveal link */

@@ -179,12 +179,6 @@ figcaption {
 
 a {
     @include normalize-a;
-    color: $blue;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 em {

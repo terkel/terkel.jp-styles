@@ -54,6 +54,14 @@
     }
 }
 
+/* Main content body */
+.mainContentBody {
+    a {
+        @extend %bordered-link;
+    }
+}
+
+/* Main content footer */
 .mainContent > footer {
     @extend %border-inset-top-solid;
     @extend %base-vertical-padding;

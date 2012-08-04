@@ -24,9 +24,6 @@
     }
     a {
         @extend %reset-link;
-        &:hover {
-            text-decoration: none;
-        }
     }
     @media screen and (min-width: 64em) {
         margin-top: -0.334em;

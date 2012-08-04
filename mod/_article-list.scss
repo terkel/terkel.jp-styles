@@ -12,11 +12,15 @@
 
 %article-list-item {
     @extend %reset-margin;
-    @extend %reveal-link;
     @extend %base-vertical-padding;
     @extend %border-inset-top-dashed;
 }
 
+%article-list-title {
+    a {
+        border-bottom-width: 0;
+    }
+}
 
 %article-list-meta {
     @extend %small-gray-text;

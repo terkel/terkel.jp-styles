@@ -12,7 +12,6 @@
 
 %article-summary-list-item {
     @extend %border-inset-top-dashed;
-    @extend %reveal-link;
     @include vertical-rhythm(padding-top, 2);
     @include vertical-rhythm(padding-bottom, 1);
     %article-summary-list:first-child &:first-child {
@@ -21,12 +20,14 @@
     }
 }
 
-%article-summary-list-link {}
-
 %article-summary-list-title {
     @extend %reset-margin-top;
     @extend %reset-letter-spacing;
     @extend %reset-word-spacing;
+    font-weight: bold;
+    a {
+        border-bottom-width: 0;
+    }
 }
 
 %article-summary-list-meta {
@@ -39,11 +40,11 @@
 }
 
 %article-summary-list-footer {
-    @extend %small-gray-text-block;
+    @extend %small-text-block;
     @include transition(opacity 0.4s);
     text-align: right;
     a {
-        @extend %reset-link;
+        border-bottom-width: 0;
         &:after {
             content: "\2192";
             margin-left: 0.25em;
