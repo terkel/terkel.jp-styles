@@ -164,6 +164,9 @@ figure {
         @extend %reset-margin;
         padding: 0;
     }
+    a {
+        border-bottom-width: 0;
+    }
     img {
         @extend %figure-image;
         @include box-sizing(border-box);
@@ -173,6 +176,9 @@ figure {
 
 figcaption {
     @extend %small-gray-text-block;
+    a {
+        border-bottom-width: 1px;
+    }
 }
 
 // Text-level semantics
