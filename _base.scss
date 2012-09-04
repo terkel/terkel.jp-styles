@@ -10,6 +10,7 @@ html {
     font-family: $base-font-family;
     @include base-font-size();
     @include line-height($base-line-height);
+    text-rendering: optimizeLegibility;
     @include mq-screen(max-width, $break-width-small) {
         @include base-font-size(14px);
     }
