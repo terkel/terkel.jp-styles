@@ -3,23 +3,24 @@
 /*  B A S E
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+
 // The root element
 
 html {
-    @include normalize-html;
     font-family: $base-font-family;
     @include base-font-size();
     @include line-height($base-line-height);
+    overflow-y: scroll;
     text-rendering: optimizeLegibility;
     @include mq-screen(max-width, $break-width-small) {
         @include base-font-size(14px);
     }
 }
 
+
 // Sections
 
 body {
-    @include normalize-body;
     background-color: $white;
     border-top: 0.25em solid $lightblue;
     color: $black;
@@ -62,33 +63,6 @@ h6 {
     @include vertical-rhythm(margin-bottom, -1);
 }
 
-// h2, h3, h4, h5, h6 {
-//     + p,
-//     + ol,
-//     + ul,
-//     + dl,
-//     + dl > dt:first-child {
-//         @extend %reset-margin-top;
-//     }
-// }
-
-// h2, h3 {
-//     + pre,
-//     + blockquote,
-//     + figure,
-//     + table {
-//         @extend %reset-margin-top;
-//     }
-// }
-
-// h4, h5, h6 {
-//     + pre,
-//     + blockquote,
-//     + figure,
-//     + table {
-//         @extend %base-vertical-margin-top;
-//     }
-// }
 
 // Grouping content
 
@@ -96,12 +70,8 @@ p {
     @extend %base-vertical-margin;
 }
 
-hr {
-    @include normalize-hr;
-}
-
 pre {
-    @include normalize-pre;
+    font-family: $monospace;
     @extend %base-vertical-margin-2;
     @extend %block-indent-border;
     @extend %small-text-block;
@@ -128,7 +98,6 @@ ol,
 ul {
     @extend %base-vertical-margin;
     @extend %block-indent;
-    @include normalize-list;
 }
 
 li {}
@@ -178,22 +147,13 @@ figcaption {
 
 // Text-level semantics
 
-a {
-    @include normalize-a;
-}
-
 em {
     font-style: normal;
     font-weight: bold;
 }
 
-strong,
-b {
-    @include normalize-b;
-}
-
 small {
-    @include normalize-small;
+    font-size: $small-font-size;
 }
 
 cite {
@@ -201,59 +161,27 @@ cite {
 }
 
 q {
-    @include normalize-q;
-}
-
-dfn {
-    @include normalize-dfn;
-}
-
-abbr {
-    @include normalize-abbr;
+    quotes: none;
 }
 
 code,
 samp,
 kbd {
-    @include normalize-monospace;
+    font-family: $monospace;
     line-height: normal;
-}
-
-sub,
-sup {
-    @include normalize-sub-sup;
-}
-
-sub {
-    @include normalize-sub;
-}
-
-sup {
-    @include normalize-sup;
 }
 
 mark {
     background-color: mix(yellow, $white, 50%);
 }
 
-br {
-    @include normalize-br;
-}
 
 // Embedded content
 
-img {
-    @include normalize-img;
-}
-
-svg {
-    @include normalize-svg;
-}
 
 // Tabular data
 
 table {
-    @include normalize-table;
     @extend %base-vertical-margin-2;
     @extend %small-text;
     @extend %table-bordered;
@@ -263,7 +191,6 @@ caption {
     padding-bottom: 0.5em;
     text-align: left;
 }
-
 
 %table-bordered {
     thead, tbody {
@@ -313,20 +240,3 @@ caption {
         }
     }
 }
-
-
-// Forms
-
-form {
-    @include normalize-form;
-}
-
-fieldset {
-    @include normalize-fieldset;
-}
-
-legend {
-    @include normalize-legend;
-}
-
-@include normalize-form-control;

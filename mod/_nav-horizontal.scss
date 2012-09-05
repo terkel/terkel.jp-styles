@@ -15,6 +15,7 @@
 
 %horizontal-nav {
     @extend %caps-text;
+    @extend %reset-padding;
     display: table;
     margin: 0 auto;
 }
