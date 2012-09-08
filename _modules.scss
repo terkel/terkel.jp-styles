@@ -187,9 +187,6 @@
     section {
         @extend %article-summary-list-item;
     }
-    header {
-        @extend %article-summary-list-header;
-    }
     h2 {
         @extend %article-summary-list-title;
     }
