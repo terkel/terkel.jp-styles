@@ -15,7 +15,20 @@ $fonts-directory: "/fonts";
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // font-family
-@import      "lib/font-stacks";
+$gothic:      "Hiragino Kaku Gothic ProN", "Meiryo";
+$mincho:      "Hiragino Mincho ProN";
+
+$helvetica:   "Helvetica Neue", "Arial";
+$lucida:      "Lucida Grande", "Verdana";
+$lucida-ja:   "Lucida Grande", $gothic, "Verdana";
+
+$times:       "Times", "Times New Roman";
+$baskerville: "Baskerville", "Baskerville Old Face";
+$palatino:    "Palatino", "Palatino Linotype";
+
+$menlo:       "Menlo", "Consolas";
+$courier:     "Courier New", "Courier";
+
 $condensed:  "Open Sans Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow";
 $sans-serif: "Open Sans", $gothic, sans-serif;
 $serif:      "Georgia", serif;
