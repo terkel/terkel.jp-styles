@@ -169,6 +169,9 @@ samp,
 kbd {
     font-family: $monospace;
     line-height: normal;
+    @include mq-screen(max-width, $break-width-small) {
+        font-family: "M+ 1m", monospace;
+    }
 }
 
 mark {

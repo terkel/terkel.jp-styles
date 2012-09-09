@@ -22,8 +22,8 @@ Tags:        HTML5, CSS3, Sass
 @import "lib/typography";
 
 // 3. CSS @import and @font-face
-@import "import";
-// @import "font-face";
+// @import "import";
+@import "font-face";
 
 // 4. Base
 @import "normalize";

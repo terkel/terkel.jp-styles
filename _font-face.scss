@@ -1,46 +1,36 @@
-// @font-face
 @charset "UTF-8";
 
+/*!
+ * M+ FONTS
+ * Copyright (C) 2002-2008 M+ FONTS PROJECT
+ * 
+ * These fonts are free softwares.
+ * Unlimited permission is granted to use, copy, and distribute it, with
+ * or without modification, either commercially and noncommercially.
+ * THESE FONTS ARE PROVIDED "AS IS" WITHOUT WARRANTY.
+ *
+ * http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/
+ */
 @font-face {
-    font-family: "DejaVu Sans Mono";
-    src: url("#{ $fonts-directory }/DejaVuSansMono-webfont.eot");
-    src: url("#{ $fonts-directory }/DejaVuSansMono-webfont.eot?#iefix") format("embedded-opentype"),
-         url("#{ $fonts-directory }/DejaVuSansMono-webfont.woff") format("woff"),
-         url("#{ $fonts-directory }/DejaVuSansMono-webfont.ttf") format("truetype"),
-         url("#{ $fonts-directory }/DejaVuSansMono-webfont.svg#DejaVuSansMonoBook") format("svg");
+    font-family: "M+ 1m";
+    src: url('#{ $fonts-directory }/mplus-1m-regular-webfont.eot');
+    src: url('#{ $fonts-directory }/mplus-1m-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{ $fonts-directory }/mplus-1m-regular-webfont.woff') format('woff'),
+         url('#{ $fonts-directory }/mplus-1m-regular-webfont.ttf') format('truetype'),
+         url('#{ $fonts-directory }/mplus-1m-regular-webfont.svg#M1mregular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
 
-// @font-face {
-//     font-family: "DejaVu Sans Mono";
-//     src: url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.eot");
-//     src: url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.eot?#iefix") format("embedded-opentype"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.woff") format("woff"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.ttf") format("truetype"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-Oblique-webfont.svg#DejaVuSansMonoOblique") format("svg");
-//     font-weight: normal;
-//     font-style: italic;
-// }
+}
 
 @font-face {
-    font-family: "DejaVu Sans Mono";
-    src: url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.eot");
-    src: url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.eot?#iefix") format("embedded-opentype"),
-         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.woff") format("woff"),
-         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.ttf") format("truetype"),
-         url("#{ $fonts-directory }/DejaVuSansMono-Bold-webfont.svg#DejaVuSansMonoBold") format("svg");
+    font-family: "M+ 1m";
+    src: url('#{ $fonts-directory }/mplus-1m-bold-webfont.eot');
+    src: url('#{ $fonts-directory }/mplus-1m-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{ $fonts-directory }/mplus-1m-bold-webfont.woff') format('woff'),
+         url('#{ $fonts-directory }/mplus-1m-bold-webfont.ttf') format('truetype'),
+         url('#{ $fonts-directory }/mplus-1m-bold-webfont.svg#M1mbold') format('svg');
     font-weight: bold;
     font-style: normal;
-}
 
-// @font-face {
-//     font-family: "DejaVu Sans Mono";
-//     src: url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.eot");
-//     src: url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.eot?#iefix") format("embedded-opentype"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.woff") format("woff"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.ttf") format("truetype"),
-//          url("#{ $fonts-directory }/DejaVuSansMono-BoldOblique-webfont.svg#DejaVuSansMonoBoldOblique") format("svg");
-//     font-weight: bold;
-//     font-style: italic;
-// }
+}
