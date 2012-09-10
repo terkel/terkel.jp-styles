@@ -1,5 +1,5 @@
-// Variables
 @charset "UTF-8";
+
 
 // Project
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -7,32 +7,18 @@
 // Source directories
 $css-directory:   "./css";
 $img-directory:   "./img";
-$fonts-directory: "/fonts";
-
+$fonts-directory: "./fonts";
 
 
 // Typography and Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// font-family
-$gothic:      "Hiragino Kaku Gothic ProN", "Meiryo";
-$mincho:      "Hiragino Mincho ProN";
-
-$helvetica:   "Helvetica Neue", "Arial";
-$lucida:      "Lucida Grande", "Verdana";
-$lucida-ja:   "Lucida Grande", $gothic, "Verdana";
-
-$times:       "Times", "Times New Roman";
-$baskerville: "Baskerville", "Baskerville Old Face";
-$palatino:    "Palatino", "Palatino Linotype";
-
-$menlo:       "Menlo", "Consolas";
-$courier:     "Courier New", "Courier";
-
-$condensed:  "Open Sans Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow";
-$sans-serif: "Open Sans", $gothic, sans-serif;
-$serif:      "Georgia", serif;
-$monospace:  "Menlo", "Consolas", "Cousine", monospace;
+// font stacks
+$sans:      "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+$condensed: "Open Sans Condensed", sans-serif;
+$serif:     "Georgia", serif;
+$serif-amp: "Baskerville", "Baskerville Old Face", "Palatino Linotype", serif;
+$monospace: "Menlo", "Consolas", monospace;
 
 // font-size
 $xx-small:  62.5%; // 10px
@@ -51,20 +37,16 @@ $line-loose:   1.75;
 $line-x-loose: 2.00;
 
 // Base font
-$base-font-family:      $sans-serif;
-$base-font-size:        $medium;
-$base-line-height:      $line-loose;
-
-$monospace-font-family: $monospace;
-$small-font-size:       $small;
-$sub-sup-font-size:     $x-small;
-
+$base-font-family:  $sans;
+$base-font-size:    $medium;
+$base-line-height:  $line-loose;
+$small-font-size:   $small;
+$sub-sup-font-size: $x-small;
 
 // Media query breakpoints
 $break-width-small:  32em;
 $break-width-medium: 48em;
 $break-width-large:  64em;
-
 
 
 // Colors

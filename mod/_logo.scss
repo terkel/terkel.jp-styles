@@ -15,12 +15,12 @@
 }
 
 %logo-main {
-    font-family: $condensed, sans-serif;
-    font-size: 300%; // 48px
-    font-weight: 700;
+    font-family: $condensed;
+    font-size: 300%;
+    font-weight: bold;
     letter-spacing: -0.021em;
+    line-height: 1.75;
     position: relative;
-    line-height: 1.75; // 84px
     &:before {
         background-color: $darkblue;
         border-radius: 0.25em;
@@ -52,7 +52,7 @@
     padding-top: 1.5em;
     position: relative;
     .amp {
-        font-family: $baskerville, $palatino, serif;
+        font-family: $serif-amp;
         font-size: 1.5em;
         letter-spacing: 0.125em;
         line-height: 1;
