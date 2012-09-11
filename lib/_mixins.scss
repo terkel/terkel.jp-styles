@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
 // Clearfix
-// http://nicolasgallagher.com/micro-clearfix-hack/
+// nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix {
     *zoom: 1;
     &:before,
     &:after {
-        content: "";
+        content: " ";
         display: table;
-        height: 0; 
     }
     &:after {
         clear: both;
