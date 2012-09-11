@@ -14,11 +14,12 @@ $fonts-directory: "./fonts";
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // font stacks
-$sans:      "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-$condensed: "Open Sans Condensed", sans-serif;
-$serif:     "Georgia", serif;
-$serif-amp: "Baskerville", "Baskerville Old Face", "Palatino Linotype", serif;
-$monospace: "Menlo", "Consolas", monospace;
+$sans:             "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+$condensed:        "Open Sans Condensed", sans-serif;
+$serif:            "Georgia", serif;
+$serif-amp:        "Baskerville", "Baskerville Old Face", "Palatino Linotype", serif;
+$monospace:        "Menlo", "Consolas", monospace;
+$monospace-narrow: "M+ 1m", monospace;
 
 // font-size
 $xx-small:  62.5%; // 10px
