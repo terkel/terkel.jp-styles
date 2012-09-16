@@ -127,7 +127,6 @@ dd {
 
 figure {
     @extend %base-vertical-margin-2;
-    @extend %block-indent;
     @extend %reset-horizontal-margin;
     &.quote,
     &.code {
