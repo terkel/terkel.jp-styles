@@ -42,8 +42,8 @@ h2 {
     @include vertical-rhythm(margin-bottom, ($base-line-height-px - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
     // @include vertical-rhythm(margin-bottom, (($base-line-height-px * 2) - (convert-to-px($f) + $base-leading)) / $base-line-height-px);
     font-weight: normal;
-    letter-spacing: 0.05em;
-    word-spacing: 0.1em;
+    // letter-spacing: 0.05em;
+    // word-spacing: 0.1em;
 }
 
 h3 {
