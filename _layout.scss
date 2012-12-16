@@ -58,9 +58,9 @@
 .mainContentBody {
     a {
         @extend %bordered-link;
-    }
-    figure > a {
-        border-bottom-width: 0;
+        &.hasImage {
+            border-bottom-width: 0;
+        }
     }
     img {
         @extend %figure-image;
