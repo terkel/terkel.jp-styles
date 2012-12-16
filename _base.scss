@@ -133,11 +133,6 @@ figure {
         @extend %reset-margin;
         padding: 0;
     }
-    img {
-        @extend %figure-image;
-        @include box-sizing(border-box);
-        max-width: 100%;
-    }
 }
 
 figcaption {

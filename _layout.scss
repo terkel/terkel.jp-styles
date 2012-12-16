@@ -62,6 +62,9 @@
     figure > a {
         border-bottom-width: 0;
     }
+    img {
+        @extend %figure-image;
+    }
 }
 
 /* Main content footer */

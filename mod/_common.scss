@@ -259,5 +259,7 @@
 
 %figure-image {
     @extend %gray-bordered-image;
-    padding: 3px;
+    max-width: 96%;
+    @include calc(max-width, "100% - 0.25em * 2 - 1px * 2");
+    padding: 0.25em;
 }
