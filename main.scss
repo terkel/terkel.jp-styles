@@ -1,14 +1,5 @@
 @charset "UTF-8";
-
-/*
-Theme Name:  terkel.jp
-Theme URI:
-Description:
-Version:     4.2
-Author:      Takeru Suzuki
-Author URI:  http://terkel.jp/
-Tags:        HTML5, CSS3, Sass
-*/
+// sass --watch ./scss:./css -t compact
 
 // 1. Variables, Mixins and Functions
 @import "variables";
