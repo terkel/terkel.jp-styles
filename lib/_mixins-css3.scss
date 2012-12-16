@@ -28,6 +28,15 @@
             box-sizing: $sizing;
 }
 
+// calc
+@mixin calc ($prop, $expr) {
+    $prefixes: webkit, moz;
+    @each $prefix in $prefixes {
+        #{ $prop }: -#{ $prefix }-calc(#{ $expr });
+    }
+    #{ $prop }: calc(#{ $expr });
+}
+
 // linear-gradient
 @mixin linear-gradient ($color1, $color2) {
     background-color: $color1;
