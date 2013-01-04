@@ -17,13 +17,13 @@
 %lastfm-list {
     @extend %reset-list-style;
     padding: 0.375em 0 0;
-    margin: 0 -3px;
+    margin: 0 -4px 0 -3px;
 }
 
 %lastfm-item {
     display: inline-block;
     margin-left: 3px;
-    margin-right: 3px;
+    margin-right: 4px;
 }
 
 %lastfm-link {
@@ -33,5 +33,5 @@
 
 %lastfm-image {
     @extend %gray-bordered-image;
-    max-width: 64px;
+    max-width: 63px;
 }

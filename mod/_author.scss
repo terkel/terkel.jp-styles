@@ -8,20 +8,21 @@
 }
 
 %author-title {
-        @extend %reset-font-size;
-        @extend %caps-text;
-        @include line-height($base-line-height);
+    @extend %reset-font-size;
+    @extend %caps-text;
+    @include line-height($base-line-height);
 }
 
 %author-body {
-        @include clearfix;
-        @extend %reset-margin;
-        @extend %small-text-block-top;
+    @include clearfix;
+    @extend %reset-margin;
+    @extend %small-text-block-top;
 }
 
 %author-image {
-        @extend %gray-bordered-image;
-        float: left;
-        margin-right: 12px;
-        margin-top: 0.25em;
+    @extend %gray-bordered-image;
+    float: left;
+    margin-right: 12px;
+    margin-top: 0.25em;
+    width: 48px;
 }
