@@ -24,9 +24,14 @@ body {
     background-color: $white;
     border-top: 0.25em solid $lightblue;
     color: $black;
+}
+
+// adactio.com/journal/5429
+#js-mediaquery {
+    visibility: hidden;
     &:after {
-        display: none;
         content: 'full';
+        display: none;
         @include mq-screen(max-width, $break-width-large) {
             content: 'large';
         }
