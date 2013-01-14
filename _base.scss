@@ -24,6 +24,19 @@ body {
     background-color: $white;
     border-top: 0.25em solid $lightblue;
     color: $black;
+    &:after {
+        display: none;
+        content: 'full';
+        @include mq-screen(max-width, $break-width-large) {
+            content: 'large';
+        }
+        @include mq-screen(max-width, $break-width-medium) {
+            content: 'medium';
+        }
+        @include mq-screen(max-width, $break-width-small) {
+            content: 'small';
+        }
+    }
 }
 
 h1 {
