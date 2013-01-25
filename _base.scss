@@ -28,7 +28,6 @@ body {
 
 // adactio.com/journal/5429
 #js-mediaquery {
-    visibility: hidden;
     &:after {
         content: 'full';
         display: none;
