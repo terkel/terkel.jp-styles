@@ -16,6 +16,7 @@
 
 %lastfm-list {
     @extend %reset-list-style;
+    @extend %reset-margin;
     padding: 0.375em 0 0;
 }
 
