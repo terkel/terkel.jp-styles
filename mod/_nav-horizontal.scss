@@ -6,10 +6,9 @@
 %horizontal-nav-wrapper {
     @extend %base-vertical-padding;
     @extend %border-inset-bottom-solid;
-    @include mq-screen(min-width, $break-width-large) {
-        & {
-            @include vertical-rhythm(margin-bottom, 1);
-        }
+    @include vertical-rhythm(margin-bottom, 1);
+    @include respond($mq-wide-and-below) {
+        margin-bottom: 0;
     }
 }
 

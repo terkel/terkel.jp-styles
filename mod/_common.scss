@@ -56,7 +56,7 @@
 
 %block-indent {
     @include rem(padding-left, 3rem);
-    @include mq-screen(max-width, $break-width-small) {
+    @include respond($mq-narrow-and-below) {
         @include rem(padding-left, 1.5rem);
     }
 }

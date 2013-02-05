@@ -12,7 +12,7 @@ html {
     @include line-height($base-line-height);
     overflow-y: scroll;
     text-rendering: optimizeLegibility;
-    @include mq-screen(max-width, $break-width-small) {
+    @include respond($mq-narrow-and-below) {
         @include base-font-size(14px);
     }
 }
@@ -31,14 +31,14 @@ body {
     &:after {
         content: 'full';
         display: none;
-        @include mq-screen(max-width, $break-width-large) {
-            content: 'large';
+        @include respond($mq-wide-and-below) {
+            content: 'wide';
         }
-        @include mq-screen(max-width, $break-width-medium) {
+        @include respond($mq-medium-and-below) {
             content: 'medium';
         }
-        @include mq-screen(max-width, $break-width-small) {
-            content: 'small';
+        @include respond($mq-narrow-and-below) {
+            content: 'narrow';
         }
     }
 }
@@ -180,7 +180,7 @@ samp,
 kbd {
     font-family: $monospace;
     line-height: normal;
-    @include mq-screen(max-width, $break-width-small) {
+    @include respond($mq-narrow-and-below) {
         font-family: $monospace-narrow;
     }
 }

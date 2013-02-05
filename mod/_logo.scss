@@ -4,13 +4,12 @@
 /* Logo */
 
 %logo {
-    display: inline-block;
-    @include mq-screen(min-width, $break-width-large) {
-        & {
-            position: absolute;
-            left: 2em;
-            width: 12em;
-        }
+    position: absolute;
+    left: 2em;
+    width: 12em;
+    @include respond($mq-wide-and-below) {
+        position: static;
+        width: auto;
     }
 }
 

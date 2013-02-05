@@ -2,33 +2,33 @@
 @charset "UTF-8";
 
 /* Ads */
-
 %ads {
     @include vertical-rhythm(margin-bottom, 3);
     text-align: center;
-    %ad-medium,
-    %ad-large {
+
+    %ad-small,
+    %ad-medium {
         display: none;
     }
-    %ad-small {
-        display: block;
-    }
-    @include mq-screen(min-width, $break-width-small) {
-        & %ad-small,
-        & %ad-large {
-            display: none;
-        }
-        & %ad-medium {
+
+    @include respond($mq-medium-and-below) {
+        %ad-medium {
             display: block;
         }
-    }
-    @include mq-screen(min-width, $break-width-medium) {
-        & %ad-small,
-        & %ad-medium {
+        %ad-small,
+        %ad-large {
             display: none;
         }
-        & %ad-large {
+    }
+
+    @include respond($mq-narrow-and-below) {
+        %ad-small {
             display: block;
         }
+        %ad-medium,
+        %ad-large {
+            display: none;
+        }
     }
+
 }

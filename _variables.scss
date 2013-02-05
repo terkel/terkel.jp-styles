@@ -45,9 +45,9 @@ $small-font-size:   $small;
 $sub-sup-font-size: $x-small;
 
 // Media query breakpoints
-$break-width-small:  32em;
-$break-width-medium: 48em;
-$break-width-large:  64em;
+$mq-wide-and-below:   "screen and (max-width: 64em)"; // <= 1024px
+$mq-medium-and-below: "screen and (max-width: 48em)"; // <=  768px
+$mq-narrow-and-below:           "screen and (max-width: 32em)"; // <=  512px
 
 
 // Colors

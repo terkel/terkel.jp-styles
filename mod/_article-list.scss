@@ -14,9 +14,20 @@
     @extend %reset-margin;
     @extend %base-vertical-padding;
     @extend %border-inset-top-dashed;
+    display: table;
+    width: 100%;
+    @include respond($mq-narrow-and-below) {
+        display: block;
+    }
 }
 
 %article-list-title {
+    display: table-cell;
+    padding-right: 1em;
+    @include respond($mq-narrow-and-below) {
+        display: block;
+        padding-right: 0;
+    }
     a {
         border-bottom-width: 0;
     }
@@ -24,20 +35,11 @@
 
 %article-list-meta {
     @extend %small-gray-text;
-    display: block;
-}
-
-@include mq-screen(min-width, $break-width-medium) {
-    %article-list-item {
-        display: table;
-        width: 100%;
-    }
-    %article-list-title {
-        display: table-cell;
-        @include rem(width, 36rem);
-    }
-    %article-list-meta {
-        display: table-cell;
-        text-align: right;
+    display: table-cell;
+    text-align: right;
+    white-space: nowrap;
+    @include respond($mq-narrow-and-below) {
+        display: block;
+        text-align: left;
     }
 }

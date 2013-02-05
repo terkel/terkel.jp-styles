@@ -38,8 +38,8 @@
 }
 
 // Media queries
-@mixin mq-screen ($prop, $val) {
-    @media screen and ($prop: $val) {
+@mixin respond ($query) {
+    @media #{ $query } {
         @content;
     }
 }
