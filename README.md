@@ -1,1 +1,1 @@
-Sass (SCSS) files for [terkel.jp](http://terkel.jp/)
+Stylesheets for [terkel.jp](http://terkel.jp/)
