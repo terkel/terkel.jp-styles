@@ -1,0 +1,37 @@
+// Directories
+$dir-css:   "../css";
+$dir-img:   "../img";
+$dir-fonts: "../fonts";
+
+// Fonts
+$font-family-sans:   "Open Sans";
+$font-family-gothic: "Hiragino Kaku Gothic ProN", "Meiryo";
+$font-family-mincho: "Hiragino Mincho ProN", "Yu Mincho", "游明朝";
+$font-family-mono:   "Ubuntu Mono", "Menlo", "Consolas";
+
+// Colors
+$color-bg-main:      hsla(  60,  25.000%,  96.875%, 1.000 );
+$color-bg-mark:      hsla(  60, 100.000%,  50.000%, 0.500 );
+$color-bg-selection: hsla( 210, 100.000%,  87.500%, 1.000 );
+$color-bg-gray:      hsla(   0,   0.000%,   0.000%, 0.050 );
+$color-bg-red:       hsla(   0,  50.000%,  75.000%, 0.250 );
+$color-bg-yellow:    hsla(  60,  50.000%,  75.000%, 0.250 );
+$color-bg-bule:      hsla( 210,  50.000%,  75.000%, 0.250 );
+
+$color-fg-main:      hsla( 210, 100.000%,  12.500%, 1.000 );
+$color-fg-darkblue:  hsla( 210, 100.000%,  25.000%, 1.000 );
+$color-fg-blue:      hsla( 210, 100.000%,  50.000%, 1.000 );
+$color-fg-bluegray:  hsla( 210,   6.250%,  43.750%, 1.000 );
+
+// $color-fg-gray:      hsla(   0,   0.000%,   0.000%, 0.500 );
+$color-fg-lightgray: hsla(   0,   0.000%,   0.000%, 0.250 );
+$color-fg-palegray:  hsla(   0,   0.000%,   0.000%, 0.125 );
+
+// $color-fg-gray:      hsla( 210,   6.250%,  50.000%, 1.000 );
+// $color-fg-lightgray: hsla( 210,  12.500%,  75.000%, 1.000 );
+
+$color-white:        hsla(   0,   0.000%, 100.000%, 1.000 );
+$color-black:        hsla(   0,   0.000%,   0.000%, 1.000 );
+
+// Images
+$image-favicon-data: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABJ0lEQVRIx2NgkDSmLRq1YMhZkH3q5fuvX5+vynOiiQVJy85//Qq04MGkAJr4oOoOyPT3X5/u06F2EPnVzFp/5yXYdBB6cmDblt27dx44sKUmgAoWZJ96CzcaHa1KpYYFu2/cuHPnCdzQlw+BXCC68+DOvhwjqsVB9rmPEAvu1NAkmaYufQvxwct9PrSwIGLWcWj4nJpCk4zWfRQaB+dmJdHCgsgDTyER8HxpKi2KCqOOB5AI+Hi+hBZlkU7Z+o8QC+6s16GFBSUbr0Ai4MHuDpqUppNgMXy0N5ImFnQffQC24PXWMifa+OAU1AdPz69vKatqmbV0Rl0SNS3IgVYDCPTx/CwqF9fzT91BtuDpgT7qVzg6AdklZcVJqcVJ0X6jrYpRC4aVBQAodwfqT2mhQAAAAABJRU5ErkJggg==);
