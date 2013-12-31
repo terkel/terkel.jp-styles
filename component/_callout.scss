@@ -1,0 +1,23 @@
+.callout-danger {
+    @extend %callout;
+    background-color: $color-bg-red;
+    color: $color-fg-red;
+}
+
+.callout-warning {
+    @extend %callout;
+    background-color: $color-bg-yellow;
+    color: $color-fg-yellow;
+}
+
+.callout-success {
+    @extend %callout;
+    background-color: $color-bg-green;
+    color: $color-fg-green;
+}
+
+.callout-info {
+    @extend %callout;
+    background-color: $color-bg-bule;
+    color: $color-fg-darkblue;
+}

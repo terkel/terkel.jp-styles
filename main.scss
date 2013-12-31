@@ -1,27 +1,39 @@
-// 1. Variables, Mixins and Functions
-@import "variables";
-// @import "mixins";
-// @import "functions";
+/*! terkel.jp v5.0.0 | github.com/terkel/terkel.jp-stylesheets */
 
-// 2. Libraries
-@import "lib/functions";
-@import "lib/mixins";
-@import "lib/mixins-css3";
-@import "lib/typography";
+// Settings
+@import "settings";
 
-// 3. CSS @import and @font-face
-// @import "import";
-@import "font-face";
+// Modules
+@import "module/clearfix";
+@import "module/decimal";
+@import "module/typography";
 
-// 4. Base
-@import "base/normalize";
-@import "base";
+// Base
+@import "base/base";
 
-// 5. Modules
-@import "modules";
+// Prototypes
+@import "prototype/text";
+@import "prototype/block";
+@import "prototype/callout";
+@import "prototype/image";
+@import "prototype/inline-list";
+// @import "prototype/layout";
 
-// 6. Layout
-@import "layout";
-
-// 7. Print
-@import "print";
+// Components
+@import "component/banner";
+@import "component/main-header";
+@import "component/main-body";
+@import "component/hello";
+@import "component/post-excerpts";
+@import "component/callout";
+@import "component/search";
+@import "component/share";
+@import "component/archives-list";
+@import "component/contentinfo";
+// @import "component/archives-nav";
+// @import "component/ads";
+// @import "component/prettyprint";
+// @import "component/print-link-urls";
+// @import "component/print";
+// @import "component/search";
+// @import "component/share";

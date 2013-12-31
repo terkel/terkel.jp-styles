@@ -1,0 +1,20 @@
+/* Print */
+
+@media print {
+    %no-print {
+        display: none;
+    }
+    html {
+        font-size: 12px;
+    }
+    body {
+        color: black;
+        background-color: white;
+    }
+    .url-ref {
+        display: inline;
+    }
+    .url-list {
+        display: block;
+    }
+}

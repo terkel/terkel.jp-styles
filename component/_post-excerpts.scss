@@ -1,0 +1,39 @@
+/* Post excerpts */
+
+.post-excerpts {
+    @include vertical-rhythm(margin, 2 0);
+    h2 {
+        @extend %block-sideline-right;
+        @extend %text-gray;
+        @extend %text-x-small-allcaps-adjust;
+    }
+    section {
+        @include vertical-rhythm(margin, 2 0);
+    }
+    h3 {
+        margin: 0;
+            color: $color-fg-darkblue;
+    }
+    p {
+        margin: 0;
+    }
+    a {
+        @extend %text-link-sub;
+    }
+    .more-link {
+        @extend %text-small;
+        text-align: right;
+        a:after {
+            content: escape("→");
+        }
+    }
+    .post-meta {
+        @extend %text-small-adjust-bottom;
+        @extend %text-gray;
+        time,
+        .tags {
+            @extend %inline-list-item;
+        }
+    }
+
+}

@@ -1,0 +1,70 @@
+.searchForm {
+    box-sizing: border-box;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.25em;
+    background-color: $color-bg-gray;
+}
+@media (max-width: 32em) {
+    .searchForm {
+        font-size: 12px;
+    }
+}
+
+.searchForm .ctrlgroup-search {
+    display: inline-block;
+    position: relative;
+}
+
+.searchForm input {
+    display: inline-block;
+    /*float: left;*/
+    height: 2.5em;
+    box-sizing: border-box;
+}
+.boxshadow .searchForm input:focus {
+    outline: 0;
+    transition: box-shadow 0.1s;
+}
+.searchForm input[type="search"] {
+    border: 1px solid $color-fg-lightgray;
+    border-radius: 0.25em;
+    padding: 0 6.5em 0 0.5em;
+    width: 24em;
+    max-width: 100%;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 0.25em hsla(0, 0%, 0%, 0.1);
+}
+.searchForm input[type="search"]:focus {
+    box-shadow: inset 0 0 0.25em hsla(0, 0%, 0%, 0.1),
+                        0 0 0.25em 1px hsl(210, 100%, 50%);
+}
+.searchForm input[type="submit"] {
+    color: inherit;
+    cursor: auto;
+    padding: 0;
+    user-select: none;
+    // background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+    background-origin: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0.25em 0.25em 0;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+    padding: 0 0.5em;
+    background-color: hsl(210, 100%, 50%);
+    color: white;
+    width: 6em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.searchForm input[type="submit"]:hover,
+.searchForm input[type="submit"]:focus {
+    // background-image: -webkit-linear-gradient(rgba(128, 128, 128, 0.05), rgba(0, 0, 0, 0.05));
+    background-image: linear-gradient(rgba(128, 128, 128, 0.05), rgba(0, 0, 0, 0.05));
+}
+.searchForm input[type="submit"]:focus {
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1),
+                0 0 0.25em 1px hsl(210, 100%, 50%);
+}

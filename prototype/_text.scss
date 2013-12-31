@@ -1,0 +1,77 @@
+/* Text */
+
+%text-x-large {
+    @include scale-text(x-large);
+}
+
+%text-large {
+    @include scale-text(large);
+}
+
+%text-medium {
+    @include scale-text(medium);
+}
+
+%text-medium-n {
+    @include scale-text(medium-n);
+}
+
+%text-small {
+    @include scale-text(small);
+}
+
+%text-small-adjust {
+    @extend %text-small;
+    @include adjust-leading(small);
+}
+
+%text-small-adjust-top {
+    @extend %text-small;
+    @include adjust-leading(small, top);
+}
+
+%text-small-adjust-bottom {
+    @extend %text-small;
+    @include adjust-leading(small, bottom);
+}
+
+%text-x-small {
+    @include scale-text(x-small);
+}
+
+%text-x-small-adjust {
+    @extend %text-x-small;
+    @include adjust-leading(x-small);
+}
+
+%text-x-small-allcaps {
+    @extend %text-x-small;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+%text-x-small-allcaps-adjust {
+    @extend %text-x-small-allcaps;
+    @include adjust-leading(x-small);
+}
+
+%text-allcaps {
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+%text-gray {
+    color: $color-fg-gray;
+}
+
+%text-link-sub {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
