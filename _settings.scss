@@ -1,0 +1,87 @@
+// Directories
+$dir-css:   "../css";
+$dir-img:   "../img";
+$dir-fonts: "../fonts";
+
+// Media queries
+$media-query-small:  "screen and (max-width: 40em)";
+$media-query-medium: null;
+$media-query-large:  "screen and (min-width: 64em) and (min-height: 64em)";
+$media-query-hidpi:  "print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)";
+
+// Font stacks
+$font-family-sans:   "Open Sans";
+$font-family-serif:  "Georgia";
+$font-family-gothic: "Hiragino Kaku Gothic ProN", "Meiryo";
+$font-family-mincho: "Hiragino Mincho ProN", "Yu Mincho", "游明朝";
+$font-family-mono:   "Ubuntu Mono", "Menlo", "Consolas";
+
+// Type scales
+$type-scales: (
+    media: null,
+    sizes: (
+        x-small:  ( font-size: 12px, line-height: 21px ),
+        small:    ( font-size: 14px, line-height: 21px ),
+        medium-n: ( font-size: 16px, line-height: 21px ),
+        medium:   ( font-size: 16px, line-height: 28px ),
+        large:    ( font-size: 21px, line-height: 28px ),
+        x-large:  ( font-size: 28px, line-height: 42px )
+    )
+), (
+    media: $media-query-small,
+    sizes: (
+        x-small:  ( font-size: 10px, line-height: 18px ),
+        small:    ( font-size: 12px, line-height: 18px ),
+        medium-n: ( font-size: 14px, line-height: 18px ),
+        medium:   ( font-size: 14px, line-height: 24px ),
+        large:    ( font-size: 18px, line-height: 24px ),
+        x-large:  ( font-size: 24px, line-height: 36px )
+    )
+), (
+    media: $media-query-large,
+    sizes: (
+        x-small:  ( font-size: 14px, line-height: 24px ),
+        small:    ( font-size: 16px, line-height: 24px ),
+        medium-n: ( font-size: 18px, line-height: 24px ),
+        medium:   ( font-size: 18px, line-height: 32px ),
+        large:    ( font-size: 24px, line-height: 32px ),
+        x-large:  ( font-size: 32px, line-height: 48px )
+    )
+);
+
+$indent-default-px: 32px;
+$indent-default:    2rem;
+
+// Colors
+$color-bg-main:      hsla(  60,  25.000%,  96.875%, 1.00 );
+$color-bg-mark:      hsla(  60, 100.000%,  50.000%, 0.50 );
+$color-bg-selection: hsla( 210, 100.000%,  87.500%, 1.00 );
+
+$color-bg-gray:      hsla(   0,   0.000%,   0.000%, 0.05 );
+$color-bg-red:       hsla(   0,  50.000%,  75.000%, 0.25 );
+$color-bg-yellow:    hsla(  60,  50.000%,  75.000%, 0.25 );
+$color-bg-green:     hsla( 120,  50.000%,  75.000%, 0.25 );
+$color-bg-bule:      hsla( 210,  50.000%,  75.000%, 0.25 );
+
+$color-fg-main:      hsla( 210, 100.000%,  12.500%, 1.00 );
+$color-fg-darkblue:  hsla( 210, 100.000%,  25.000%, 1.00 );
+$color-fg-blue:      hsla( 210, 100.000%,  50.000%, 1.00 );
+$color-fg-bluegray:  hsla( 210,  25.000%,  50.000%, 1.00 );
+$color-fg-gray:      hsla( 210,   6.250%,  50.000%, 1.00 );
+// $color-fg-gray:      hsla( 210,   6.250%,  43.750%, 1.00 ); // AA
+
+$color-fg-red:       hsla(   0, 100.000%,  25.000%, 1.00 );
+$color-fg-yellow:    hsla(  60, 100.000%,  12.500%, 1.00 );
+$color-fg-green:     hsla( 120, 100.000%,  12.500%, 1.00 );
+
+$color-fg-lightgray: hsla(   0,   0.000%,   0.000%, 0.25 );
+$color-fg-palegray:  hsla(   0,   0.000%,   0.000%, 0.10 );
+
+$color-white:        hsla(   0,   0.000%, 100.000%, 1.00 );
+$color-black:        hsla(   0,   0.000%,   0.000%, 1.00 );
+
+// Images
+$image-favicon-data: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABKElEQVRIx2NgUHCgLRq1YMhZUHz27defP9+uLfSliQUpK6/+/Am04NmUYJr4oPE+yPSvP18e0aV2EEXUzd12/y3YdBB6dXjXrn379x8+sqsumAoWFJ/9CDcaHa3NoIYF++7cu//gFdzQt0+AXCB69OTBkTxzqsVB8aWvEAse1dEkmWas/gjxwdsjvrSwIHLuWWj4nJtNk4zWexIaB5fmZtHCgqTDLyER8HZ5Bi2KCvP+J5AI+Hq1jBZlkW7Vtq8QCx5s06WFBWVbbkEi4Mn+fpqUplNgMXxiQhJNLOg9+QxswccdVb608cE5qA9eXNrWVtXYNnf17MYsalqQB60GEOjrpQVULq4XnnuEbMGLI1OpX+HoBheXVVWlZFSlxEWMtipGLRhWFgAARqxVUzyoqyIAAAAASUVORK5CYII=);
+
+// Decimal precision
+$decimal-precision: 4;

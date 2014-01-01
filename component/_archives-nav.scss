@@ -1,0 +1,24 @@
+/* Archives nav */
+
+.archives-nav {
+    @extend %text-small-adjust-top;
+    @extend %text-gray;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        @extend %inline-list-item;
+        display: inline-block;
+    }
+    em {
+        font-style: normal;
+        font-weight: bold;
+        &:after {
+            content: "*";
+        }
+    }
+    a {
+        @extend %text-link-sub;
+    }
+}

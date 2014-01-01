@@ -1,0 +1,15 @@
+/* Hello section */
+
+.hello {
+    text-align: center;
+    p {
+        margin: 0;
+    }
+    .avatar {
+        @include vertical-rhythm(margin, 0 auto 0.25);
+        @include vertical-rhythm(height, 2.75);
+        border: 0.25rem solid $color-white;
+        box-sizing: border-box;
+        display: block;
+    }
+}

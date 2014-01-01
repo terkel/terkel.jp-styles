@@ -1,0 +1,202 @@
+@function get-default-scale () {
+    @each $scale in $type-scales {
+        @if map-get($scale, media) == null {
+            @return map-get($scale, sizes);
+        }
+    }
+}
+
+$font-size-browser: 16px !default;
+$type-scale-default: get-default-scale() !default;
+
+@function get-font-size ($scale, $size, $root) {
+    $font-size-root: if( $root, $font-size-browser, map-get( map-get( $scale, medium ), font-size ) );
+    $font-size-target: map-get( map-get( $scale, $size ), font-size );
+    @return decimal-ceil( $font-size-target / $font-size-root ) * 1rem;
+}
+
+@function get-line-height ($scale, $size) {
+    $font-size-target: map-get( map-get( $scale, $size ), font-size );
+    $line-height-target: map-get( map-get( $scale, $size ), line-height );
+    @return decimal-ceil( $line-height-target / $font-size-target );
+}
+
+@mixin scale-text ( $size, $root: false, $prop-font-size: true, $prop-line-height: true ) {
+    $scale: $type-scale-default;
+    $font-size-default: if( $prop-font-size, get-font-size( $scale, $size, $root ), null );
+    $line-height-default: if( $prop-line-height, get-line-height( $scale, $size ), null );
+    font-size: $font-size-default;
+    line-height: $line-height-default;
+    @each $item in $type-scales {
+        $media: map-get( $item, media );
+        @if $media {
+            $scale: map-get( $item, sizes );
+            $font-size: if( $prop-font-size, get-font-size( $scale, $size, $root ), null );
+            $line-height: if( $prop-line-height, get-line-height( $scale, $size ), null );
+            @media #{ $media } {
+                font-size: if( $font-size != $font-size-default, $font-size, null );
+                line-height: if( $line-height != $line-height-default, $line-height, null );
+            }
+        }
+    }
+}
+
+@mixin scale-text-root () {
+    @include scale-text( $size: medium, $root: true );
+}
+
+@mixin scale-font-size ( $size ) {
+    @include scale-text( $size, $prop-line-height: false );
+}
+
+@mixin scale-line-height ( $size ) {
+    @include scale-text( $size, $prop-font-size: false );
+}
+
+@function get-vr ( $scale, $rhythm ) {
+    $font-size-root: map-get( map-get( $scale, medium ), font-size );
+    $line-height-root: map-get( map-get( $scale, medium ), line-height);
+    @return decimal-ceil( $line-height-root / $font-size-root * $rhythm ) * 1rem;
+}
+
+@function create-map( $args... ) {
+    @return keywords( $args );
+}
+
+@mixin scale-vr ( $styles ) {
+    $vr-styles: ();
+    @each $prop, $val in $styles {
+        $scale: $type-scale-default;
+        $vr-default: ();
+        @each $rhythm in $val {
+            $vr-default: append($vr-default, if( type-of($rhythm) == number and unitless($rhythm), get-vr( $scale, $rhythm ), $rhythm ) );
+        }
+        $vr-styles: append( $vr-styles, ($prop $vr-default), comma );
+    }
+}
+
+.test-#{ unique-id() } {
+    @include scale-vr((
+        padding: 5px auto 0.25,
+        width: 2.75
+    ));
+}
+
+
+// Set vertical spacing in rem
+//
+// @param {String} $prop CSS property to apply value
+// @param {Number} [$rhythm:1]
+// @param {Boolean} [$fallback:false]
+//
+@mixin vertical-rhythm ($prop, $rhythm: 1, $fallback: false) {
+
+    $scale: $type-scale-default;
+    $vr-default-px: ();
+    $vr-default: ();
+    @each $r in $rhythm {
+        $vr-default-px: append( $vr-default-px, if( type-of($r) == number and unitless($r), get-vr-px( $scale, $r ), $r ) );
+        $vr-default: append($vr-default, if( type-of($r) == number and unitless($r), get-vr( $scale, $r ), $r ) );
+    }
+    #{ $prop }: if( $fallback, $vr-default-px, null );
+    #{ $prop }: $vr-default;
+
+    @each $item in $type-scales {
+        $media: map-get( $item, media );
+        @if $media {
+            $scale: map-get( $item, sizes );
+            $vr-px: ();
+            $vr: ();
+            @each $r in $rhythm {
+                $vr-px: append( $vr-px, if( type-of($r) == number and unitless($r), get-vr-px( $scale, $r ), $r ) );
+                $vr: append($vr, if( type-of($r) == number and unitless($r), get-vr( $scale, $r ), $r ) );
+            }
+            @media #{ $media } {
+                #{ $prop }: if( $fallback, if( $vr-px != $vr-default-px, $vr-px, null ), null );
+                #{ $prop }: if( $vr != $vr-default, $vr, null );
+            }
+        }
+    }
+}
+
+@function get-vr-px ( $scale, $rhythm ) {
+    $line-height-root: map-get( map-get( $scale, medium ), line-height);
+    @return $line-height-root * $rhythm;
+}
+
+@function get-vr ( $scale, $rhythm ) {
+    $font-size-root: map-get( map-get( $scale, medium ), font-size );
+    $line-height-root: map-get( map-get( $scale, medium ), line-height);
+    @return decimal-ceil( $line-height-root / $font-size-root * $rhythm ) * 1rem;
+}
+
+// Adjust leading using vertical padding
+//
+// @param {Map} $scale Map of lists defines font-size and line-height
+// @param {String} $size Current size key in scale
+// @param {String} [$align:justify] (justify|top|bottom)
+//
+@mixin adjust-leading ($size, $align: justify) {
+
+    $scale: $type-scale-default;
+    $font-size-current: map-get(map-get($scale, $size), font-size);
+    $line-height-current:  map-get(map-get($scale, $size), line-height);
+    $line-height-root: map-get(map-get($scale, medium), line-height);
+    $leading-default: get-leading($line-height-root, $line-height-current, $font-size-current);
+    $half-leading-default: get-half-leading($line-height-root, $line-height-current, $font-size-current);
+    @if $align == top {
+        padding-top: $leading-default;
+    } @else if $align == bottom {
+        padding-bottom: $leading-default;
+    } @else {
+        padding-top: $half-leading-default;
+        padding-bottom: $half-leading-default;
+    }
+
+    @each $item in $type-scales {
+        $media: map-get( $item, media );
+        @if $media {
+            $scale: map-get( $item, sizes );
+            $font-size-current: map-get(map-get($scale, $size), font-size);
+            $line-height-current:  map-get(map-get($scale, $size), line-height);
+            $line-height-root: map-get(map-get($scale, medium), line-height);
+            $leading: get-leading($line-height-root, $line-height-current, $font-size-current);
+            $half-leading: get-half-leading($line-height-root, $line-height-current, $font-size-current);
+            @media #{ $media } {
+                @if $align == top {
+                    padding-top: if( $leading != $leading-default, $leading, null );
+                } @else if $align == bottom {
+                    padding-bottom: if( $leading != $leading-default, $leading, null );
+                } @else {
+                    padding-top: if( $half-leading != $half-leading-default, $half-leading, null );
+                    padding-bottom: if( $half-leading != $half-leading-default, $half-leading, null );
+                }
+            }
+        }
+    }
+}
+
+
+// Helper functions
+
+@function get-leading ($line-height-root, $line-height-current, $font-size-current, $flac: 1) {
+    $target: $line-height-root;
+    @while $target < $line-height-current {
+        $target: $target + $line-height-root;
+    }
+
+    @return if( $line-height-root != $line-height-current,
+        decimal-ceil( ($target - $line-height-current) / $font-size-current * 1em * $flac),
+        null
+    );
+
+    // @if $line-height-root == $line-height-current {
+    //     @return null;
+    // } @else {
+    //     @return decimal-ceil( ($target - $line-height-current) / $font-size-current * 1em * $flac, $decimal-precision);
+    // }
+}
+
+@function get-half-leading ($line-height-root, $line-height-current, $font-size-current) {
+    @return get-leading($line-height-root, $line-height-current, $font-size-current, $flac: 1/2);
+}

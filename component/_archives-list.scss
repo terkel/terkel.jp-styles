@@ -1,0 +1,58 @@
+/* Archives list */
+
+// background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'><circle cx='1' cy='1' r='1' fill='rgb(120,128,135)' /></svg>");
+$c: '%23788087';
+
+.archives-list {
+    margin: 0;
+    padding: 0;
+    li {
+        @include vertical-rhythm(margin, 0.5 0);
+        background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2716%27%20height%3D%272%27%3E%3Ccircle%20cx%3D%271%27%20cy%3D%271%27%20r%3D%271%27%20fill%3D%27#{ $c }%27%20%2F%3E%3C%2Fsvg%3E") repeat-x 0 50%;
+        display: flex;
+    }
+    b, time {
+        background-color: $color-bg-main;
+    }
+    b {
+        padding-right: 0.5em;
+        margin-right: 4em;
+    }
+    time {
+        @extend %text-small;
+        color: $color-fg-gray;
+        text-align: right;
+        padding-left: 0.5em;
+        margin-left: auto;
+        align-self: center;
+        white-space: nowrap;
+    }
+    .tags {
+        display: none;
+    }
+    a {
+        @extend %text-link-sub;
+    }
+    @mixin archives-list-simple () {
+        li {
+            @include vertical-rhythm(margin, 1 0);
+            display: block;
+            background-image: none;
+        }
+        b, time {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+        time {
+            text-align: left;
+
+        }
+    }
+    .no-flexbox.no-flexboxlegacy & {
+        @include archives-list-simple();
+    }
+    @media #{ $media-query-small } {
+        @include archives-list-simple();
+    }
+}
