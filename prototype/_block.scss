@@ -63,10 +63,12 @@
 %block-sideline-pesudo {
     border-top: 1px solid $color-fg-palegray;
     content: "";
-    flex: auto;
+    display: inline-block; // for IE
+    flex-grow: 1;
 }
 
 %block-sideline-pesudo-before {
+    @extend %block-sideline;
     &:before {
         @extend %block-sideline-pesudo;
         margin-right: 1em;
@@ -74,6 +76,7 @@
 }
 
 %block-sideline-pesudo-after {
+    @extend %block-sideline;
     &:after {
         @extend %block-sideline-pesudo;
         margin-left: 1em;
@@ -81,17 +84,14 @@
 }
 
 %block-sideline-both {
-    @extend %block-sideline;
     @extend %block-sideline-pesudo-before;
     @extend %block-sideline-pesudo-after;
 }
 
 %block-sideline-left {
-    @extend %block-sideline;
     @extend %block-sideline-pesudo-before;
 }
 
 %block-sideline-right {
-    @extend %block-sideline;
     @extend %block-sideline-pesudo-after;
 }
