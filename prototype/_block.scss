@@ -63,7 +63,7 @@
 %block-sideline-pesudo {
     border-top: 1px solid $color-fg-palegray;
     content: "";
-    display: inline-block; // for IE
+    display: inline; // for IE
     flex-grow: 1;
 }
 
