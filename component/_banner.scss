@@ -21,14 +21,10 @@
             border-top: 1px solid $color-fg-lightgray;
             width: 48px;
             width: 3rem;
-            // left: 50%;
-            // margin-left: -24px;
-            // margin-left: -1.5rem;
         }
         a {
-            border-bottom-width: 0;
+            @extend %text-link-noline;
             color: inherit;
-            text-decoration: none;
         }
     }
 }

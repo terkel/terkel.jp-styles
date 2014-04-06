@@ -74,4 +74,34 @@
     &:focus {
         text-decoration: underline;
     }
+    .backgroundsize.cssgradients & {
+        background-image: none;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            background-image: linear-gradient(currentColor 50%, transparent 50%);
+        }
+    }
+}
+
+%text-link-sub-semibold {
+    @extend %text-link-sub;
+    .backgroundsize.cssgradients & {
+        background-size: 1px 2px;
+    }
+}
+
+%text-link-sub-bold {
+    @extend %text-link-sub;
+    .backgroundsize.cssgradients & {
+        background-size: 1px 4px;
+        @media #{ $media-query-hidpi } {
+            background-size: 1px 2px;
+        }
+    }
+}
+
+%text-link-noline {
+    background-image: none;
+    text-decoration: none;
 }

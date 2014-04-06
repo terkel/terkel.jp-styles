@@ -18,7 +18,7 @@
         margin: 0;
     }
     a {
-        @extend %text-link-sub;
+        @extend %text-link-sub-bold;
     }
     .more-link {
         @extend %text-small;

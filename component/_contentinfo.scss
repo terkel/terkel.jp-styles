@@ -69,7 +69,6 @@
         display: table;
     }
     li {
-        background-color: $color-bg-main;
         display: table-cell;
         padding: 0 0.75em;
     }
@@ -85,7 +84,6 @@
         }
     }
     a {
-        @extend %text-link-sub;
+        @extend %text-link-sub-semibold;
     }
 }
-

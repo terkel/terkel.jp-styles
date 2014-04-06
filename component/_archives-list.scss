@@ -31,7 +31,7 @@ $c: '%23788087';
         display: none;
     }
     a {
-        @extend %text-link-sub;
+        @extend %text-link-sub-semibold;
     }
     @mixin archives-list-simple () {
         li {
