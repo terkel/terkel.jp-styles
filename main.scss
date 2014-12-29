@@ -1,30 +1,10 @@
 /*! terkel.jp v6.0.0 | terkel.mit-license.org/2014 | github.com/terkel/terkel.jp-stylesheets */
 
-// Settings
-@import "settings";
-
 // Modules
-@import "module/clearfix";
-@import "module/decimal";
-@import "module/typography";
+@import "module/ratio";
+
+// Theme
+@import "theme/typography";
 
 // Base
 @import "base/base";
-
-// Prototypes
-@import "prototype/text";
-@import "prototype/block";
-@import "prototype/callout";
-@import "prototype/image";
-@import "prototype/inline-list";
-// @import "prototype/layout";
-
-// Components
-@import "component/banner";
-@import "component/main-header";
-@import "component/main-body";
-@import "component/hello";
-@import "component/post-excerpts";
-@import "component/callout";
-@import "component/archives-list";
-@import "component/contentinfo";
