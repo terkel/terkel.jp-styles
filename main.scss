@@ -1,10 +1,19 @@
 /*! terkel.jp v6.0.0 | terkel.mit-license.org/2014 | github.com/terkel/terkel.jp-stylesheets */
 
 // Modules
+@import "module/easing";
+@import "module/polyrhythm";
 @import "module/ratio";
 
 // Theme
+@import "theme/color";
 @import "theme/typography";
 
 // Base
 @import "base/base";
+
+// Component
+@import "component/pageHeader";
+@import "component/mainHeader";
+@import "component/mainBody";
+@import "component/primaryNav";

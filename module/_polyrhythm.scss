@@ -1,0 +1,58 @@
+$polyrhyhtm-line-height: 1.5rem !default;
+$polyrhyhtm-footer-height: 1rem !default;
+$polyrhythm-baseline-adjust: 0 !default;
+
+$polyrhythm-debug: true;
+$polyrhythm-unit: 0.5rem;
+
+@mixin polyrhythm ( $line-height:     $polyrhyhtm-line-height,
+                    $footer-height:   $polyrhyhtm-footer-height,
+                    $baseline-adjust: $polyrhythm-baseline-adjust ) {
+
+    line-height: $line-height;
+
+    &:before,
+    &:after {
+        content: "";
+        display: inline-block;
+    }
+
+    &:before {
+        height: $line-height;
+        vertical-align: $baseline-adjust;
+    }
+
+    &:after {
+        vertical-align: - $footer-height;
+    }
+
+    @if $polyrhythm-debug {
+        .polyrhythm-debug & {
+            background-color: rgba(red, 0.1);
+
+            &:before,
+            &:after {
+                background-color: rgba(red, 0.25);
+                width: 1em;
+            }
+
+            &:before {
+                margin-left: -1em;
+            }
+
+            &:after {
+                height: $line-height;
+                margin-right: -1em;
+            }
+        }
+    }
+}
+
+
+@if $polyrhythm-debug {
+    .polyrhythm-debug {
+        background-image: linear-gradient(to bottom, rgba(red, 0.25) 1px, transparent 1px);
+        background-repeat: repeat-y;
+        background-size: 100% $polyrhythm-unit;
+    }
+}

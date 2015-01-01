@@ -1,0 +1,54 @@
+.mainHeader[data-component] {
+    box-shadow: 0 1px rgba(black, 0.25);
+    margin-bottom: 4rem;
+    min-height: 24rem;
+    position: relative;
+    padding: 6rem 0 3rem;
+
+    // About などはコンパクトに
+    // min-height: 15rem;
+
+    h1 {
+        @include polyrhythm(3rem, 1rem);
+        font-weight: normal;
+        margin: 0;
+
+        @media (max-width: 500px) {
+            @include polyrhythm(2.5rem, 1rem);
+            font-size: $ratio-minor-seventh + rem;
+        }
+
+        .mincho & {
+            font-family: $font-family-serif, $font-family-mincho, serif;
+        }
+    }
+
+    .meta {
+        color: rgba(black, 0.54);
+        font-size: $ratio-minor-seventh * 0.5 + rem;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        time {
+            @include polyrhythm(1.5rem, 1rem);
+            display: block;
+            letter-spacing: 0.1em;
+            margin-top: -0.5rem;
+        }
+
+        .tags {
+            @include polyrhythm(1.5rem, 1rem);
+            text-transform: lowercase;
+            bottom: 0;
+            position: absolute;
+            right: 0;
+        }
+    }
+}

@@ -1,9 +1,54 @@
-html {
-    font-family: $font-family-sans, $font-family-gothic, sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
-    &.mincho {
-        font-family: $font-family-serif, $font-family-mincho, serif;
+html {
+    box-sizing: border-box;
+    font-family: $font-family-sans, $font-family-gothic, sans-serif;
+    font-size: percentage($ratio-major-second);
+
+    @media (max-width: 1250px) {
+        font-size: percentage($ratio-unison);
     }
+
+    @media (max-width: 750px) {
+        font-size: percentage($ratio-minor-seventh * 0.5);
+    }
+}
+
+body {
+    background-color: $color-offwhite;
+    margin: auto;
+    max-width: 48rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+h1 {
+    font-size: $ratio-major-third * 2 + rem;
+    font-size: $ratio-octave + rem;
+}
+
+h2 {
+    font-size: $ratio-perfect-fifth + rem;
+}
+
+h3 {
+    font-size: $ratio-major-third + rem;
+}
+
+h4 {
+    font-size: $ratio-unison + rem;
+}
+
+h5 {
+    font-size: $ratio-minor-seventh * 0.5 + rem;
+}
+
+h6 {
+    font-size: $ratio-perfect-fifth * 0.5 + rem;
 }
 
 pre,
@@ -11,4 +56,41 @@ code,
 samp,
 kbd {
     font-family: $font-family-mono, monospace;
+    opacity: $ratio-minor-seventh / 2;
+}
+
+a {
+    color:$color-blue;
+}
+
+dfn,
+em,
+i {
+    &:lang(ja) {
+        font-style: normal;
+        font-weight: bold;
+    }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+}
+
+::-moz-selection {
+    background-color: hsla( 210, 100.000%,  87.500%, 1.00 );
+    text-shadow: none;
+}
+
+::selection {
+    background-color: hsla( 210, 100.000%,  87.500%, 1.00 );
+    text-shadow: none;
 }

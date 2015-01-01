@@ -1,0 +1,52 @@
+.pageHeader[data-component] {
+    box-shadow: 0 1px rgba(black, 0.25);
+    background-color: $color-offwhite;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 2;
+
+    .logo {
+        display: block;
+        @include polyrhythm(2rem, 1rem);
+        font-weight: normal;
+        color: rgba(black, 0.54);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &.home {
+            color: $color-blue;
+            font-weight: bold;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .separator {
+        margin: 0 0.1em;
+    }
+}
+
+.toggleNav {
+    position: absolute;
+    bottom: -0.25rem;
+    right: -0.25rem;
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

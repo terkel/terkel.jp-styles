@@ -1,0 +1,49 @@
+.mainBody[data-component] {
+
+    h2 {
+        font-weight: 300;
+    }
+
+    h3 {}
+
+    h4 {}
+
+    h5 {
+        letter-spacing: $ratio-perfect-fifth * 0.05 + em;
+    }
+
+    h6 {
+        letter-spacing: $ratio-minor-seventh * 0.05 + em;
+    }
+
+    p {
+        @include polyrhythm(2rem, 1rem);
+        margin: 1rem 0;
+
+        @media (max-width: 500px) {
+            @include polyrhythm(1.75rem, 0.75rem);
+            margin: 0.75rem 0;
+        }
+    }
+
+    .mincho & {
+        p {
+            font-family: $font-family-serif, $font-family-mincho, serif;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        b,
+        strong,
+        dfn:lang(ja),
+        em:lang(ja),
+        i:lang(ja) {
+            & {
+                font-family: $font-family-sans, $font-family-gothic, sans-serif;
+            }
+        }
+    }
+}
