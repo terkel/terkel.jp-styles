@@ -1,6 +1,4 @@
 .primaryNav[data-component] {
-    // border-bottom: 1px solid rgba(black, 0.25);
-    box-shadow: 0 1px rgba(black, 0.25), 0 -1px rgba(black, 0.25);
     padding: 0.5rem 0;
     text-align: center;
 
@@ -9,6 +7,7 @@
     }
 
     .pageHeader + & {
+        box-shadow: 0 1px $color-border;
         left: 1rem;
         position: absolute;
         right: 1rem;
@@ -29,7 +28,7 @@
 
     ul {
         @include polyrhythm(1.5rem, 1rem);
-        color: rgba(black, 0.54);
+        color: $color-text-secondary;
         display: inline-block;
         font-size: $ratio-perfect-fifth * 0.5 + rem;
         letter-spacing: 0.1em;
@@ -50,12 +49,16 @@
     a {
         text-decoration: none;
 
-        &:hover {
-            text-decoration: underline;
+        &[data-current="true"] {
+            border-bottom: 1px solid;
         }
+
+        // &[href]:hover {
+        //     color: $color-link;
+        // }
     }
 
-    .search {
+    .searchForm {
         display: inline-block;
         position: relative;
         vertical-align: middle;
@@ -68,7 +71,7 @@
             top: 0;
             height: 1rem;
 
-            img {
+            .searchIcon {
                 height: 100%;
                 line-height: 0;
                 vertical-align: top;
@@ -76,7 +79,7 @@
         }
 
         input[type="search"] {
-            background-color: rgba(black, 0.05);
+            background-color: $color-background-highlight;
             border: 0;
             border-radius: 0.25em;
             box-sizing: border-box;

@@ -19,7 +19,8 @@ html {
 }
 
 body {
-    background-color: $color-offwhite;
+    background-color: $color-background;
+    color: $color-text;
     margin: auto;
     max-width: 48rem;
     padding: 0 1rem;
@@ -60,7 +61,7 @@ kbd {
 }
 
 a {
-    color:$color-blue;
+    color: $color-accent;
 }
 
 dfn,

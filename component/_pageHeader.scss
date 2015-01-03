@@ -1,29 +1,29 @@
 .pageHeader[data-component] {
-    box-shadow: 0 1px rgba(black, 0.25);
-    background-color: $color-offwhite;
+    background-color: $color-background;
+    box-shadow: 0 1px $color-border;
+    color: $color-text-secondary;
     padding-top: 1rem;
     position: relative;
     z-index: 2;
 
     .logo {
-        display: block;
         @include polyrhythm(2rem, 1rem);
+        display: block;
         font-weight: normal;
-        color: rgba(black, 0.54);
     }
 
     a {
         color: inherit;
         text-decoration: none;
 
-        &.home {
-            color: $color-blue;
+        &[href="/"] {
+            color: $color-link;
             font-weight: bold;
         }
 
-        &:hover {
-            text-decoration: underline;
-        }
+        // &:hover {
+        //     color: $color-link;
+        // }
     }
 
     .separator {
@@ -39,7 +39,7 @@
     width: 3rem;
     height: 3rem;
 
-    img {
+    .navIcon {
         position: absolute;
         top: 0;
         left: 0;
@@ -48,5 +48,25 @@
         margin: auto;
         width: 1.5rem;
         height: 1.5rem;
+
+        path {
+            fill: $color-text-secondary;
+        }
+    }
+
+    // &:hover {
+    //     .navIcon {
+    //         path {
+    //             fill: $color-link;
+    //         }
+    //     }
+    // }
+
+    &[aria-expanded="true"] {
+        .navIcon {
+            path {
+                fill: $color-text;
+            }
+        }
     }
 }
