@@ -21,9 +21,9 @@
             font-weight: bold;
         }
 
-        // &:hover {
-        //     color: $color-link;
-        // }
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .separator {
@@ -54,18 +54,18 @@
         }
     }
 
-    // &:hover {
-    //     .navIcon {
-    //         path {
-    //             fill: $color-link;
-    //         }
-    //     }
-    // }
-
     &[aria-expanded="true"] {
         .navIcon {
             path {
                 fill: $color-text;
+            }
+        }
+    }
+
+    &:hover {
+        .navIcon {
+            path {
+                fill: $color-link;
             }
         }
     }
