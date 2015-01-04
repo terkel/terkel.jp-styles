@@ -10,22 +10,24 @@
 
     h1 {
         @include polyrhythm(3rem, 1rem);
+        font-family: $font-family-serif, $font-family-mincho, serif;
+        font-size: $font-size-xxxlarge;
         font-weight: normal;
         margin: 0;
 
-        @media (max-width: 500px) {
-            @include polyrhythm(2.5rem, 1rem);
-            font-size: $ratio-minor-seventh + rem;
+        .no-mincho & {
+            font-family: $font-family-sans, $font-family-gothic, sans-serif;
         }
 
-        .mincho & {
-            font-family: $font-family-serif, $font-family-mincho, serif;
+        @media (max-width: 500px) {
+            @include polyrhythm(2.5rem, 1rem);
+            font-size: $font-size-xxlarge;
         }
     }
 
     .meta {
         color: rgba(black, 0.54);
-        font-size: $ratio-minor-seventh * 0.5 + rem;
+        font-size: $font-size-small;
         margin: 0;
 
         a {
@@ -39,7 +41,7 @@
         time {
             @include polyrhythm(1.5rem, 1rem);
             display: block;
-            letter-spacing: 0.1em;
+            letter-spacing: $letter-spacing-small;
             margin-top: -0.5rem;
         }
 

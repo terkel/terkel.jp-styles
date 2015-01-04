@@ -1,49 +1,130 @@
 .mainBody[data-component] {
 
-    h2 {
-        font-weight: 300;
+    font-family: $font-family-serif, $font-family-mincho, serif;
+
+    .no-mincho &,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    em,
+    strong,
+    dfn,
+    i,
+    b,
+    table {
+        font-family: $font-family-sans, $font-family-gothic, sans-serif;
     }
 
-    h3 {}
+    h2 {
+        @include polyrhythm(2rem, 1rem);
+        font-size: $font-size-xlarge;
+        font-weight: normal;
+        margin: 5rem 0 1rem;
+    }
 
-    h4 {}
+    h3 {
+        @include polyrhythm(2rem, 1rem);
+        font-size: $font-size-large;
+        margin: 3rem 0 1rem;
+    }
+
+    h4 {
+        @include polyrhythm(2rem, 1rem);
+        font-size: $font-size-medium;
+        margin: 1rem 0 0;
+    }
 
     h5 {
-        letter-spacing: $ratio-perfect-fifth * 0.05 + em;
+        @include polyrhythm(1.5rem, 1rem);
+        font-size: $font-size-small;
+        letter-spacing: $ratio-fifth * 0.05 + em;
+        margin: 1.5rem 0 0;
     }
 
     h6 {
-        letter-spacing: $ratio-minor-seventh * 0.05 + em;
+        @include polyrhythm(1.5rem, 1rem);
+        font-size: $font-size-xsmall;
+        letter-spacing: $ratio-minor-7th * 0.05 + em;
+        margin: 1.5rem 0 0;
     }
 
-    p {
+    h3,
+    h4,
+    h5,
+    h6 {
+        opacity: 0.75;
+    }
+
+    h4,
+    h5,
+    h6 {
+        + p,
+        + ol,
+        + ul,
+        + dl {
+            margin-top: -1rem;
+        }
+    }
+
+    p,
+    ol,
+    ul,
+    dl {
         @include polyrhythm(2rem, 1rem);
         margin: 1rem 0;
 
-        @media (max-width: 500px) {
-            @include polyrhythm(1.75rem, 0.75rem);
-            margin: 0.75rem 0;
+        // @media (max-width: 500px) {
+        //     @include polyrhythm(1.75rem, 0.75rem);
+        //     margin: 0.75rem 0;
+        // }
+    }
+
+    li,
+    dd {
+        p,
+        ol,
+        ul,
+        dl {
+            margin: 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
         }
     }
 
-    .mincho & {
-        p {
-            font-family: $font-family-serif, $font-family-mincho, serif;
-        }
+    pre {
+        @include polyrhythm(1rem, 0.5rem);
+        font-size: $font-size-small;
+        padding: 0 0 0 2rem;
+        margin: 2rem 0;
+    }
 
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        b,
-        strong,
-        dfn:lang(ja),
-        em:lang(ja),
-        i:lang(ja) {
-            & {
-                font-family: $font-family-sans, $font-family-gothic, sans-serif;
-            }
+    a {
+        border-bottom: 1px solid rgba($color-link, 0.5);
+        text-decoration: none;
+        &:hover {
+            border-bottom-color: inherit;
+            color: inherit;
         }
+    }
+
+    em {}
+
+    strong {
+        border-bottom: double;
+    }
+
+    table {
+        border-collapse: collapse;
+        font-size: $font-size-small;
+    }
+
+    caption {
+        text-align: left;
     }
 }

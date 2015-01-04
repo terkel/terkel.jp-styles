@@ -7,14 +7,14 @@
 html {
     box-sizing: border-box;
     font-family: $font-family-sans, $font-family-gothic, sans-serif;
-    font-size: percentage($ratio-major-second);
+    font-size: percentage($ratio-major-2nd);
 
     @media (max-width: 1250px) {
         font-size: percentage($ratio-unison);
     }
 
     @media (max-width: 750px) {
-        font-size: percentage($ratio-minor-seventh * 0.5);
+        font-size: percentage($ratio-minor-7th * 0.5);
     }
 }
 
@@ -27,41 +27,25 @@ body {
     position: relative;
 }
 
-h1 {
-    font-size: $ratio-major-third * 2 + rem;
-    font-size: $ratio-octave + rem;
-}
-
-h2 {
-    font-size: $ratio-perfect-fifth + rem;
-}
-
-h3 {
-    font-size: $ratio-major-third + rem;
-}
-
-h4 {
-    font-size: $ratio-unison + rem;
-}
-
-h5 {
-    font-size: $ratio-minor-seventh * 0.5 + rem;
-}
-
-h6 {
-    font-size: $ratio-perfect-fifth * 0.5 + rem;
-}
-
 pre,
 code,
 samp,
 kbd {
     font-family: $font-family-mono, monospace;
-    opacity: $ratio-minor-seventh / 2;
+}
+
+code,
+samp,
+kbd {
+    opacity: $ratio-fifth * 0.5;
 }
 
 a {
     color: $color-accent;
+
+    &:not([href]) {
+        color: inherit;
+    }
 }
 
 dfn,
