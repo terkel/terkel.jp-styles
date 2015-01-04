@@ -1,9 +1,0 @@
-/* Ads */
-
-.ads {
-    display: none;
-    @extend %block-aside;
-    .adsbygoogle {
-        @extend %image-figure;
-    }
-}
