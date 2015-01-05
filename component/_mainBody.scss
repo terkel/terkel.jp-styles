@@ -122,21 +122,21 @@
     table {
         border-collapse: collapse;
         font-size: $font-size-xsmall;
-        margin: 2rem 0;
+        margin: 3rem 0;
     }
 
     caption {
         @include polyrhythm(1rem, 0.5rem);
         caption-side: bottom;
         color: $color-text-secondary;
-        padding-top: 0.5rem;
+        padding: 1rem 0 0;
         text-align: left;
     }
 
     th,
     td {
         @include polyrhythm(1rem, 0.5rem);
-        padding: 0.5rem 0 0rem 1rem;
+        padding: 0rem 0 0rem 1rem;
         vertical-align: baseline;
         position: relative;
 
@@ -145,36 +145,41 @@
         }
     }
 
-    th {
-        text-align: left;
-    }
-
-    thead {
-        th {
-            // padding-bottom: 0.5rem;
-        }
-    }
-
-    tbody tr {
+    tr {
         &:first-child {
             th,
             td {
-                &:before {
-                    vertical-align: -1px;
-                }
-                padding-top: 1rem;
-                border-top: 1px solid $color-border;
+                padding-top: 0.5rem;
             }
         }
         &:last-child {
             th,
             td {
-                &:before {
-                    vertical-align: -1px;
-                }
-                border-bottom-color: gray;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid $color-border;
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+
+    thead,
+    tbody {
+        tr:first-child {
+            th,
+            td {
+                box-shadow: inset 0 1px $color-border;
+            }
+        }
+    }
+
+    tfoot,
+    tbody {
+        th {
+            text-align: left;
+        }
+
+        tr:last-child {
+            th,
+            td {
+                box-shadow: 0 1px $color-border;
             }
         }
     }
