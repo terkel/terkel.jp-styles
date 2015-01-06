@@ -8,6 +8,7 @@
     h4,
     h5,
     h6,
+    dt,
     figure,
     em,
     strong,
@@ -69,17 +70,33 @@
         }
     }
 
-    p,
+    p {
+        @include polyrhythm(2rem, 1rem);
+        margin: 1rem 0;
+    }
+
     ol,
     ul,
     dl {
         @include polyrhythm(2rem, 1rem);
-        margin: 1rem 0;
+        margin: -2rem 0;
 
-        // @media (max-width: 500px) {
-        //     @include polyrhythm(1.75rem, 0.75rem);
-        //     margin: 0.75rem 0;
-        // }
+        + ol,
+        + ul,
+        + dl {
+            margin-top: -3rem;
+        }
+    }
+
+    ol,
+    ul {
+        padding-left: 2rem;
+    }
+
+    ul {
+        li {
+            list-style-type: circle;
+        }
     }
 
     li,
@@ -95,6 +112,14 @@
                 display: none;
             }
         }
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 2rem;
     }
 
     pre {
