@@ -139,6 +139,23 @@
         }
     }
 
+    blockquote {
+        margin: 3rem 0;
+        padding-left: 2rem;
+
+        p,
+        footer {
+            @include polyrhythm(1.5rem, 1rem);
+            font-size: $font-size-small;
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            margin-top: -1.5rem;
+            text-align: right;
+        }
+    }
+
     a {
         border-bottom: 1px solid rgba($color-link, 0.5);
         text-decoration: none;
