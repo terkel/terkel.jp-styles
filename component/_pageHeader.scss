@@ -32,12 +32,13 @@
 }
 
 .toggleNav {
-    position: absolute;
     bottom: -0.25rem;
-    right: -0.25rem;
-    line-height: 1;
-    width: 3rem;
+    cursor: default;
     height: 3rem;
+    line-height: 1;
+    position: absolute;
+    right: -0.25rem;
+    width: 3rem;
 
     .navIcon {
         position: absolute;
