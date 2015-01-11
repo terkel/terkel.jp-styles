@@ -122,6 +122,23 @@
         margin-left: 2rem;
     }
 
+    hr {
+        border: 0;
+        color: $color-text-secondary;
+        height: 3rem;
+        line-height: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 2rem;
+        }
+        &:after {
+            content: "*";
+        }
+    }
+
     pre {
         @include polyrhythm(1rem, 0.5rem);
         font-size: $font-size-xsmall;
