@@ -173,6 +173,14 @@
         }
     }
 
+    figure {
+        margin: 3rem 0;
+    }
+
+    figcaption {
+        @extend %text-caption;
+    }
+
     a {
         border-bottom: 1px solid rgba($color-link, 0.5);
         text-decoration: none;
@@ -195,17 +203,9 @@
     }
 
     caption {
-        @include polyrhythm(1rem, 0.5rem);
+        @extend %text-caption;
         caption-side: bottom;
-        color: $color-text-secondary;
-        padding: 1rem 0 0;
         text-align: left;
- 
-        a {
-            border-bottom: 0;
-            color: $color-link-secondary;
-            text-decoration: underline;
-        }
     }
 
     th,
