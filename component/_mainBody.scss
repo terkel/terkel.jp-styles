@@ -164,11 +164,20 @@
         footer {
             @include polyrhythm(1.5rem, 1rem);
             font-size: $font-size-small;
-            margin: 0.5rem 0;
+            // margin: 0.5rem 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p + p {
+            margin-top: -1rem;
+            text-indent: 2em;
         }
 
         footer {
-            margin-top: -1.5rem;
+            margin-top: -1rem;
             text-align: right;
         }
     }
