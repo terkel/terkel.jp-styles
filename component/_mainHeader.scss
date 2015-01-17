@@ -21,6 +21,7 @@
         @media (max-width: 500px) {
             @include polyrhythm(2.5rem, 1rem);
             font-size: $font-size-xxlarge;
+            padding-top: 0.5rem;
         }
     }
 
