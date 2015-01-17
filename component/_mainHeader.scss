@@ -1,6 +1,5 @@
 .mainHeader[data-component] {
-    box-shadow: 0 1px rgba(black, 0.25);
-    margin-bottom: 4rem;
+    box-shadow: 0 1px $color-border;
     min-height: 24rem;
     position: relative;
     padding: 6rem 0 3rem;

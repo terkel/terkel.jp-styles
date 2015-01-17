@@ -9,14 +9,15 @@
 @import "theme/color";
 @import "theme/typography";
 
-// Prototype
-@import "prototype/text";
-
 // Base
 @import "base/base";
+
+// Prototype
+@import "prototype/text";
 
 // Component
 @import "component/pageHeader";
 @import "component/mainHeader";
 @import "component/mainBody";
 @import "component/primaryNav";
+@import "component/pageFooter";

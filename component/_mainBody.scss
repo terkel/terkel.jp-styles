@@ -1,6 +1,7 @@
 .mainBody[data-component] {
 
     font-family: $font-family-serif, $font-family-mincho, serif;
+    padding: 4rem 0;
 
     .no-mincho &,
     h2,
@@ -17,6 +18,10 @@
     b,
     table {
         font-family: $font-family-sans, $font-family-gothic, sans-serif;
+    }
+
+    > :first-child {
+        margin-top: 0;
     }
 
     h2 {
