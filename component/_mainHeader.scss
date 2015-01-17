@@ -4,8 +4,9 @@
     position: relative;
     padding: 6rem 0 3rem;
 
-    // About などはコンパクトに
-    // min-height: 15rem;
+    @media (max-height: 24em) {
+        min-height: 15rem;
+    }
 
     h1 {
         @include polyrhythm(3rem, 1rem);
