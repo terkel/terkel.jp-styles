@@ -7,14 +7,14 @@
 html {
     box-sizing: border-box;
     font-family: $font-family-sans, $font-family-gothic, sans-serif;
-    font-size: percentage($ratio-major-2nd);
+    font-size: percentage($ratio-minor-7th * 0.5);
 
-    @media (max-width: 1250px) {
+    @media (min-width: 48em) {
         font-size: percentage($ratio-unison);
     }
 
-    @media (max-width: 750px) {
-        font-size: percentage($ratio-minor-7th * 0.5);
+    @media (min-width: 80em) {
+        font-size: percentage($ratio-major-2nd);
     }
 }
 
@@ -22,15 +22,7 @@ body {
     @extend %layout-body;
     background-color: $color-background;
     color: $color-text;
-    // margin: auto;
-    // max-width: 48rem;
-    // padding: 0 1rem;
     position: relative;
-
-    // @media (min-width: 24em) {
-    //     padding-left: 2rem;
-    //     padding-right: 2rem;
-    // }
 }
 
 pre,
