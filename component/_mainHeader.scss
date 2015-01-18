@@ -1,28 +1,29 @@
 .mainHeader[data-component] {
     box-shadow: 0 1px $color-border;
-    min-height: 24rem;
+    min-height: 15rem;
     position: relative;
     padding: 6rem 0 3rem;
 
-    @media (max-height: 24em) {
-        min-height: 15rem;
+    @media (min-height: 24em) {
+        min-height: 24rem;
     }
 
     h1 {
-        @include polyrhythm(3rem, 1rem);
+        @include polyrhythm(2.5rem, 1rem);
         font-family: $font-family-serif, $font-family-mincho, serif;
-        font-size: $font-size-xxxlarge;
+        font-size: $font-size-xxlarge;
         font-weight: normal;
         margin: 0;
+        padding-top: 0.5rem;
 
         .no-mincho & {
             font-family: $font-family-sans, $font-family-gothic, sans-serif;
         }
 
-        @media (max-width: 500px) {
-            @include polyrhythm(2.5rem, 1rem);
-            font-size: $font-size-xxlarge;
-            padding-top: 0.5rem;
+        @media (min-width: 24em) {
+            @include polyrhythm(3rem, 1rem);
+            font-size: $font-size-xxxlarge;
+            padding-top: 0;
         }
     }
 
