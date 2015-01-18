@@ -145,10 +145,9 @@
     }
 
     pre {
+        @extend %layout-inset;
         @include polyrhythm(1rem, 0.5rem);
         font-size: $font-size-xsmall;
-        padding: 1rem 0 1rem 2rem;
-        margin: 1rem 0;
         white-space: pre-wrap;
     }
 
@@ -162,8 +161,7 @@
     }
 
     blockquote {
-        margin: 3rem 0;
-        padding-left: 2rem;
+        @extend %layout-inset;
 
         p,
         footer {
@@ -182,13 +180,18 @@
         }
 
         footer {
+            margin-left: 1rem;
             margin-top: -1rem;
+            // text-indent: -1em;
             text-align: right;
+        @media (min-width: 24em) {
+            margin-left: 2rem;
+        }
         }
     }
 
     figure {
-        margin: 3rem 0;
+        @extend %layout-inset;
     }
 
     figcaption {
@@ -211,9 +214,9 @@
     }
 
     table {
+        @extend %layout-inset;
         border-collapse: collapse;
         font-size: $font-size-xsmall;
-        margin: 3rem 0;
     }
 
     caption {

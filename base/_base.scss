@@ -19,12 +19,18 @@ html {
 }
 
 body {
+    @extend %layout-body;
     background-color: $color-background;
     color: $color-text;
-    margin: auto;
-    max-width: 48rem;
-    padding: 0 1rem;
+    // margin: auto;
+    // max-width: 48rem;
+    // padding: 0 1rem;
     position: relative;
+
+    // @media (min-width: 24em) {
+    //     padding-left: 2rem;
+    //     padding-right: 2rem;
+    // }
 }
 
 pre,
