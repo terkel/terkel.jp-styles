@@ -58,14 +58,6 @@
     &[aria-expanded="true"] {
         .navIcon {
             path {
-                fill: $color-text;
-            }
-        }
-    }
-
-    &:hover {
-        .navIcon {
-            path {
                 fill: $color-link;
             }
         }
