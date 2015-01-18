@@ -23,6 +23,7 @@ $color-gray-xxxlight: mix($color-light, $color-dark, percentage(31/32));
 // Site-wide colors
 $color-background:           $color-light;
 $color-background-highlight: $color-gray-xxlight;
+$color-background-marked:    change-color($color-yellow, $lightness: 50% - percentage(1/32));
 $color-text:                 $color-dark;
 $color-text-secondary:       mix($color-light, $color-dark, 50% - percentage(1/16));
 $color-link:                 $color-accent;
