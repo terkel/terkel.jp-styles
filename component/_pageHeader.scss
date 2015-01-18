@@ -55,6 +55,7 @@
         }
     }
 
+    &[data-state-hover="true"],
     &[aria-expanded="true"] {
         .navIcon {
             path {
