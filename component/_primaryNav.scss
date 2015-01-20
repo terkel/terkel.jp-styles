@@ -16,6 +16,11 @@
         visibility: hidden;
         z-index: 1;
 
+        @media (min-width: 32em) {
+            left: 2rem;
+            right: 2rem;
+        }
+
         &[data-state-animating="true"] {
             visibility: visible;
         }
