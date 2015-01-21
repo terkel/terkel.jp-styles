@@ -1,0 +1,40 @@
+.articleSummary[data-component] {
+    margin: 1rem 0;
+
+    a {
+        // color: inherit;
+    }
+
+    h3 {
+        font-family: $font-family-serif, $font-family-mincho, serif;
+        font-weight: normal;
+        opacity: 1;
+        margin: 0;
+
+        .no-mincho & {
+            font-family: $font-family-sans, $font-family-gothic, sans-serif;
+        }
+
+        a {
+            border: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    time {
+        @include polyrhythm(1rem, 0.5rem);
+        display: block;
+        color: $color-text-secondary;
+        font-size: $font-size-xsmall;
+        margin-top: -0.5rem;
+    }
+
+    p {
+        @include polyrhythm(1.5rem, 1rem);
+        font-size: $font-size-small;
+        margin: 0;
+    }
+}

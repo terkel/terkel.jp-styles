@@ -43,6 +43,7 @@ a {
 
     &:not([href]) {
         color: inherit;
+        cursor: default;
     }
 }
 
