@@ -3,6 +3,16 @@
     font-family: $font-family-serif, $font-family-mincho, serif;
     padding: 4rem 0;
 
+    p,
+    li,
+    dd,
+    figcaption,
+    caption {
+        @media (min-width: 32em) {
+            text-align: justify;
+        }
+    }
+
     .no-mincho &,
     h2,
     h3,
