@@ -24,20 +24,19 @@
         position: relative;
         text-transform: uppercase;
 
+        &:before {
+            color: $color-text-secondary;
+            content: "→";
+            padding-right: 0.5em;
+            text-align: right;
+            width: 2rem;
+        }
+
         a {
             border: 0;
 
             &:hover {
                 text-decoration: underline;
-            }
-
-            &:before {
-                color: $color-text-secondary;
-                content: "→";
-                display: inline-block;
-                padding-right: 0.5em;
-                text-align: right;
-                width: 2rem;
             }
         }
     }
