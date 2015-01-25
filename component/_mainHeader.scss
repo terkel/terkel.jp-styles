@@ -27,30 +27,26 @@
     }
 
     .meta {
-        color: rgba(black, 0.54);
+        @include polyrhythm(1.5rem, 1rem);
+        color: $color-text-secondary;
         font-size: $font-size-small;
-        margin: 0;
+        margin: -0.5rem 0 0;
 
         a {
+            color: $color-link-secondary;
             text-decoration: none;
 
             &:hover {
                 text-decoration: underline;
             }
         }
+    }
 
-        time {
-            @include polyrhythm(1.5rem, 1rem);
-            display: block;
-            margin-top: -0.5rem;
-        }
-
-        .tags {
-            @include polyrhythm(1.5rem, 1rem);
-            text-transform: lowercase;
-            bottom: 0;
-            position: absolute;
-            right: 0;
-        }
+    .tags {
+        @include polyrhythm(1.5rem, 1rem);
+        text-transform: lowercase;
+        bottom: 0;
+        position: absolute;
+        right: 0;
     }
 }

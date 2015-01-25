@@ -23,15 +23,16 @@
         }
     }
 
-    time {
+    .meta {
         @include polyrhythm(1rem, 0.5rem);
         display: block;
         color: $color-text-secondary;
+        font-family: $font-family-sans, $font-family-gothic, sans-serif;
         font-size: $font-size-xsmall;
-        margin-top: -0.5rem;
+        margin: -0.5rem 0 0;
     }
 
-    p {
+    .description {
         @include polyrhythm(1.5rem, 1rem);
         font-size: $font-size-small;
         margin: 0;
