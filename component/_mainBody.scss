@@ -69,13 +69,6 @@
         margin: 1.5rem 0 0;
     }
 
-    h3,
-    h4,
-    h5,
-    h6 {
-        opacity: 0.75;
-    }
-
     h4,
     h5,
     h6 {
@@ -161,15 +154,6 @@
         @include polyrhythm(1rem, 0.5rem);
         font-size: $font-size-xsmall;
         white-space: pre-wrap;
-    }
-
-    pre,
-    table {
-        code,
-        samp,
-        kbd {
-            opacity: $ratio-minor-7th * 0.5;
-        }
     }
 
     blockquote {

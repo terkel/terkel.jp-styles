@@ -32,12 +32,6 @@ kbd {
     font-family: $font-family-mono, monospace;
 }
 
-code,
-samp,
-kbd {
-    opacity: $ratio-fifth * 0.5;
-}
-
 a {
     color: $color-accent;
 
