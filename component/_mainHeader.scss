@@ -10,14 +10,13 @@
 
     h1 {
         @include polyrhythm(2.5rem, 1rem);
-        font-family: $font-family-serif, $font-family-mincho, serif;
         font-size: $font-size-xxlarge;
         font-weight: normal;
         margin: 0;
         padding-top: 0.5rem;
 
-        .no-mincho & {
-            font-family: $font-family-sans, $font-family-gothic, sans-serif;
+        .mincho & {
+            font-family: $font-family-serif, $font-family-mincho, serif;
         }
 
         @media (min-width: 24em) {
