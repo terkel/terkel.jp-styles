@@ -57,11 +57,12 @@
         &[href]:hover {
             text-decoration: underline;
         }
-    }
 
-    [data-current="true"] {
-        &:after {
-            content: "*";
+        &[data-current="true"] {
+            &:after {
+                content: "*";
+                display: inline-block;
+            }
         }
     }
 
