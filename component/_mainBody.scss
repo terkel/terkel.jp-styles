@@ -1,6 +1,6 @@
 .mainBody[data-component] {
 
-    padding: 4rem 0;
+    margin: 5rem 0;
 
     p,
     li,
@@ -31,10 +31,6 @@
         table {
             font-family: $font-family-sans, $font-family-gothic, sans-serif;
         }
-    }
-
-    > :first-child {
-        margin-top: 0;
     }
 
     h2 {
