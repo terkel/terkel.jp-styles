@@ -11,7 +11,6 @@
 
 // Base
 @import "base/base";
-@import "base/font-face";
 
 // Prototype
 @import "prototype/layout";
@@ -25,3 +24,7 @@
 @import "component/pageFooter";
 @import "component/articleSummary";
 @import "component/homeSubsection";
+
+// Font
+@import "font/merriweather";
+@import "font/merriweathersans";
