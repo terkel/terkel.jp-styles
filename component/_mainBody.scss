@@ -33,50 +33,6 @@
         }
     }
 
-    h2 {
-        @include polyrhythm(2rem, 1rem);
-        font-size: $font-size-xlarge;
-        font-weight: normal;
-        margin: 5rem 0 1rem;
-    }
-
-    h3 {
-        @include polyrhythm(2rem, 1rem);
-        font-size: $font-size-large;
-        margin: 3rem 0 1rem;
-    }
-
-    h4 {
-        @include polyrhythm(2rem, 1rem);
-        font-size: $font-size-medium;
-        margin: 1rem 0 0;
-    }
-
-    h5 {
-        @include polyrhythm(1.5rem, 1rem);
-        font-size: $font-size-small;
-        letter-spacing: $ratio-fifth * 0.05 + em;
-        margin: 1.5rem 0 0;
-    }
-
-    h6 {
-        @include polyrhythm(1.5rem, 1rem);
-        font-size: $font-size-xsmall;
-        letter-spacing: $ratio-minor-7th * 0.05 + em;
-        margin: 1.5rem 0 0;
-    }
-
-    h4,
-    h5,
-    h6 {
-        + p,
-        + ol,
-        + ul,
-        + dl {
-            margin-top: -1rem;
-        }
-    }
-
     p {
         @include polyrhythm(2rem, 1rem);
         margin: 1rem 0;

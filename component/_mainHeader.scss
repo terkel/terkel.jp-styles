@@ -9,15 +9,8 @@
     }
 
     h1 {
-        @include polyrhythm(2.5rem, 1rem);
-        font-size: $font-size-xxlarge;
-        font-weight: normal;
         margin: 0;
         padding-top: 0.5rem;
-
-        .mincho & {
-            font-family: $font-family-serif, $font-family-mincho, serif;
-        }
 
         @media (min-width: 24em) {
             @include polyrhythm(3rem, 1rem);
