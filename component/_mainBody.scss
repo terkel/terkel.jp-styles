@@ -2,16 +2,6 @@
 
     margin: 5rem 0;
 
-    p,
-    li,
-    dd,
-    figcaption,
-    caption {
-        @media (min-width: 32em) {
-            text-align: justify;
-        }
-    }
-
     .mincho & {
         font-family: $font-family-serif, $font-family-mincho, serif;
 
@@ -33,9 +23,14 @@
         }
     }
 
-    p {
-        @include polyrhythm(2rem, 1rem);
-        margin: 1rem 0;
+    p,
+    li,
+    dd,
+    figcaption,
+    caption {
+        @media (min-width: 32em) {
+            text-align: justify;
+        }
     }
 
     ol,
@@ -77,60 +72,6 @@
 
     dd {
         margin-left: 2rem;
-    }
-
-    hr {
-        border: 0;
-        color: $color-text-secondary;
-        height: 3rem;
-        line-height: 2rem;
-        margin: 1rem 0;
-        text-align: center;
-        &:before {
-            content: "";
-            display: inline-block;
-            height: 2rem;
-        }
-        &:after {
-            content: "*";
-        }
-    }
-
-    pre {
-        @extend %layout-inset;
-        @include polyrhythm(1rem, 0.5rem);
-        font-size: $font-size-xsmall;
-        white-space: pre-wrap;
-    }
-
-    blockquote {
-        @extend %layout-inset;
-
-        p,
-        footer {
-            @include polyrhythm(1.5rem, 1rem);
-            font-size: $font-size-small;
-            // margin: 0.5rem 0;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        p + p {
-            margin-top: -1rem;
-            text-indent: 2em;
-        }
-
-        footer {
-            margin-left: 1rem;
-            margin-top: -1rem;
-            // text-indent: -1em;
-            text-align: right;
-        @media (min-width: 24em) {
-            margin-left: 2rem;
-        }
-        }
     }
 
     figure {

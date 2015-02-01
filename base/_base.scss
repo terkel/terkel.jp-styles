@@ -67,11 +67,71 @@ h6 {
     margin: 1.5rem 0 -2rem;
 }
 
+p {
+    @include polyrhythm(2rem, 1rem);
+    margin: 1rem 0;
+}
+
+hr {
+    border: 0;
+    color: $color-text-secondary;
+    height: 3rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 2rem;
+    }
+
+    &:after {
+        content: "*";
+    }
+}
+
 pre,
 code,
 samp,
 kbd {
     font-family: $font-family-mono, monospace;
+}
+
+pre {
+    @extend %layout-inset;
+    @include polyrhythm(1rem, 0.5rem);
+    font-size: $font-size-xsmall;
+    white-space: pre-wrap;
+}
+
+blockquote {
+    @extend %layout-inset;
+
+    p,
+    footer {
+        @include polyrhythm(1.5rem, 1rem);
+        font-size: $font-size-small;
+    }
+
+    p {
+        margin: 0;
+
+        & + p {
+            margin-top: -1rem;
+            text-indent: 2em;
+        }
+    }
+
+    footer {
+        margin-left: 1rem;
+        margin-top: -1rem;
+        text-align: right;
+
+        @media (min-width: 24em) {
+            margin-left: 2rem;
+        }
+    }
 }
 
 a {
