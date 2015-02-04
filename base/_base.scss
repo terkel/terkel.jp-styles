@@ -78,6 +78,47 @@ p {
     margin: 1rem 0;
 }
 
+ol,
+ul,
+dl {
+    @include polyrhythm(2rem, 1rem);
+    margin: -2rem 0;
+
+    + ol,
+    + ul,
+    + dl {
+        margin-top: -3rem;
+    }
+}
+
+ol,
+ul {
+    padding-left: $indent-medium;
+}
+
+li,
+dd {
+    p,
+    ol,
+    ul,
+    dl {
+        margin: 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: $indent-medium;
+}
+
 hr {
     border: 0;
     color: $color-text-secondary;
@@ -94,6 +135,32 @@ hr {
 
     &:after {
         content: "*";
+    }
+}
+
+figure {
+    margin: 3rem $indent-small;
+
+    @media (min-width: 32em) {
+        margin-left: $indent-medium;
+        margin-right: $indent-medium;
+    }
+}
+
+figcaption {
+    @include polyrhythm(1rem, 0.5rem);
+    color: $color-text-secondary;
+    font-size: $font-size-xsmall;
+    padding: 1rem 0 0;
+
+    a {
+        border-bottom: 0;
+        color: $color-link-secondary;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color-text;
+        }
     }
 }
 
@@ -136,73 +203,6 @@ blockquote {
 
         @media (min-width: 24em) {
             margin-left: $indent-medium;
-        }
-    }
-}
-
-ol,
-ul,
-dl {
-    @include polyrhythm(2rem, 1rem);
-    margin: -2rem 0;
-
-    + ol,
-    + ul,
-    + dl {
-        margin-top: -3rem;
-    }
-}
-
-ol,
-ul {
-    padding-left: $indent-medium;
-}
-
-li,
-dd {
-    p,
-    ol,
-    ul,
-    dl {
-        margin: 0;
-
-        &::before,
-        &::after {
-            display: none;
-        }
-    }
-}
-
-dt {
-    font-weight: bold;
-}
-
-dd {
-    margin-left: $indent-medium;
-}
-
-figure {
-    margin: 3rem $indent-small;
-
-    @media (min-width: 32em) {
-        margin-left: $indent-medium;
-        margin-right: $indent-medium;
-    }
-}
-
-figcaption {
-    @include polyrhythm(1rem, 0.5rem);
-    color: $color-text-secondary;
-    font-size: $font-size-xsmall;
-    padding: 1rem 0 0;
-
-    a {
-        border-bottom: 0;
-        color: $color-link-secondary;
-        text-decoration: underline;
-
-        &:hover {
-            color: $color-text;
         }
     }
 }
