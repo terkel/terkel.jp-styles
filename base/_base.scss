@@ -302,6 +302,10 @@ i {
     }
 }
 
+strong {
+    border-bottom: double;
+}
+
 mark {
     background-color: $color-background-marked;
 }
