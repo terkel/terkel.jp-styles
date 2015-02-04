@@ -33,47 +33,6 @@
         }
     }
 
-    ol,
-    ul,
-    dl {
-        @include polyrhythm(2rem, 1rem);
-        margin: -2rem 0;
-
-        + ol,
-        + ul,
-        + dl {
-            margin-top: -3rem;
-        }
-    }
-
-    ol,
-    ul {
-        padding-left: 2rem;
-    }
-
-    li,
-    dd {
-        p,
-        ol,
-        ul,
-        dl {
-            margin: 0;
-
-            &::before,
-            &::after {
-                display: none;
-            }
-        }
-    }
-
-    dt {
-        font-weight: bold;
-    }
-
-    dd {
-        margin-left: 2rem;
-    }
-
     figure {
         @extend %layout-inset;
     }

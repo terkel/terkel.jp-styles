@@ -119,19 +119,60 @@ blockquote {
 
         & + p {
             margin-top: -1rem;
-            text-indent: 2em;
+            text-indent: $indent-medium;
         }
     }
 
     footer {
-        margin-left: 1rem;
+        margin-left: $indent-small;
         margin-top: -1rem;
         text-align: right;
 
         @media (min-width: 24em) {
-            margin-left: 2rem;
+            margin-left: $indent-medium;
         }
     }
+}
+
+ol,
+ul,
+dl {
+    @include polyrhythm(2rem, 1rem);
+    margin: -2rem 0;
+
+    + ol,
+    + ul,
+    + dl {
+        margin-top: -3rem;
+    }
+}
+
+ol,
+ul {
+    padding-left: $indent-medium;
+}
+
+li,
+dd {
+    p,
+    ol,
+    ul,
+    dl {
+        margin: 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: $indent-medium;
 }
 
 a {
