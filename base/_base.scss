@@ -222,9 +222,8 @@ caption {
 th,
 td {
     @include polyrhythm(1rem, 0.5rem);
-    padding: 0rem 0 0rem 1rem;
+    padding: 0 0 0 1rem;
     vertical-align: baseline;
-    position: relative;
 
     &:first-child {
         padding-left: 0;
