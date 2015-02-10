@@ -1,11 +1,11 @@
 .mainHeader[data-component] {
     box-shadow: 0 1px $color-border;
-    min-height: 15rem;
-    position: relative;
+    min-height: 6rem;
     padding: 6rem 0 3rem;
+    position: relative;
 
     @media (min-height: 24em) {
-        min-height: 24rem;
+        min-height: 15rem;
     }
 
     h1 {

@@ -1,11 +1,4 @@
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 html {
-    box-sizing: border-box;
     font-family: $font-family-sans, $font-family-gothic, sans-serif;
     font-size: percentage($ratio-minor-7th * 0.5);
 
