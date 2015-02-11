@@ -1,10 +1,9 @@
 .primaryNav[data-component] {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0.5rem 0;
-    text-align: center;
-
-    @media (max-width: 500px) {
-        padding: 0.5rem 0 1rem;
-    }
 
     .pageHeader + & {
         box-shadow: 0 1px $color-border;
@@ -29,7 +28,6 @@
     ul {
         @include polyrhythm(1.5rem, 1rem);
         color: $color-text-secondary;
-        display: inline-block;
         font-size: $font-size-xsmall;
         letter-spacing: 0.1em;
         margin: 0 1rem;
@@ -62,9 +60,8 @@
     }
 
     .searchForm {
-        display: inline-block;
+        margin: 0.25rem 0;
         position: relative;
-        vertical-align: middle;
 
         label {
             bottom: 0;
@@ -86,8 +83,6 @@
             border: 0;
             border-radius: 0.25em;
             box-sizing: border-box;
-            display: block;
-            font-size: 16px;
             line-height: 1.5rem;
             max-width: 100%;
             padding: 0.25rem 0 0.25rem 2rem;
