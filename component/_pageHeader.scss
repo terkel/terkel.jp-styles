@@ -6,10 +6,16 @@
     position: relative;
     z-index: 2;
 
-    .logo {
+    h1,
+    .breadcrumbs {
         @include polyrhythm(2rem, 1rem);
-        display: block;
-        font-weight: normal;
+        margin: 0;
+    }
+
+    h1 {
+        font-family: $font-family-sans;
+        font-size: inherit;
+        font-weight: bold;
     }
 
     a {
@@ -29,37 +35,37 @@
     .separator {
         margin: 0 0.1em;
     }
-}
 
-.toggleNav {
-    bottom: -0.25rem;
-    cursor: default;
-    height: 3rem;
-    line-height: 1;
-    position: absolute;
-    right: -0.25rem;
-    width: 3rem;
-
-    .navIcon {
+    .toggleNav {
+        bottom: -0.25rem;
+        cursor: default;
+        height: 3rem;
+        line-height: 1;
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-        width: 1.5rem;
-        height: 1.5rem;
+        right: -0.25rem;
+        width: 3rem;
 
-        path {
-            fill: $color-text-secondary;
-        }
-    }
-
-    &[data-state-hover="true"],
-    &[aria-expanded="true"] {
         .navIcon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 1.5rem;
+            height: 1.5rem;
+
             path {
-                fill: $color-text;
+                fill: $color-text-secondary;
+            }
+        }
+
+        &[data-state-hover="true"],
+        &[aria-expanded="true"] {
+            .navIcon {
+                path {
+                    fill: $color-text;
+                }
             }
         }
     }
