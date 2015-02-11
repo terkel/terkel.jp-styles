@@ -1,9 +1,8 @@
-$polyrhyhtm-line-height: 1.5rem !default;
-$polyrhyhtm-footer-height: 1rem !default;
+$polyrhythm-debug: false !default;
+$polyrhythm-unit: 0.5rem !default;
+$polyrhyhtm-line-height: $polyrhythm-unit * 3 !default;
+$polyrhyhtm-footer-height: $polyrhythm-unit * 2 !default;
 $polyrhythm-baseline-adjust: 0 !default;
-
-$polyrhythm-debug: true;
-$polyrhythm-unit: 0.5rem;
 
 @mixin polyrhythm ( $line-height:     $polyrhyhtm-line-height,
                     $footer-height:   $polyrhyhtm-footer-height,
