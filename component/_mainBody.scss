@@ -23,16 +23,6 @@
         }
     }
 
-    p,
-    li,
-    dd,
-    figcaption,
-    caption {
-        @media (min-width: 32em) {
-            text-align: justify;
-        }
-    }
-
     a {
         border-bottom: 1px solid rgba($color-link, 0.5);
         text-decoration: none;
