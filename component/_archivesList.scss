@@ -1,0 +1,27 @@
+.archivesList[data-component] {
+    line-height: 1.5rem;
+    padding: 0;
+
+    a {
+        border: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li {
+        align-items: baseline;
+        display: flex;
+        list-style-type: none;
+        margin: 0.5rem 0;
+    }
+
+    time {
+        color: $color-text-secondary;
+        flex: 0 0 4rem;
+        font-family: $font-family-sans;
+        font-size: $font-size-xsmall;
+        line-height: normal;
+    }
+}

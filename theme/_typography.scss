@@ -1,0 +1,23 @@
+// Font family
+$font-family-serif:  "Merriweather";
+$font-family-sans:   "Merriweather Sans";
+$font-family-mincho: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN";
+$font-family-gothic: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo";
+$font-family-mono:   "Menlo", "Consolas";
+
+// Font size
+$font-size-xxxlarge: $ratio-octave          + rem;
+$font-size-xxlarge:  $ratio-minor-7th       + rem;
+$font-size-xlarge:   $ratio-fifth           + rem;
+$font-size-large:    $ratio-major-3rd       + rem;
+$font-size-medium:   $ratio-unison          + rem;
+$font-size-small:    $ratio-minor-7th * 0.5 + rem;
+$font-size-xsmall:   $ratio-fifth     * 0.5 + rem;
+
+// Letter spacing
+$letter-spacing-medium: $ratio-major-3rd * 0.05 + em;
+$letter-spacing-small:  $ratio-fifth     * 0.05 + em;
+$letter-spacing-xsmall: $ratio-minor-7th * 0.05 + em;
+
+$indent-medium: 2rem;
+$indent-small:  1rem;

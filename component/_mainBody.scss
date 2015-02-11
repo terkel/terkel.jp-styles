@@ -1,0 +1,34 @@
+.mainBody[data-component] {
+
+    margin: 5rem 0;
+
+    .mincho & {
+        font-family: $font-family-serif, $font-family-mincho, serif;
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        blockquote,
+        dt,
+        figure,
+        em,
+        strong,
+        dfn,
+        i,
+        b,
+        table {
+            font-family: $font-family-sans, $font-family-gothic, sans-serif;
+        }
+    }
+
+    a {
+        border-bottom: 1px solid rgba($color-link, 0.5);
+        text-decoration: none;
+        &:hover {
+            border-bottom-color: inherit;
+            color: inherit;
+        }
+    }
+}

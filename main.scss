@@ -1,37 +1,27 @@
-/*! terkel.jp v5.0.0 | github.com/terkel/terkel.jp-stylesheets */
-
-// Settings
-@import "settings";
+/*! terkel.jp v6.0.0 | terkel.mit-license.org/2014 | github.com/terkel/terkel.jp-stylesheets */
 
 // Modules
-@import "module/clearfix";
-@import "module/decimal";
-@import "module/typography";
+@import "module/easing";
+@import "module/polyrhythm";
+@import "module/ratio";
+
+// Theme
+@import "theme/color";
+@import "theme/typography";
 
 // Base
 @import "base/base";
 
-// Prototypes
-@import "prototype/text";
-@import "prototype/block";
-@import "prototype/callout";
-@import "prototype/image";
-@import "prototype/inline-list";
-// @import "prototype/layout";
+// Component
+@import "component/pageHeader";
+@import "component/mainHeader";
+@import "component/mainBody";
+@import "component/primaryNav";
+@import "component/pageFooter";
+@import "component/articleSummary";
+@import "component/homeSubsection";
+@import "component/archivesList";
 
-// Components
-@import "component/banner";
-@import "component/main-header";
-@import "component/main-body";
-@import "component/hello";
-@import "component/post-excerpts";
-@import "component/callout";
-@import "component/archives-list";
-@import "component/contentinfo";
-// @import "component/archives-nav";
-// @import "component/ads";
-// @import "component/prettyprint";
-// @import "component/print-link-urls";
-// @import "component/print";
-// @import "component/search";
-// @import "component/share";
+// Font
+@import "font/merriweather";
+@import "font/merriweathersans";
