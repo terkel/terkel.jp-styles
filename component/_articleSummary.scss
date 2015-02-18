@@ -1,8 +1,8 @@
 .articleSummary[data-component] {
     margin: 1rem 0;
 
-    a {
-        // color: inherit;
+    @media (min-height: 24em) {
+        margin: 3rem 0;
     }
 
     h3 {
