@@ -38,6 +38,7 @@
 
     .toggleNav {
         bottom: -0.25rem;
+        color: $color-text-secondary;
         cursor: default;
         height: 3rem;
         line-height: 1;
@@ -54,19 +55,11 @@
             margin: auto;
             width: 1.5rem;
             height: 1.5rem;
-
-            path {
-                fill: $color-text-secondary;
-            }
         }
 
         &[data-state-hover="true"],
         &[aria-expanded="true"] {
-            .navIcon {
-                path {
-                    fill: $color-text;
-                }
-            }
+            color: $color-text;
         }
     }
 }

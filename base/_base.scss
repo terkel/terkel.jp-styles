@@ -315,6 +315,10 @@ img {
     max-width: 100%;
 }
 
+svg {
+    fill: currentColor;
+}
+
 ::-moz-selection {
     background-color: hsla( 210, 100.000%,  87.500%, 1.00 );
     text-shadow: none;
