@@ -171,6 +171,19 @@ pre {
     white-space: pre-wrap;
 }
 
+code,
+samp,
+kbd {
+    opacity: $ratio-minor-7th * 0.5;
+
+    pre &,
+    code &,
+    samp &,
+    kbd & {
+        opacity: 1;
+    }
+}
+
 blockquote {
     @extend figure;
 
