@@ -1,6 +1,6 @@
 .mainBody[data-component] {
-
-    margin: 5rem 0;
+    @include vertical-rhythm(margin-bottom, 3);
+    @include vertical-rhythm(margin-top, 3);
 
     .mincho & {
         font-family: $font-family-serif, $font-family-mincho, serif;
