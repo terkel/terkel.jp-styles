@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-    @include vertical-rhythm(line-height, 1.5);
+    @include vertical-rhythm(line-height, 9/6);
     font-size: $font-size-xxlarge;
     font-weight: normal;
     margin: 0;
@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-    @include vertical-rhythm(line-height, 1.333);
+    @include vertical-rhythm(line-height, 8/6);
     @include vertical-rhythm(margin-bottom, 1);
     @include vertical-rhythm(margin-top, 3);
     font-size: $font-size-xxlarge;
@@ -55,28 +55,26 @@ h3 {
 }
 
 h4 {
-    @include vertical-rhythm(line-height, 0.833);
+    @include vertical-rhythm(line-height, 5/6);
     @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 0.083);
-    @include vertical-rhythm(padding-top, 0.083);
+    @include vertical-rhythm(padding-bottom, 1/6);
     font-size: $font-size-medium;
     margin-bottom: 0;
 }
 
 h5 {
-    @include vertical-rhythm(line-height, 0.833);
+    @include vertical-rhythm(line-height, 5/6);
     @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 0.083);
-    @include vertical-rhythm(padding-top, 0.083);
+    @include vertical-rhythm(padding-bottom, 1/6);
     font-size: $font-size-small;
     margin-bottom: 0;
 }
 
 h6 {
-    @include vertical-rhythm(line-height, 0.667);
+    @include vertical-rhythm(line-height, 4/6);
     @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 0.167);
-    @include vertical-rhythm(padding-top, 0.167);
+    @include vertical-rhythm(padding-bottom, 1/6);
+    @include vertical-rhythm(padding-top, 1/6);
     font-size: $font-size-xsmall;
     margin-bottom: 0;
 }
@@ -147,7 +145,7 @@ table {
 blockquote {
     p,
     footer {
-        @include vertical-rhythm(line-height, 0.833);
+        @include vertical-rhythm(line-height, 5/6);
         font-size: $font-size-small;
     }
 
@@ -178,7 +176,7 @@ kbd {
 }
 
 pre {
-    @include vertical-rhythm(line-height, 0.667);
+    @include vertical-rhythm(line-height, 4/6);
     font-size: $font-size-xsmall;
     white-space: pre-wrap;
 }
@@ -198,8 +196,8 @@ kbd {
 
 figcaption,
 caption {
-    @include vertical-rhythm(line-height, 0.667);
-    @include vertical-rhythm(padding-top, 0.667);
+    @include vertical-rhythm(line-height, 4/6);
+    @include vertical-rhythm(padding-top, 4/6);
     color: $color-text-secondary;
     font-size: $font-size-xsmall;
 
@@ -225,9 +223,9 @@ caption {
 
 th,
 td {
-    @include vertical-rhythm(line-height, 0.667);
-    @include vertical-rhythm(padding-bottom, 0.167);
-    @include vertical-rhythm(padding-top, 0.167);
+    @include vertical-rhythm(line-height, 4/6);
+    @include vertical-rhythm(padding-bottom, 1/6);
+    @include vertical-rhythm(padding-top, 1/6);
     font-size: $font-size-xsmall;
     padding-left: 1rem;
     vertical-align: baseline;
@@ -237,21 +235,21 @@ td {
     }
 
     tr:first-child & {
-        @include vertical-rhythm(padding-top, 0.667);
+        @include vertical-rhythm(padding-top, 4/6);
     }
 
     tr:last-child & {
-        @include vertical-rhythm(padding-bottom, 0.667);
+        @include vertical-rhythm(padding-bottom, 4/6);
     }
 
     thead tr:first-child &,
     tfoot tr:first-child & {
-        @include vertical-rhythm(padding-top, 0.333);
+        @include vertical-rhythm(padding-top, 2/6);
     }
 
     thead tr:last-child &,
     tfoot tr:last-child & {
-        @include vertical-rhythm(padding-bottom, 0.333);
+        @include vertical-rhythm(padding-bottom, 2/6);
     }
 
     thead tr:first-child &,

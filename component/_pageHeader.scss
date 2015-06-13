@@ -1,5 +1,5 @@
 [role="banner"][data-component] {
-    @include vertical-rhythm(padding-top, 0.5);
+    @include vertical-rhythm(padding-top, 3/6);
     background-color: $color-background;
     box-shadow: 0 1px $color-border;
     color: $color-text-secondary;
@@ -22,7 +22,7 @@
         }
 
         &::after {
-            @include vertical-rhythm(vertical-align, -0.5);
+            @include vertical-rhythm(vertical-align, -3/6);
         }
     }
 
@@ -51,8 +51,8 @@
     }
 
     .toggleNav {
-        @include vertical-rhythm(height, 1.5);
-        @include vertical-rhythm(width, 1.5);
+        @include vertical-rhythm(height, 9/6);
+        @include vertical-rhythm(width, 9/6);
         color: $color-text-secondary;
         bottom: 0;
         cursor: default;
