@@ -1,5 +1,5 @@
 .archivesList[data-component] {
-    line-height: 1.5rem;
+    @include vertical-rhythm(line-height, 5/6);
     padding: 0;
 
     a {
@@ -11,15 +11,16 @@
     }
 
     li {
+        @include vertical-rhythm(margin-bottom, 2/6);
+        @include vertical-rhythm(margin-top, 2/6);
         align-items: baseline;
         display: flex;
         list-style-type: none;
-        margin: 0.5rem 0;
     }
 
     time {
         color: $color-text-secondary;
-        flex: 0 0 4rem;
+        flex: 0 0 5em;
         font-family: $font-family-sans;
         font-size: $font-size-xsmall;
         line-height: normal;
