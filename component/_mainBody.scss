@@ -1,4 +1,4 @@
-.mainBody[data-component] {
+.MainBody {
     @include vertical-rhythm(margin-bottom, 3);
     @include vertical-rhythm(margin-top, 3);
 
@@ -21,11 +21,5 @@
         table {
             font-family: $font-family-sans, $font-family-gothic, sans-serif;
         }
-    }
-
-    a {
-        // &:hover {
-        //     color: inherit;
-        // }
     }
 }

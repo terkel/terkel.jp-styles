@@ -1,6 +1,6 @@
-.homeSubsection[data-component] {
+.HomeSubsection {
 
-    & + .homeSubsection {
+    & + & {
         @include vertical-rhythm(margin-top, 9/6);
         @include vertical-rhythm(padding-top, 9/6);
         box-shadow: inset 0 1px $color-border;

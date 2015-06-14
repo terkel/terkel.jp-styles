@@ -1,4 +1,4 @@
-.mainHeader[data-component] {
+.MainHeader {
     @include vertical-rhythm(padding-bottom, 1.5);
     @include vertical-rhythm(padding-top, 3);
     box-shadow: 0 1px $color-border;

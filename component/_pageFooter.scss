@@ -1,4 +1,4 @@
-[role="contentinfo"][data-component] {
+.PageFooter {
     @include vertical-rhythm(padding-bottom, 2);
     @include vertical-rhythm(padding-top, 1);
     box-shadow: inset 0 1px $color-border;

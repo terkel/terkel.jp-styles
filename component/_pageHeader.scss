@@ -1,4 +1,4 @@
-[role="banner"][data-component] {
+.PageHeader {
     @include vertical-rhythm(padding-top, 3/6);
     background-color: $color-background;
     box-shadow: 0 1px $color-border;
