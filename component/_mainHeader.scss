@@ -14,35 +14,19 @@
     }
 
     h1 {
-        &::before,
-        &::after {
+        &::before {
+            @include vertical-rhythm(height, 9/6);
             content: "";
             display: inline-block;
-        }
-
-        &::before {
-            @include vertical-rhythm(height, 1.5);
             vertical-align: 0;
-        }
-
-        &::after {
-            @include vertical-rhythm(vertical-align, -0.5);
         }
     }
 
     .meta {
-        @include vertical-rhythm(line-height, 1);
-        @include vertical-rhythm(margin-top, -0.5);
+        @include vertical-rhythm(line-height, 5/6);
         color: $color-text-secondary;
         font-size: $font-size-small;
-        margin-bottom: 0;
-
-        &::before {
-            @include vertical-rhythm(height, 1);
-            content: "";
-            display: inline-block;
-            vertical-align: 0;
-        }
+        margin: 0;
 
         a {
             color: $color-link-secondary;
