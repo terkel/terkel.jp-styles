@@ -1,26 +1,27 @@
-/*! terkel.jp v6.0.0 | terkel.mit-license.org/2014 | github.com/terkel/terkel.jp-stylesheets */
+/*! terkel.jp v6.3.0 | terkel.mit-license.org/2015 | github.com/terkel/terkel.jp-stylesheets */
 
 // Modules
 @import "module/easing";
-@import "module/polyrhythm";
 @import "module/ratio";
+@import "module/vertical-rhythm";
 
 // Theme
 @import "theme/color";
+@import "theme/media";
 @import "theme/typography";
 
 // Base
 @import "base/base";
 
 // Component
-@import "component/pageHeader";
-@import "component/mainHeader";
-@import "component/mainBody";
-@import "component/primaryNav";
-@import "component/pageFooter";
-@import "component/articleSummary";
-@import "component/homeSubsection";
-@import "component/archivesList";
+@import "component/PageHeader";
+@import "component/MainHeader";
+@import "component/MainBody";
+@import "component/PrimaryNav";
+@import "component/PageFooter";
+@import "component/ArticleSummary";
+@import "component/HomeSubsection";
+@import "component/ArchivesList";
 
 // Font
 @import "font/merriweather";

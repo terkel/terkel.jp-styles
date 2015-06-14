@@ -2,11 +2,11 @@ html {
     font-family: $font-family-sans, $font-family-gothic, sans-serif;
     font-size: percentage($ratio-minor-7th * 0.5);
 
-    @media (min-width: 48em) {
+    @media #{ $media-medium } {
         font-size: percentage($ratio-unison);
     }
 
-    @media (min-width: 80em) {
+    @media #{ $media-large } {
         font-size: percentage($ratio-major-2nd);
     }
 }
@@ -15,20 +15,20 @@ body {
     background-color: $color-background;
     color: $color-text;
     margin: auto;
-    max-width: calc(100vw - 2rem);
+    max-width: 100vw / $ratio-major-2nd;
     position: relative;
-    width: 32rem;
-
-    @media (min-width: 48em) {
-        width: 44rem;
-    }
+    width: 40rem;
 }
 
 h1 {
-    @include polyrhythm(2.5rem, 1rem);
+    @include vertical-rhythm(line-height, 9/6);
     font-size: $font-size-xxlarge;
     font-weight: normal;
-    margin: 5rem 0;
+    margin: 0;
+
+    @media (min-width: 24em) {
+        font-size: $font-size-xxxlarge;
+    }
 
     .mincho & {
         font-family: $font-family-serif, $font-family-mincho, serif;
@@ -36,72 +36,83 @@ h1 {
 }
 
 h2 {
-    @include polyrhythm(2.5rem, 1rem);
-    font-size: $font-size-xlarge;
+    @include vertical-rhythm(line-height, 8/6);
+    @include vertical-rhythm(margin-bottom, 1);
+    @include vertical-rhythm(margin-top, 3);
+    font-size: $font-size-xxlarge;
     font-weight: normal;
-    margin: 5rem 0 1rem;
 }
 
 h3 {
-    @include polyrhythm(2rem, 1rem);
+    @include vertical-rhythm(line-height, 1);
+    @include vertical-rhythm(margin-bottom, 1);
+    @include vertical-rhythm(margin-top, 2);
     font-size: $font-size-large;
-    margin: 3rem 0 1rem;
 }
 
 h4 {
-    @include polyrhythm(2rem, 1rem);
+    @include vertical-rhythm(line-height, 5/6);
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(padding-bottom, 1/6);
     font-size: $font-size-medium;
-    margin: 1rem 0 -2rem;
+    margin-bottom: 0;
 }
 
 h5 {
-    @include polyrhythm(1.5rem, 1rem);
+    @include vertical-rhythm(line-height, 5/6);
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(padding-bottom, 1/6);
     font-size: $font-size-small;
-    margin: 1.5rem 0 -2rem;
+    margin-bottom: 0;
 }
 
 h6 {
-    @include polyrhythm(1.5rem, 1rem);
+    @include vertical-rhythm(line-height, 4/6);
+    @include vertical-rhythm(margin-top, 1);
+    @include vertical-rhythm(padding-bottom, 1/6);
+    @include vertical-rhythm(padding-top, 1/6);
     font-size: $font-size-xsmall;
-    margin: 1.5rem 0 -2rem;
+    margin-bottom: 0;
 }
 
-p {
-    @include polyrhythm(2rem, 1rem);
-    margin: 1rem 0;
-}
-
+p,
 ol,
 ul,
 dl {
-    @include polyrhythm(2rem, 1rem);
-    margin: -2rem 0;
+    @include vertical-rhythm(line-height, 1);
+    @include vertical-rhythm(margin-bottom, 1);
+    @include vertical-rhythm(margin-top, 1);
 
-    + ol,
-    + ul,
-    + dl {
-        margin-top: -3rem;
+    li &,
+    dd & {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h4 + &,
+    h5 + &,
+    h6 + & {
+        margin-top: 0;
+    }
+}
+
+hr {
+    @include vertical-rhythm(line-height, 1);
+    @include vertical-rhythm(margin-bottom, 1);
+    @include vertical-rhythm(margin-top, 1);
+    border: 0;
+    color: $color-text-secondary;
+    height: auto; // Override normalize.css
+    text-align: center;
+
+    &::after {
+        content: "*";
     }
 }
 
 ol,
 ul {
     padding-left: $indent-medium;
-}
-
-li,
-dd {
-    p,
-    ol,
-    ul,
-    dl {
-        margin: 0;
-
-        &::before,
-        &::after {
-            display: none;
-        }
-    }
 }
 
 dt {
@@ -112,27 +123,14 @@ dd {
     margin-left: $indent-medium;
 }
 
-hr {
-    border: 0;
-    color: $color-text-secondary;
-    height: 3rem;
-    line-height: 2rem;
-    margin: 1rem 0;
-    text-align: center;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        height: 2rem;
-    }
-
-    &:after {
-        content: "*";
-    }
-}
-
-figure {
-    margin: 3rem $indent-small;
+blockquote,
+pre,
+figure,
+table {
+    @include vertical-rhythm(margin-bottom, 2);
+    @include vertical-rhythm(margin-top, 2);
+    margin-left: $indent-small;
+    margin-right: $indent-small;
 
     @media (min-width: 32em) {
         margin-left: $indent-medium;
@@ -140,19 +138,28 @@ figure {
     }
 }
 
-figcaption {
-    @include polyrhythm(1rem, 0.5rem);
-    color: $color-text-secondary;
-    font-size: $font-size-xsmall;
-    padding: 1rem 0 0;
+blockquote {
+    p,
+    footer {
+        @include vertical-rhythm(line-height, 5/6);
+        font-size: $font-size-small;
+    }
 
-    a {
-        border-bottom: 0;
-        color: $color-link-secondary;
-        text-decoration: underline;
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
 
-        &:hover {
-            color: $color-text;
+        & + p {
+            text-indent: $indent-medium;
+        }
+    }
+
+    footer {
+        margin-left: $indent-small;
+        text-align: right;
+
+        @media (min-width: 24em) {
+            margin-left: $indent-medium;
         }
     }
 }
@@ -165,8 +172,7 @@ kbd {
 }
 
 pre {
-    @extend figure;
-    @include polyrhythm(1rem, 0.5rem);
+    @include vertical-rhythm(line-height, 4/6);
     font-size: $font-size-xsmall;
     white-space: pre-wrap;
 }
@@ -184,94 +190,83 @@ kbd {
     }
 }
 
-blockquote {
-    @extend figure;
+figcaption,
+caption {
+    @include vertical-rhythm(line-height, 4/6);
+    @include vertical-rhythm(padding-top, 4/6);
+    color: $color-text-secondary;
+    font-size: $font-size-xsmall;
 
-    p,
-    footer {
-        @include polyrhythm(1.5rem, 1rem);
-        font-size: $font-size-small;
-    }
+    a {
+        border-bottom: 0;
+        color: $color-link-secondary;
+        text-decoration: underline;
 
-    p {
-        margin: 0;
-
-        & + p {
-            margin-top: -1rem;
-            text-indent: $indent-medium;
-        }
-    }
-
-    footer {
-        margin-left: $indent-small;
-        margin-top: -1rem;
-        text-align: right;
-
-        @media (min-width: 24em) {
-            margin-left: $indent-medium;
+        &:hover {
+            color: $color-text;
         }
     }
 }
 
 table {
-    @extend figure;
     border-collapse: collapse;
-    font-size: $font-size-xsmall;
 }
 
 caption {
-    @extend figcaption;
     caption-side: bottom;
     text-align: left;
 }
 
 th,
 td {
-    @include polyrhythm(1rem, 0.5rem);
-    padding: 0 0 0 1rem;
+    @include vertical-rhythm(line-height, 4/6);
+    @include vertical-rhythm(padding-bottom, 1/6);
+    @include vertical-rhythm(padding-top, 1/6);
+    font-size: $font-size-xsmall;
+    padding-left: 1rem;
     vertical-align: baseline;
 
     &:first-child {
         padding-left: 0;
     }
+
+    tr:first-child & {
+        @include vertical-rhythm(padding-top, 4/6);
+    }
+
+    tr:last-child & {
+        @include vertical-rhythm(padding-bottom, 4/6);
+    }
+
+    thead tr:first-child &,
+    tfoot tr:first-child & {
+        @include vertical-rhythm(padding-top, 2/6);
+    }
+
+    thead tr:last-child &,
+    tfoot tr:last-child & {
+        @include vertical-rhythm(padding-bottom, 2/6);
+    }
+
+    thead tr:first-child &,
+    tbody tr:first-child & {
+        box-shadow: inset 0 1px $color-border;
+    }
+
+    tfoot tr:last-child &,
+    tbody tr:last-child & {
+        box-shadow: 0 1px $color-border;
+    }
 }
 
-tr {
-    &:first-child {
-        th,
-        td {
-            padding-top: 0.5rem;
-        }
+th {
+    thead & {
+        vertical-align: bottom;
     }
-    &:last-child {
-        th,
-        td {
-            padding-bottom: 0.5rem;
-        }
-    }
-}
 
-thead,
-tbody {
-    tr:first-child {
-        th,
-        td {
-            box-shadow: inset 0 1px $color-border;
-        }
-    }
-}
-
-tfoot,
-tbody {
-    th {
+    tfoot &,
+    tbody & {
         text-align: left;
-    }
-
-    tr:last-child {
-        th,
-        td {
-            box-shadow: 0 1px $color-border;
-        }
     }
 }
 
@@ -281,6 +276,10 @@ a {
     &:not([href]) {
         color: inherit;
         cursor: default;
+    }
+
+    &:hover {
+        color: inherit;
     }
 }
 
@@ -295,7 +294,7 @@ samp,
 small,
 strong,
 var {
-    line-height: 0;
+    line-height: normal;
 }
 
 cite,
@@ -326,6 +325,7 @@ video {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 svg {
@@ -333,11 +333,11 @@ svg {
 }
 
 ::-moz-selection {
-    background-color: hsla( 210, 100.000%,  87.500%, 1.00 );
+    background-color: hsla(210, 100%, 87.5%, 1);
     text-shadow: none;
 }
 
 ::selection {
-    background-color: hsla( 210, 100.000%,  87.500%, 1.00 );
+    background-color: hsla(210, 100%, 87.5%, 1);
     text-shadow: none;
 }

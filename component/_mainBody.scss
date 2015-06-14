@@ -1,6 +1,6 @@
-.mainBody[data-component] {
-
-    margin: 5rem 0;
+.MainBody {
+    @include vertical-rhythm(margin-bottom, 3);
+    @include vertical-rhythm(margin-top, 3);
 
     .mincho & {
         font-family: $font-family-serif, $font-family-mincho, serif;
@@ -20,15 +20,6 @@
         b,
         table {
             font-family: $font-family-sans, $font-family-gothic, sans-serif;
-        }
-    }
-
-    a {
-        border-bottom: 1px solid rgba($color-link, 0.5);
-        text-decoration: none;
-        &:hover {
-            border-bottom-color: inherit;
-            color: inherit;
         }
     }
 }

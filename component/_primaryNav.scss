@@ -1,9 +1,10 @@
-.primaryNav[data-component] {
+.PrimaryNav {
+    @include vertical-rhythm(padding-bottom, 2/6);
+    @include vertical-rhythm(padding-top, 2/6);
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0.5rem 0;
 
     [role="banner"] + & {
         box-shadow: 0 1px $color-border;
@@ -26,7 +27,7 @@
     }
 
     ul {
-        @include polyrhythm(1.5rem, 1rem);
+        @include vertical-rhythm(line-height, 1);
         color: $color-text-secondary;
         font-size: $font-size-xsmall;
         letter-spacing: 0.1em;
@@ -60,11 +61,12 @@
     }
 
     .searchForm {
-        margin: 0.25rem 0;
+        margin: 0;
         position: relative;
 
         .searchIcon {
             bottom: 0;
+            height: 1rem;
             left: 0.5rem;
             margin: auto;
             position: absolute;
@@ -73,13 +75,13 @@
         }
 
         input[type="search"] {
+            @include vertical-rhythm(height, 1);
             background-color: $color-background-highlight;
             border: 0;
             border-radius: 0.25em;
             box-sizing: border-box;
-            line-height: 1.5rem;
             max-width: 100%;
-            padding: 0.25rem 0 0.25rem 2rem;
+            padding-left: 2rem;
             width: 16rem;
         }
     }

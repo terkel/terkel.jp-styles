@@ -1,33 +1,32 @@
-.mainHeader[data-component] {
+.MainHeader {
+    @include vertical-rhythm(padding-bottom, 1.5);
+    @include vertical-rhythm(padding-top, 3);
     box-shadow: 0 1px $color-border;
-    padding: 6rem 0 3rem;
     position: relative;
 
     &,
     &[data-header-compact] {
-        min-height: 6rem;
+        @include vertical-rhythm(min-height, 3);
     }
 
     @media (min-height: 24em) {
-        min-height: 15rem;
+        @include vertical-rhythm(min-height, 7.5);
     }
 
     h1 {
-        margin: 0;
-        padding-top: 0.5rem;
-
-        @media (min-width: 24em) {
-            @include polyrhythm(3rem, 1rem);
-            font-size: $font-size-xxxlarge;
-            padding-top: 0;
+        &::before {
+            @include vertical-rhythm(height, 9/6);
+            content: "";
+            display: inline-block;
+            vertical-align: 0;
         }
     }
 
     .meta {
-        @include polyrhythm(1.5rem, 1rem);
+        @include vertical-rhythm(line-height, 5/6);
         color: $color-text-secondary;
         font-size: $font-size-small;
-        margin: -0.5rem 0 0;
+        margin: 0;
 
         a {
             color: $color-link-secondary;
@@ -40,10 +39,15 @@
     }
 
     .tags {
-        @include polyrhythm(1.5rem, 1rem);
-        text-transform: lowercase;
         bottom: 0;
         position: absolute;
         right: 0;
+        text-transform: lowercase;
+
+        &::after {
+            @include vertical-rhythm(vertical-align, -0.5);
+            content: "";
+            display: inline-block;
+        }
     }
 }

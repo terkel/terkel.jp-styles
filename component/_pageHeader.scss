@@ -1,15 +1,30 @@
-[role="banner"][data-component] {
+.PageHeader {
+    @include vertical-rhythm(padding-top, 3/6);
     background-color: $color-background;
     box-shadow: 0 1px $color-border;
     color: $color-text-secondary;
-    padding-top: 1rem;
     position: relative;
     z-index: 2;
 
     h1,
     .breadcrumbs {
-        @include polyrhythm(2rem, 1rem);
+        line-height: 1;
         margin: 0;
+
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+        }
+
+        &::before {
+            @include vertical-rhythm(height, 1);
+            vertical-align: 0;
+        }
+
+        &::after {
+            @include vertical-rhythm(vertical-align, -3/6);
+        }
     }
 
     h1 {
@@ -37,24 +52,24 @@
     }
 
     .toggleNav {
-        bottom: -0.25rem;
+        @include vertical-rhythm(height, 9/6);
+        @include vertical-rhythm(width, 9/6);
         color: $color-text-secondary;
+        bottom: 0;
         cursor: default;
-        height: 3rem;
         line-height: 1;
         position: absolute;
-        right: -0.25rem;
-        width: 3rem;
+        right: 0;
 
         .navIcon {
-            position: absolute;
-            top: 0;
-            left: 0;
             bottom: 0;
-            right: 0;
+            height: $font-size-xlarge;
+            left: 0;
             margin: auto;
-            width: 1.5rem;
-            height: 1.5rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: $font-size-xlarge;
         }
 
         &[data-state-hover="true"],
