@@ -26,7 +26,7 @@ h1 {
     font-weight: normal;
     margin: 0;
 
-    @media (min-width: 24em) {
+    @media #{ $media-xsmall } {
         font-size: $font-size-xxxlarge;
     }
 
@@ -132,7 +132,7 @@ table {
     margin-left: $indent-small;
     margin-right: $indent-small;
 
-    @media (min-width: 32em) {
+    @media #{ $media-small } {
         margin-left: $indent-medium;
         margin-right: $indent-medium;
     }
@@ -158,7 +158,7 @@ blockquote {
         margin-left: $indent-small;
         text-align: right;
 
-        @media (min-width: 24em) {
+        @media #{ $media-xsmall } {
             margin-left: $indent-medium;
         }
     }

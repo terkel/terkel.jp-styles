@@ -10,6 +10,12 @@
 @import "theme/media";
 @import "theme/typography";
 
+// for MQPacker
+@media #{ $media-xsmall } { /* Do not delete this comment */ }
+@media #{ $media-small } { /* Do not delete this comment */ }
+@media #{ $media-medium } { /* Do not delete this comment */ }
+@media #{ $media-large } { /* Do not delete this comment */ }
+
 // Base
 @import "base/base";
 
