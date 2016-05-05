@@ -273,6 +273,14 @@ th {
 a {
     color: $color-accent;
 
+    &[href^="#fn-"] {
+        font-family: $font-family-mono, monospace;
+        font-weight: bold;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        text-decoration: none;
+    }
+
     &:not([href]) {
         color: inherit;
         cursor: default;

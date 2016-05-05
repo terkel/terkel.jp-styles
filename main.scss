@@ -1,5 +1,3 @@
-/*! terkel.jp v6.3.0 | terkel.mit-license.org/2015 | github.com/terkel/terkel.jp-stylesheets */
-
 // Modules
 @import "module/easing";
 @import "module/ratio";
@@ -9,6 +7,12 @@
 @import "theme/color";
 @import "theme/media";
 @import "theme/typography";
+
+// Font
+@import "font/merriweather";
+@import "font/merriweathersans";
+
+/*! terkel.jp v6.3.0 | terkel.mit-license.org/2015 | github.com/terkel/terkel.jp-stylesheets */
 
 // for MQPacker
 @media #{ $media-xsmall } { /* Do not delete this comment */ }
@@ -28,7 +32,4 @@
 @import "component/ArticleSummary";
 @import "component/HomeSubsection";
 @import "component/ArchivesList";
-
-// Font
-@import "font/merriweather";
-@import "font/merriweathersans";
+@import "component/Footnotes";
