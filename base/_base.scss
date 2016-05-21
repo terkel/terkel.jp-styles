@@ -281,6 +281,10 @@ a {
         text-decoration: none;
     }
 
+    &[href^="#fnref-"] {
+        text-decoration: none;
+    }
+
     &:not([href]) {
         color: inherit;
         cursor: default;
