@@ -1,215 +1,194 @@
 html {
-    font-family: $font-family-sans, $font-family-gothic, sans-serif;
-    font-size: percentage($ratio-minor-7th * 0.5);
-
-    @media #{ $media-medium } {
-        font-size: percentage($ratio-unison);
-    }
-
-    @media #{ $media-large } {
-        font-size: percentage($ratio-major-2nd);
-    }
+    font-family: $font-family-system;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-    background-color: $color-background;
-    color: $color-text;
-    margin: auto;
-    max-width: 100vw / $ratio-major-2nd;
-    position: relative;
-    width: 40rem;
-}
+    background-color: $color-offwhite;
+    color: $color-black-900;
+    margin: 0 auto;
+    max-width: calc(100vw - 2rem);
 
-h1 {
-    @include vertical-rhythm(line-height, 9/6);
-    font-size: $font-size-xxlarge;
-    font-weight: normal;
-    margin: 0;
-
-    @media #{ $media-xsmall } {
-        font-size: $font-size-xxxlarge;
+    @media (orientation: portrait) {
+        @media (min-width: 20em) { width: 18rem; }
+        @media (min-width: 22em) { width: 20rem; }
+        @media (min-width: 25em) { width: 22rem; }
+        @media (min-width: 30em) { width: 27rem; }
+        @media (min-width: 36em) { width: 32rem; }
     }
 
-    .mincho & {
-        font-family: $font-family-serif, $font-family-mincho, serif;
+    @media (orientation: landscape) {
+        @media (min-width: 30em) { width: 24rem; }
+        @media (min-width: 35em) { width: 28rem; }
+        @media (min-width: 40em) { width: 32rem; }
+        @media (min-width: 45em) { width: 36rem; }
+    }
+
+    @media (orientation: portrait) and (min-width: 45em), (min-width: 50em) {
+        width: 40rem;
     }
 }
 
 h2 {
-    @include vertical-rhythm(line-height, 8/6);
-    @include vertical-rhythm(margin-bottom, 1);
-    @include vertical-rhythm(margin-top, 3);
-    font-size: $font-size-xxlarge;
-    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    margin-top: 3.5rem;
+    padding-bottom: 0.125rem;
+    padding-top: 0.125rem;
 }
 
-h3 {
-    @include vertical-rhythm(line-height, 1);
-    @include vertical-rhythm(margin-bottom, 1);
-    @include vertical-rhythm(margin-top, 2);
-    font-size: $font-size-large;
-}
-
-h4 {
-    @include vertical-rhythm(line-height, 5/6);
-    @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 1/6);
-    font-size: $font-size-medium;
-    margin-bottom: 0;
-}
-
-h5 {
-    @include vertical-rhythm(line-height, 5/6);
-    @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 1/6);
-    font-size: $font-size-small;
-    margin-bottom: 0;
-}
-
+h3,
+h4,
+h5,
 h6 {
-    @include vertical-rhythm(line-height, 4/6);
-    @include vertical-rhythm(margin-top, 1);
-    @include vertical-rhythm(padding-bottom, 1/6);
-    @include vertical-rhythm(padding-top, 1/6);
-    font-size: $font-size-xsmall;
+    font-size: 0.875rem;
+    line-height: 1.429;
     margin-bottom: 0;
+    margin-top: 1.75rem;
+    padding-bottom: 0.1875rem;
+    padding-top: 0.3125rem;
 }
 
 p,
 ol,
 ul,
 dl {
-    @include vertical-rhythm(line-height, 1);
-    @include vertical-rhythm(margin-bottom, 1);
-    @include vertical-rhythm(margin-top, 1);
-
-    li &,
-    dd & {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    h4 + &,
-    h5 + &,
-    h6 + & {
-        margin-top: 0;
-    }
-}
-
-hr {
-    @include vertical-rhythm(line-height, 1);
-    @include vertical-rhythm(margin-bottom, 1);
-    @include vertical-rhythm(margin-top, 1);
-    border: 0;
-    color: $color-text-secondary;
-    height: auto; // Override normalize.css
-    text-align: center;
-
-    &::after {
-        content: "*";
-    }
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+    margin-top: 1.75rem;
 }
 
 ol,
 ul {
-    padding-left: $indent-medium;
+    padding-left: 2rem;
 }
 
-dt {
-    font-weight: bold;
+ul li {
+    @include list-item-dash();
 }
 
 dd {
-    margin-left: $indent-medium;
+    margin-left: 2rem;
 }
 
-blockquote,
-pre,
-figure,
-table {
-    @include vertical-rhythm(margin-bottom, 2);
-    @include vertical-rhythm(margin-top, 2);
-    margin-left: $indent-small;
-    margin-right: $indent-small;
+h3 + p, h4 + p, h5 + p, h6 + p,
+h3 + ol, h4 + ol, h5 + ol, h6 + ol,
+h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+h3 + dl, h4 + dl, h5 + dl, h6 + dl {
+    margin-top: 0;
+}
 
-    @media #{ $media-small } {
-        margin-left: $indent-medium;
-        margin-right: $indent-medium;
-    }
+ol p, ul p, dl p,
+ol ol, ul ol, dl ol,
+ol ul, ul ul, dl ul,
+ol dl, ul dl, dl dl {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+pre {
+    font-family: $font-family-mono;
+    font-size: 0.875rem;
+    line-height: 1.429;
+    margin-bottom: 1.75rem;
+    margin-top: 1.75rem;
+    overflow: auto;
+    padding-bottom: 0.125rem;
+    padding-left: 2rem;
+    padding-top:0.375rem;
 }
 
 blockquote {
-    p,
-    footer {
-        @include vertical-rhythm(line-height, 5/6);
-        font-size: $font-size-small;
-    }
+    margin: 1.75rem 0 1.75rem 2rem;
 
     p {
         margin-bottom: 0;
         margin-top: 0;
 
-        & + p {
-            text-indent: $indent-medium;
-        }
+    }
+
+    p + p {
+        text-indent: 1em;
     }
 
     footer {
-        margin-left: $indent-small;
         text-align: right;
-
-        @media #{ $media-xsmall } {
-            margin-left: $indent-medium;
-        }
     }
 }
 
-pre,
-code,
-samp,
-kbd {
-    font-family: $font-family-mono, monospace;
+figure,
+table {
+    font-size: 0.75rem;
+    line-height: 1.667;
+    margin: 3rem auto;
 }
 
-pre {
-    @include vertical-rhythm(line-height, 4/6);
-    font-size: $font-size-xsmall;
-    white-space: pre-wrap;
+figure {
+    display: table;
 }
 
-code,
-samp,
-kbd {
-    opacity: $ratio-minor-7th * 0.5;
+table {
+    border-bottom: 1px solid $color-black-500;
+    border-collapse: collapse;
+}
 
-    pre &,
-    code &,
-    samp &,
-    kbd & {
-        opacity: 1;
-    }
+thead,
+tfoot,
+tbody {
+    border-top: 1px solid $color-black-500;
+}
+
+th,
+td {
+    padding: 0.25rem 1em;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody th,
+tfoot th {
+    text-align: left;
+}
+
+tbody tr:first-child th,
+tbody tr:first-child td {
+    padding-top: 0.75rem;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    padding-bottom: 0.75rem;
+}
+
+thead tr:not(:last-child):not(:only-child) th[colspan],
+tfoot tr:not(:last-child):not(:only-child) th[colspan] {
+    position: relative;
+}
+
+thead tr:not(:last-child):not(:only-child) th[colspan]::after,
+tfoot tr:not(:last-child):not(:only-child) th[colspan]::after {
+    content: "";
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 0;
+    border-top: 1px solid $color-black-500;
 }
 
 figcaption,
 caption {
-    @include vertical-rhythm(line-height, 4/6);
-    @include vertical-rhythm(padding-top, 4/6);
-    color: $color-text-secondary;
-    font-size: $font-size-xsmall;
+    font-size: 0.75rem;
+    line-height: 1.667;
+    margin-bottom: -0.5em;
+    margin-top: 1.167em;
 
     a {
-        border-bottom: 0;
-        color: $color-link-secondary;
-        text-decoration: underline;
-
-        &:hover {
-            color: $color-text;
-        }
+        color: inherit;
     }
-}
-
-table {
-    border-collapse: collapse;
 }
 
 caption {
@@ -217,64 +196,14 @@ caption {
     text-align: left;
 }
 
-th,
-td {
-    @include vertical-rhythm(line-height, 4/6);
-    @include vertical-rhythm(padding-bottom, 1/6);
-    @include vertical-rhythm(padding-top, 1/6);
-    font-size: $font-size-xsmall;
-    padding-left: 1rem;
-    vertical-align: baseline;
 
-    &:first-child {
-        padding-left: 0;
-    }
-
-    tr:first-child & {
-        @include vertical-rhythm(padding-top, 4/6);
-    }
-
-    tr:last-child & {
-        @include vertical-rhythm(padding-bottom, 4/6);
-    }
-
-    thead tr:first-child &,
-    tfoot tr:first-child & {
-        @include vertical-rhythm(padding-top, 2/6);
-    }
-
-    thead tr:last-child &,
-    tfoot tr:last-child & {
-        @include vertical-rhythm(padding-bottom, 2/6);
-    }
-
-    thead tr:first-child &,
-    tbody tr:first-child & {
-        box-shadow: inset 0 1px $color-border;
-    }
-
-    tfoot tr:last-child &,
-    tbody tr:last-child & {
-        box-shadow: 0 1px $color-border;
-    }
-}
-
-th {
-    thead & {
-        vertical-align: bottom;
-    }
-
-    tfoot &,
-    tbody & {
-        text-align: left;
-    }
-}
 
 a {
-    color: $color-accent;
+    color: $color-blue;
+    text-decoration-skip: ink;
 
     &[href^="#fn-"] {
-        font-family: $font-family-mono, monospace;
+        font-family: $font-family-mono;
         font-weight: bold;
         padding-left: 0.25em;
         padding-right: 0.25em;
@@ -286,12 +215,7 @@ a {
     }
 
     &:not([href]) {
-        color: inherit;
         cursor: default;
-    }
-
-    &:hover {
-        color: inherit;
     }
 }
 
@@ -309,21 +233,63 @@ var {
     line-height: normal;
 }
 
+code,
+samp,
+kbd {
+    background-color: $color-black-100;
+    border-radius: 0.125em;
+    color: $color-black-900;
+    font-family: $font-family-mono;
+    margin-left: 0.125ch;
+    margin-right: 0.125ch;
+    padding: 0.125em 0.375ch;
+}
+
+pre code,
+pre samp,
+pre kbd {
+    background-color: transparent;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+a code,
+a samp,
+a kbd {
+    color: inherit;
+}
+
+code *,
+samp *,
+kbd * {
+    font-family: inherit !important;
+}
+
 cite,
 dfn,
 em,
 i {
-    &:lang(ja) {
+    @include lang-cjk() {
         font-style: normal;
     }
 }
 
-strong {
-    border-bottom: double;
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-mark {
-    background-color: $color-background-marked;
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 
 audio,
@@ -342,14 +308,4 @@ img {
 
 svg {
     fill: currentColor;
-}
-
-::-moz-selection {
-    background-color: hsla(210, 100%, 87.5%, 1);
-    text-shadow: none;
-}
-
-::selection {
-    background-color: hsla(210, 100%, 87.5%, 1);
-    text-shadow: none;
 }

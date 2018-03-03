@@ -1,0 +1,53 @@
+.SiteHeader {
+    box-shadow: 0 1px $color-black-500;
+    align-items: baseline;
+    display: flex;
+
+    h1,
+    ul {
+        line-height: 1.25;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0.75em;
+        padding-top: 1em;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    ul {
+        font-feature-settings: "c2sc", "smcp";
+        display: flex;
+        padding-left: 0;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    li {
+        position: static;
+
+        &::before {
+            content: normal;
+        }
+    }
+
+
+    li + li {
+        margin-left: 1em;
+    }
+
+    a {
+        text-decoration: none;
+
+        &[href]:hover {
+            text-decoration: underline;
+        }
+    }
+}

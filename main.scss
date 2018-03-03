@@ -1,35 +1,30 @@
-// Modules
-@import "module/easing";
-@import "module/ratio";
-@import "module/vertical-rhythm";
+/*!
+ * terkel.jp v7.0.0
+ * terkel.mit-license.org/2017
+ * github.com/terkel/terkel.jp-styles
+ */
 
-// Theme
-@import "theme/color";
-@import "theme/media";
-@import "theme/typography";
+// Variables
+@import "variables";
 
-// Font
-@import "font/merriweather";
-@import "font/merriweathersans";
-
-/*! terkel.jp v6.4.1 | terkel.mit-license.org/2016 | github.com/terkel/terkel.jp-stylesheets */
-
-// for MQPacker
-@media #{ $media-xsmall } { /* Do not delete this comment */ }
-@media #{ $media-small } { /* Do not delete this comment */ }
-@media #{ $media-medium } { /* Do not delete this comment */ }
-@media #{ $media-large } { /* Do not delete this comment */ }
+// Mixins
+@import "mixins";
 
 // Base
 @import "base/base";
 
-// Component
-@import "component/PageHeader";
-@import "component/MainHeader";
-@import "component/MainBody";
-@import "component/PrimaryNav";
-@import "component/PageFooter";
-@import "component/ArticleSummary";
-@import "component/HomeSubsection";
-@import "component/ArchivesList";
-@import "component/Footnotes";
+// Components
+@import "components/SiteHeader";
+@import "components/SiteFooter";
+@import "components/MainHeader";
+@import "components/MainBody";
+@import "components/ArticleTeaser";
+@import "components/ArchivesLink";
+@import "components/ArchivesList";
+@import "components/Subheader";
+
+// Third-party libraries
+@import "vendor/mojik";
+
+// Media specific styles
+@import "media/print";

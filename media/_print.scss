@@ -1,0 +1,122 @@
+/*!
+ * Print styles
+ */
+@media print {
+    *,
+    *::before,
+    *::after {
+        color: black !important;
+    }
+
+    body {
+        background-color: transparent;
+        margin-left: 0;
+        margin-right: 14rem;
+        max-width: none;
+        width: 40rem;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        white-space: pre-wrap;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    .SiteHeader,
+    .MainHeader {
+        border-bottom: 1px solid $color-black-500;
+        box-shadow: none;
+    }
+
+    .SiteHeader nav {
+        display: none;
+    }
+
+    .MainBody {
+        counter-reset: sidenote;
+
+        a[href]:not([href^="#"]),
+        abbr[title],
+        dfn[title] {
+            counter-increment: sidenote;
+        }
+
+        a[href]:not([href^="#"])::after,
+        abbr[title]::after,
+        dfn[title]::after {
+            bottom: -0.25em;
+            content: counter(sidenote);
+            font-family: $font-family-system;
+            font-size: 0.625rem;
+            font-weight: normal;
+            line-height: 0;
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .mjk-western:not(.mjk-western-atParagraphEnd):not(.mjk-western-noSpaceAfter) + a[href]::after,
+        .mjk-western:not(.mjk-western-atParagraphEnd):not(.mjk-western-noSpaceAfter) + abbr[title]::after,
+        .mjk-western:not(.mjk-western-atParagraphEnd):not(.mjk-western-noSpaceAfter) + dfn[title]::after {
+            margin-left: 0;
+        }
+
+        blockquote[cite]::before,
+        a[href]:not([href^="#"])::before,
+        abbr[title]::before,
+        dfn[title]::before {
+            clear: right;
+            font-family: $font-family-system;
+            font-size: 0.625rem;
+            font-weight: normal;
+            float: right;
+            line-height: 1.6;
+            margin-right: -14rem;
+            margin-bottom: -0.5rem;
+            margin-top: 0.5rem;
+            overflow-wrap: break-word;
+            width: 12rem;
+        }
+
+        blockquote[cite]::before {
+            content: "\261E\A0" attr(cite);
+        }
+
+        a[href]:not([href^="#"])::before {
+            content: counter(sidenote) ".\A0" attr(href);
+        }
+
+        abbr[title]::before,
+        dfn[title]::before {
+            content: counter(sidenote) ".\A0" attr(title);
+        }
+    }
+
+    .SiteFooter {
+        border-top: 1px solid $color-black-500;
+        box-shadow: none;
+    }
+
+    .SiteFooter a {
+        text-decoration: none;
+    }
+
+    .SiteFooter a[href^="https://typekit.com/colophons/"]::after,
+    .SiteFooter a[rel="license"]::after,
+    .SiteFooter a[rel="alternate"]::after {
+        content: " (" attr(href) ")";
+    }
+}

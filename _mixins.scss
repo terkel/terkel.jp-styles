@@ -1,0 +1,28 @@
+// CJK lang selector
+@mixin lang-cjk () {
+    &:lang(zh),
+    &:lang(ja),
+    &:lang(ko) {
+        @content;
+    }
+}
+
+// Non-CJK lang selector
+@mixin lang-not-cjk () {
+    &:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)) {
+        @content;
+    }
+}
+
+// List item with dash
+@mixin list-item-dash () {
+    list-style-type: none;
+    position: relative;
+
+    &::before {
+        content: "\2013";
+        margin-right: 0.5em;
+        position: absolute;
+        right: 100%;
+    }
+}

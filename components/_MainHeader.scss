@@ -1,0 +1,44 @@
+.MainHeader {
+    box-shadow: 0 1px $color-black-500;
+    min-height: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+
+    h1 {
+        color: $color-black;
+        font-family: $font-family-mincho;
+        font-feature-settings: "palt";
+        font-size: 1.75rem;
+        font-weight: normal;
+        line-height: 1.25;
+        margin-bottom: -0.25em;
+        margin-top: -1em;
+    }
+
+    .meta {
+        font-size: 0.75rem;
+        line-height: 1.25;
+        margin-bottom: -0.25em;
+        margin-top: calc(2rem - 1em);
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .tags {
+        text-transform: lowercase;
+
+        &::before {
+            content: "\B7";
+            display: inline-block;
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+        }
+    }
+}

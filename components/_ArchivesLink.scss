@@ -1,0 +1,32 @@
+.ArchivesLink {
+    color: $color-black-900 !important;
+    font-family: $font-family-system !important;
+    font-feature-settings: "c2sc", "smcp";
+    font-kerning: auto;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+    margin-bottom: 1.75rem;
+    margin-top: 1.75rem;
+    padding-bottom:0.25rem;
+    padding-top:0.25rem;
+    text-align: right;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            content: "\2192";
+            display: inline-block;
+            line-height: 0;
+            margin-left: 0.5em;
+            vertical-align: middle;
+        }
+    }
+}
