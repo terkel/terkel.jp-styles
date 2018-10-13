@@ -1,6 +1,8 @@
 .ArticleTeaser {
     @include list-item-dash();
-    font-family: $font-family-mincho;
+    font-family: $font-family-mincho-punc;
+    font-weight: $font-weight-mincho-normal;
+    line-height: 1.75;
     margin-bottom: 1.75rem;
     margin-left: 2rem;
     margin-top: 1.75rem;
@@ -11,12 +13,12 @@
     }
 
     h3 {
-        font-family: $font-family-mincho;
+        font-family: $font-family-mincho-punc;
+        font-weight: $font-weight-mincho-normal;
         font-feature-settings: normal;
         font-kerning: none;
         font-size: 1rem;
         line-height: 1.75;
-        font-weight: normal;
         padding-bottom: 0;
         padding-top: 0;
         margin-bottom: 0;
@@ -24,21 +26,23 @@
     }
 
     .meta {
-        color: inherit;
-        font-family: $font-family-system;
+        color: $color-black-700;
+        font-family: $font-family-gothic;
+        font-weight: $font-weight-gothic-normal;
         font-kerning: auto;
-        font-size: 0.75rem;
-        line-height: 1.667;
+        font-size: 0.8125rem;
+        line-height: 1.539;
         margin-bottom: 0;
         margin-left: 0.25rem;
         margin-top: 0;
+        vertical-align: bottom;
         white-space: nowrap;
 
         &::before,
         &::after {
             content: "";
             display: inline-block;
-            height: 1.667em;
+            height: 1.539em;
         }
 
         &::after {

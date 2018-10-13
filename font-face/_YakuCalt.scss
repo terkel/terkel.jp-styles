@@ -1,0 +1,37 @@
+// YakuCalt fonts
+// http://tama-san.com/yakucalt-font/
+@font-face {
+    font-family: "YakuCalt Gothic";
+    src: url("../fonts/YakuCaltGothic-R.woff") format("woff");
+    font-weight: 400;
+    unicode-range:
+        U+3000-3002, // 　、。
+        U+3008-3011, // 〈〉《》「」『』【】
+        U+3014-301B, // 〔〕〖〗〘〙〚〛
+        U+301D-301F, // 〝〞〟
+        U+30FB, // ・
+        U+FF08-FF09, // （）
+        U+FF0C, U+FF0E, // ，．
+        U+FF1A-FF1B, // ：；
+        U+FF3B, U+FF3D, // ［］
+        U+FF5B, U+FF5D, // ｛｝
+        U+FF5F-FF60; // ｟｠
+}
+
+@font-face {
+    font-family: "YakuCalt Mincho";
+    src: url("../fonts/YakuCaltMincho-R.woff") format("woff");
+    font-weight: 400;
+    unicode-range:
+        U+3000-3002, // 　、。
+        U+3008-3011, // 〈〉《》「」『』【】
+        U+3014-301B, // 〔〕〖〗〘〙〚〛
+        U+301D-301F, // 〝〞〟
+        U+30FB, // ・
+        U+FF08-FF09, // （）
+        U+FF0C, U+FF0E, // ，．
+        U+FF1A-FF1B, // ：；
+        U+FF3B, U+FF3D, // ［］
+        U+FF5B, U+FF5D, // ｛｝
+        U+FF5F-FF60; // ｟｠
+}

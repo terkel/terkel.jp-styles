@@ -1,13 +1,14 @@
 .SiteFooter {
     box-shadow: inset 0 1px $color-black-500;
+    color: $color-black-700;
     padding-bottom: 5rem;
     padding-top: 3rem;
 
     p {
-        font-size: 0.75rem;
-        line-height: 1.667;
-        margin-bottom: -0.5em;
-        margin-top: -1.167em;
+        font-size: 0.8125rem;
+        line-height: 1.539;
+        margin-bottom: -0.4em;
+        margin-top: -1.139em;
     }
 
     a {

@@ -1,5 +1,6 @@
 html {
-    font-family: $font-family-system;
+    font-family: $font-family-gothic;
+    font-weight: $font-weight-gothic-normal;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -145,10 +146,6 @@ td {
     padding: 0.25rem 1em;
 }
 
-th {
-    font-weight: bold;
-}
-
 tbody th,
 tfoot th {
     text-align: left;
@@ -240,9 +237,11 @@ kbd {
     border-radius: 0.125em;
     color: $color-black-900;
     font-family: $font-family-mono;
+    font-weight: $font-weight-gothic-normal;
     margin-left: 0.125ch;
     margin-right: 0.125ch;
-    padding: 0.125em 0.375ch;
+    padding-left: 0.375ch;
+    padding-right: 0.375ch;
 }
 
 pre code,
@@ -250,6 +249,7 @@ pre samp,
 pre kbd {
     background-color: transparent;
     border-radius: 0;
+    line-height: inherit;
     margin-left: 0;
     margin-right: 0;
     padding: 0;

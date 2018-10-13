@@ -1,13 +1,20 @@
 // Colors
 $color-black: #000000;
-$color-black-900: rgba($color-black, 0.87);
+$color-black-900: #212121;
+$color-black-700: #616161;
 $color-black-500: rgba($color-black, 0.38);
 $color-black-100: rgba($color-black, 0.04);
 $color-offwhite: #f9f9f5;
 $color-blue: #0070e0;
 
 // Font families
-$font-family-system: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", "Helvetica Neue", "sans-serif", sans-serif, "Segoe UI Emoji";
-$font-family-mincho: "source-han-serif-japanese", serif;
 $font-family-gothic: "source-han-sans-japanese", sans-serif;
-$font-family-mono: "mplus-1m", monospace;
+$font-family-gothic-punc: "YakuCalt Gothic", $font-family-gothic;
+$font-family-mincho: "source-han-serif-japanese", serif;
+$font-family-mincho-punc: "YakuCalt Mincho", $font-family-mincho;
+$font-family-mono: "source-code-pro", "source-han-sans-japanese", monospace;
+
+// Font weights
+$font-weight-mincho-normal: 400;
+$font-weight-gothic-normal: 400;
+$font-weight-gothic-bold: 700;

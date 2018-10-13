@@ -3,8 +3,9 @@
     align-items: baseline;
     display: flex;
 
-    h1,
-    ul {
+    h1 {
+        font-size: 1rem;
+        font-weight: $font-weight-gothic-bold;
         line-height: 1.25;
         margin-bottom: 0;
         margin-top: 0;
@@ -12,35 +13,36 @@
         padding-top: 1em;
     }
 
-    h1 {
-        font-size: 1rem;
-    }
-
     nav {
+        font-size: 0.8125rem;
+        letter-spacing: 0.05em;
+        line-height: 1;
         margin-left: auto;
-    }
+        text-transform: uppercase;
 
-    ul {
-        font-feature-settings: "c2sc", "smcp";
-        display: flex;
-        padding-left: 0;
+        ul {
+            display: flex;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-left: 0;
+
+        }
+
+        li {
+            position: static;
+
+            &::before {
+                content: normal;
+            }
+        }
+
+        li + li {
+            margin-left: 1em;
+        }
 
         a {
             color: inherit;
         }
-    }
-
-    li {
-        position: static;
-
-        &::before {
-            content: normal;
-        }
-    }
-
-
-    li + li {
-        margin-left: 1em;
     }
 
     a {

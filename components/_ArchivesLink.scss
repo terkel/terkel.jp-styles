@@ -1,17 +1,17 @@
 .ArchivesLink {
     color: $color-black-900 !important;
-    font-family: $font-family-system !important;
-    font-feature-settings: "c2sc", "smcp";
+    font-family: $font-family-gothic !important;
+    font-weight: $font-weight-gothic-normal !important;
     font-kerning: auto;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 0.8125rem;
     letter-spacing: 0.1em;
-    line-height: 1.25;
+    line-height: 1.539;
     margin-bottom: 1.75rem;
     margin-top: 1.75rem;
     padding-bottom:0.25rem;
     padding-top:0.25rem;
     text-align: right;
+    text-transform: uppercase;
 
     a {
         color: inherit;
@@ -26,7 +26,6 @@
             display: inline-block;
             line-height: 0;
             margin-left: 0.5em;
-            vertical-align: middle;
         }
     }
 }

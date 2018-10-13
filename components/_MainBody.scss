@@ -16,7 +16,8 @@
     ul,
     dl {
         color: $color-black;
-        font-family: $font-family-mincho;
+        font-family: $font-family-mincho-punc;
+        font-weight: $font-weight-mincho-normal;
     }
 
     h2:not(.Subheader),
@@ -30,8 +31,9 @@
     i,
     em,
     dfn {
-        font-family: $font-family-gothic;
-        font-weight: 500;
+        color: $color-black-900;
+        font-family: $font-family-gothic-punc;
+        font-weight: $font-weight-gothic-bold;
     }
 
     pre b, pre strong,
@@ -46,12 +48,19 @@
     h4,
     h5,
     h6 {
+        font-family: $font-family-gothic;
         font-feature-settings: "palt";
         font-kerning: auto;
+        font-weight: $font-weight-gothic-bold;
     }
 
     figure,
     table {
-        font-family: $font-family-system;
+        font-family: $font-family-gothic;
+        font-weight: $font-weight-gothic-normal;
+    }
+
+    th {
+        font-weight: $font-weight-gothic-bold;
     }
 }

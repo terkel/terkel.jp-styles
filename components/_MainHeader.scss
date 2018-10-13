@@ -7,16 +7,17 @@
     h1 {
         color: $color-black;
         font-family: $font-family-mincho;
+        font-weight: $font-weight-mincho-normal;
         font-feature-settings: "palt";
         font-size: 1.75rem;
-        font-weight: normal;
         line-height: 1.25;
         margin-bottom: -0.25em;
         margin-top: -1em;
     }
 
     .meta {
-        font-size: 0.75rem;
+        color: $color-black-700;
+        font-size: 0.8125rem;
         line-height: 1.25;
         margin-bottom: -0.25em;
         margin-top: calc(2rem - 1em);
