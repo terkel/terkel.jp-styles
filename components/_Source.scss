@@ -1,0 +1,11 @@
+.Source {
+    margin-top: 0;
+    padding-left: var(--body-indent-size);
+    text-align: right;
+}
+
+.Source small {
+    @include lang-any($lang-latin) {
+        font-size: calc(var(--body-font-size) * 514 / 475 * 8  / 10);
+    }
+}

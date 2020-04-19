@@ -1,0 +1,8 @@
+@keyframes highlight-fade {
+    0% {
+        background-color: $color-highlight-bg;
+    }
+    100% {
+        background-color: transparent;
+    }
+}

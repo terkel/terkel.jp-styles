@@ -1,17 +1,43 @@
 .SiteFooter {
-    box-shadow: inset 0 1px $color-black-500;
-    color: $color-black-700;
-    padding-bottom: 5rem;
-    padding-top: 3rem;
+    font-size: var(--caption-font-size);
+    line-height: var(--caption-line-height);
+    margin-top: calc(var(--vertical-rhythm-unit) * 4);
+    margin-bottom: calc(var(--vertical-rhythm-unit) * 2);
+}
 
-    p {
-        font-size: 0.8125rem;
-        line-height: 1.539;
-        margin-bottom: -0.4em;
-        margin-top: -1.139em;
-    }
+.SiteFooter__nav {
+    margin-top: calc(var(--caption-line-height) * 2);
+    margin-bottom: 0;
+    text-indent: 0;
+}
 
-    a {
-        color: inherit;
-    }
+.SiteFooter__colophon,
+.SiteFooter__author,
+.SiteFooter__privacy {
+    margin-top: var(--caption-line-height);
+    margin-bottom: 0;
+    text-indent: 0;
+}
+
+.SiteFooter hr {
+    margin-top: var(--caption-line-height);
+}
+
+.SiteFooter hr::before {
+    content: "\2015";
+    display: block;
+    margin-bottom: calc(var(--caption-line-height) * -1);
+}
+
+.SiteFooter__colophon {
+    padding-left: 0;
+}
+
+.SiteFooter__colophon li {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+.SiteFooter__colophon li::before {
+    content: normal;
 }

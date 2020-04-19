@@ -1,8 +1,28 @@
-// YakuCalt fonts
-// http://tama-san.com/yakucalt-font/
+// text-emphasis fix 1
+@font-face {
+    font-family: "em-dot-fix";
+    src: local("Times"), local("Times New Roman");
+    unicode-range: U+2022;
+}
+
+// text-emphasis fix 2 (for Chrome)
+@font-face {
+    font-family: "em-space-fix";
+    src: local("Hiragino Mincho ProN");
+    unicode-range: U+20;
+}
+
+/*!
+ * YakuCalt (約猫)
+ * http://tama-san.com/yakucalt-font/
+ */
+
+// http://tama-san.com/font-sample/YakuCaltMincho/YakuCaltMincho_List.html
+
 @font-face {
     font-family: "YakuCalt Gothic";
-    src: url("../fonts/YakuCaltGothic-R.woff") format("woff");
+    font-display: swap;
+    src: url("https://terkel.jp/wordpress/wp-content/themes/terkel-jp/fonts/YakuCaltGothic-R.woff") format("woff");
     font-weight: 400;
     unicode-range:
         U+3000-3002, // 　、。
@@ -20,7 +40,8 @@
 
 @font-face {
     font-family: "YakuCalt Mincho";
-    src: url("../fonts/YakuCaltMincho-R.woff") format("woff");
+    font-display: swap;
+    src: url("https://terkel.jp/wordpress/wp-content/themes/terkel-jp/fonts/YakuCaltMincho-R.woff") format("woff");
     font-weight: 400;
     unicode-range:
         U+3000-3002, // 　、。

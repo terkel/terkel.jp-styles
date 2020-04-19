@@ -1,20 +1,55 @@
+// Languages
+$lang-cjk: ja;
+$lang-latin: en;
+
 // Colors
-$color-black: #000000;
-$color-black-900: #212121;
-$color-black-700: #616161;
-$color-black-500: rgba($color-black, 0.38);
-$color-black-100: rgba($color-black, 0.04);
-$color-offwhite: #f9f9f5;
-$color-blue: #0070e0;
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 0%, 100%);
+
+$color-gray-50: hsl(0, 0%, 98%);
+$color-gray-100: hsl(0, 0%, 96%);
+$color-gray-200: hsl(0, 0%, 93%);
+$color-gray-300: hsl(0, 0%, 88%);
+$color-gray-400: hsl(0, 0%, 74%);
+$color-gray-500: hsl(0, 0%, 62%);
+$color-gray-600: hsl(0, 0%, 46%);
+$color-gray-700: hsl(0, 0%, 38%);
+$color-gray-800: hsl(0, 0%, 26%);
+$color-gray-900: hsl(0, 0%, 13%);
+
+$color-blue: hsl(217, 55%, 43%);
+$color-orange: hsl(17, 79%, 48%);
+$color-yellow: hsl(49, 93%, 83%);
+
+$color-body-bg: $color-white;
+$color-body-fg: $color-black;
+$color-mincho-muted: $color-gray-700;
+$color-gothic-bold: $color-gray-900;
+$color-gothic-muted: $color-gray-600;
+$color-serif: $color-gray-800;
+$color-mono: $color-gray-900;
+$color-link-fg: $color-blue;
+$color-highlight-bg: $color-yellow;
+$color-text-underline: $color-gray-600;
+$color-divider: hsla(0, 0%, 0%, 0.12);
 
 // Font families
-$font-family-gothic: "source-han-sans-japanese", sans-serif;
+$font-family-gothic: "source-han-sans-japanese", "Helvetica Neue", "Arial", sans-serif;
 $font-family-gothic-punc: "YakuCalt Gothic", $font-family-gothic;
-$font-family-mincho: "source-han-serif-japanese", serif;
+$font-family-mincho: "source-han-serif-japanese", "Hiragino Mincho ProN", "Yu Mincho", serif;
 $font-family-mincho-punc: "YakuCalt Mincho", $font-family-mincho;
-$font-family-mono: "source-code-pro", "source-han-sans-japanese", monospace;
+$font-family-title: "ten-mincho-text", "Hiragino Mincho ProN", serif;
+$font-family-serif: "source-serif-pro", "Georgia", "source-han-serif-japanese", serif;
+$font-family-mono: "source-code-pro", "Courier", "source-han-sans-japanese", monospace;
+$font-monowidth: 0.6;
 
 // Font weights
-$font-weight-mincho-normal: 400;
-$font-weight-gothic-normal: 400;
+$font-weight-gothic-normal: 300;
 $font-weight-gothic-bold: 700;
+$font-weight-mincho-normal: 400;
+$font-weight-title: 400;
+$font-weight-mono-normal: 400;
+
+// OpenType features
+$opentype-faetures-japanese: "locl";
+$opentype-faetures-japanese-proportional: "locl", "palt";

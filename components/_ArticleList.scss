@@ -1,0 +1,30 @@
+.ArticleList__item {
+    text-indent: calc(0px - var(--body-indent-size));
+}
+
+.ArticleList__item::before {
+    content: normal;
+}
+
+.ArticleList__meta {
+    color: $color-mincho-muted;
+    font-size: var(--caption-font-size);
+    line-height: var(--caption-line-height);
+    white-space: nowrap;
+}
+
+.ArticleList__annotation {
+    text-indent: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.ArticleList__annotation + .ArticleList__annotation {
+    text-indent: var(--body-indent-size);
+}
+
+.ArticleList__inlineSeparator {
+    font-family: $font-family-mono;
+    font-size: 1em / $font-monowidth;
+    line-height: 0;
+}

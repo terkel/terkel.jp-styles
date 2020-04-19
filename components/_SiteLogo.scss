@@ -1,0 +1,28 @@
+.SiteLogo {
+    display: flex;
+    align-items: baseline;
+    color: $color-gothic-bold;
+    font-family: $font-family-gothic;
+    font-weight: $font-weight-gothic-bold;
+    font-kerning: auto;
+    margin: 0;
+}
+
+.SiteLogo::after {
+    flex-grow: 1;
+    content: "";
+    border-top: 1px solid $color-divider;
+    margin-left: 0.5em;
+    position: relative;
+    top: -0.5ex;
+}
+
+.SiteLogo.-right::after {
+    order: -1;
+    margin-left: 0;
+    margin-right: 0.5em;
+}
+
+.SiteLogo__link {
+    text-decoration: none;
+}

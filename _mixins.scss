@@ -1,28 +1,51 @@
-// CJK lang selector
-@mixin lang-cjk () {
-    &:lang(zh),
-    &:lang(ja),
-    &:lang(ko) {
+// lang-any
+// Creates selector matches any of language tags
+//
+// @param {list} $langs - List of labguage tag
+//
+// @example
+//   p {
+//     @include lang-any(ja, ko, zh) {
+//       font-family: sans-serif;
+//     }
+//   }
+//
+// @output
+//   p:lang(ja), p:lang(ko), p:lang(zh) {
+//     font-family: serif;
+//   }
+@mixin lang-any ($langs) {
+    $selector: "";
+    @each $lang in $langs {
+        $selector: $selector + "&:lang(" + $lang + "),";
+    }
+    #{$selector} {
         @content;
     }
 }
 
-// Non-CJK lang selector
-@mixin lang-not-cjk () {
-    &:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)) {
-        @content;
+// lang-not-any
+// Creates selector does not matche any of language tags
+//
+// @param {list} $langs - List of labguage tag not to match
+//
+// @example
+//   p {
+//     @include lang-not-any(ja, ko, zh) {
+//       font-family: serif;
+//     }
+//   }
+//
+// @output
+//   p:not(:lang(ja)):not(:lang(ko)):not(:lang(zh)) {
+//     font-family: serif;
+//   }
+@mixin lang-not-any ($langs) {
+    $selector: "&";
+    @each $lang in $langs {
+        $selector: $selector + ":not(:lang(" + $lang + "))";
     }
-}
-
-// List item with dash
-@mixin list-item-dash () {
-    list-style-type: none;
-    position: relative;
-
-    &::before {
-        content: "\2013";
-        margin-right: 0.5em;
-        position: absolute;
-        right: 100%;
+    #{$selector} {
+        @content;
     }
 }

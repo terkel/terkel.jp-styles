@@ -11,9 +11,12 @@
     body {
         background-color: transparent;
         margin-left: 0;
-        margin-right: 14rem;
+        margin-right: calc(var(--sidenote-width) + var(--sidenote-gutter));
         max-width: none;
-        width: 40rem;
+    }
+
+    h1 {
+        margin-top: calc(var(--vertical-rhythm-unit) * 2);
     }
 
     h2,
@@ -29,22 +32,24 @@
         display: table-header-group;
     }
 
+    th::before,
+    th::after,
+    td::before,
+    td::after,
+    .SiteLogo::after {
+        border-color: silver !important;
+    }
+
     tr,
     img {
         page-break-inside: avoid;
     }
 
-    .SiteHeader,
-    .MainHeader {
-        border-bottom: 1px solid $color-black-500;
-        box-shadow: none;
+    a {
+        text-decoration: none;
     }
 
-    .SiteHeader nav {
-        display: none;
-    }
-
-    .MainBody {
+    main {
         counter-reset: sidenote;
 
         a[href]:not([href^="#"]),
@@ -56,16 +61,17 @@
         a[href]:not([href^="#"])::after,
         abbr[title]::after,
         dfn[title]::after {
-            bottom: -0.25em;
             content: counter(sidenote);
             font-family: $font-family-gothic;
             font-weight: $font-weight-gothic-normal;
-            font-size: 0.625rem;
+            font-size: var(--sidenote-font-size);
             line-height: 0;
+            position: relative;
+            top: -0.5em;
             margin-left: 0.25em;
             margin-right: 0.25em;
-            position: relative;
             display: inline-block;
+            text-indent: 0;
         }
 
         blockquote[cite]::before,
@@ -75,15 +81,15 @@
             clear: right;
             font-family: $font-family-gothic;
             font-weight: $font-weight-gothic-normal;
-            font-size: 0.625rem;
-            font-weight: normal;
+            font-size: var(--sidenote-font-size);
+            line-height: var(--sidenote-line-height);
             float: right;
-            line-height: 1.6;
-            margin-right: -14rem;
-            margin-bottom: -0.5rem;
-            margin-top: 0.5rem;
+            margin-right: calc(0px - var(--sidenote-width) - var(--sidenote-gutter));
+            margin-bottom: calc(0px - var(--extra-leading));
+            margin-top: var(--extra-leading);
             overflow-wrap: break-word;
-            width: 12rem;
+            width: var(--sidenote-width);
+            text-indent: 1em;
         }
 
         blockquote[cite]::before {
@@ -100,18 +106,23 @@
         }
     }
 
+    .SiteHeader {
+        display: none;
+    }
+
     .SiteFooter {
-        border-top: 1px solid $color-black-500;
-        box-shadow: none;
+        page-break-inside : avoid;
     }
 
-    .SiteFooter a {
-        text-decoration: none;
+    .SiteFooter__nav {
+        display: none;
     }
 
-    .SiteFooter a[href^="https://typekit.com/colophons/"]::after,
-    .SiteFooter a[rel="license"]::after,
-    .SiteFooter a[rel="alternate"]::after {
-        content: " (" attr(href) ")";
+    .SiteFooter__colophon {
+        margin-top: calc(var(--caption-line-height) * 2);
+    }
+
+    .SiteFooter__colophon::before {
+        content: normal;
     }
 }
